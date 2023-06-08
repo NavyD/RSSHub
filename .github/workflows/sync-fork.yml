@@ -1,4 +1,4 @@
-name: Sync Fork
+name: Sync Upstream to mine
 
 on:
   schedule:
@@ -7,15 +7,13 @@ on:
 
 jobs:
   sync:
-
     runs-on: ubuntu-latest
-
     steps:
-      - name: fetch upstream
-        uses: tgymnich/fork-sync@v1.8
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          # auto_approve: true
-          owner: DIYgod
-          base: master
-          head: master
+    - name: merge diygod/master to mine
+      shell: bash
+      run: |
+        set -eux
+        git remote add -f diygod https://github.com/DIYgod/RSSHub.git
+        git checkout mine
+        git merge --ff-only diygod/master
+        git push
