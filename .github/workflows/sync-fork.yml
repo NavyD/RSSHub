@@ -9,15 +9,11 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v3
-
-    - name: merge diygod/master to mine
-      shell: bash
-      run: |
-        set -eux
-        git remote add -f diygod "https://github.com/DIYgod/RSSHub.git"
-        git pull --ff-only diygod master:master
-        git checkout mine
-        git merge --ff-only master
-        git push
+      - uses: tgymnich/fork-sync@v1.8
+        name: Sync upstream/master to mine
+        with:
+          token: ${{ secrets.MERGE_TOKEN }}
+          owner: DIYgod
+          base: master
+          head: mine
+          auto_approve: true
