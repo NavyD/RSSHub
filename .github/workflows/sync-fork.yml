@@ -24,7 +24,7 @@ jobs:
           git fetch upstream
       - name: Merge upstream/master changes
         run: |
-          git merge --ff-only upstream/master
+          git merge --ff upstream/master
       - name: Push changes to mine
         run: |
           git push origin HEAD:mine
