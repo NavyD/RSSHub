@@ -14,6 +14,6 @@ jobs:
         with:
           token: ${{ secrets.MERGE_TOKEN }}
           owner: DIYgod
-          base: master
-          head: mine
+          base: mine
+          head: master
           auto_approve: true
