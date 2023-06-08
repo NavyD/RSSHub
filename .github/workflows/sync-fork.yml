@@ -1,34 +1,21 @@
-name: Sync Upstream to mine
+name: Sync Fork
 
 on:
   schedule:
-    # utc timezone to local shanghai at 04:00
-    - cron: '0 20 * * *'
-  workflow_dispatch: ~ # on button click
+    - cron: '0 4 * * *'
+  workflow_dispatch: # on button click
 
 jobs:
   sync:
+
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - name: fetch upstream
+        uses: tgymnich/fork-sync@v1.8
         with:
-          # Number of commits to fetch. 0 indicates all history for all branches and tags.
-          fetch-depth: 0
-          token: ${{ secrets.PAT_TOKEN }}
-
-      - name: Fetch upstream changes
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git remote add -f upstream https://github.com/DIYgod/RSSHub.git
-          git fetch upstream
-
-      - name: Merge upstream/master changes
-        run: git rebase upstream/master
-
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.PAT_TOKEN }}
-          force_with_lease: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+          # auto_approve: true
+          owner: DIYgod
+          base: master
+          head: master
