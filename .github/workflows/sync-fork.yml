@@ -1,0 +1,21 @@
+name: Sync Fork
+
+on:
+  schedule:
+    - cron: '0 4 * * *'
+  workflow_dispatch: # on button click
+
+jobs:
+  sync:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: fetch upstream
+        uses: tgymnich/fork-sync@v1.8
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          # auto_approve: true
+          owner: DIYgod
+          base: master
+          head: master
