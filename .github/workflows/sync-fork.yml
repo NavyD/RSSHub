@@ -17,6 +17,7 @@ jobs:
       run: |
         set -eux
         git remote add -f diygod "https://github.com/DIYgod/RSSHub.git"
+        git pull --ff-only diygod master:master
         git checkout mine
-        git merge --ff-only diygod/master
+        git merge --ff-only master
         git push
