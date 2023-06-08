@@ -14,17 +14,17 @@ jobs:
         with:
           # Number of commits to fetch. 0 indicates all history for all branches and tags.
           fetch-depth: 0
-      - name: Configure Git
-        run: |
-          git config user.name "${{ github.actor }}"
-          git config user.email "${{ github.actor }}@users.noreply.github.com"
+          token: ${{ secrets.PAT_TOKEN }}
       - name: Fetch upstream changes
         run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
           git remote add -f upstream https://github.com/DIYgod/RSSHub.git
           git fetch upstream
       - name: Merge upstream/master changes
         run: |
           git merge --ff upstream/master
-      - name: Push changes to mine
-        run: |
-          git push origin HEAD:mine
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.PAT_TOKEN }}
