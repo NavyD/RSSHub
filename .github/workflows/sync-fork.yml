@@ -9,11 +9,19 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - uses: tgymnich/fork-sync@v1.8
-        name: Sync upstream/master to mine
-        with:
-          token: ${{ secrets.MERGE_TOKEN }}
-          owner: DIYgod
-          base: mine
-          head: master
-          auto_approve: true
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Configure Git
+        run: |
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
+      - name: Fetch upstream changes
+        run: |
+          git remote add -f upstream https://github.com/DIYgod/RSSHub.git
+          git fetch upstream
+      - name: Merge upstream/master changes
+        run: |
+          git merge --ff-only upstream/master
+      - name: Push changes to mine
+        run: |
+          git push origin HEAD:mine
