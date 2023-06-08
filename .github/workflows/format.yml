@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - mine
 
 permissions:
   contents: read
