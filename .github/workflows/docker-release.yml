@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - mine
     paths:
       - '.github/workflows/docker-release.yml'
       - 'lib/**'
