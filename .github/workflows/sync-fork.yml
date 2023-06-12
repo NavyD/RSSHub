@@ -3,7 +3,7 @@ name: Sync Upstream to mine
 on:
   schedule:
     - cron: '0 4 * * *'
-  workflow_dispatch: # on button click
+  workflow_dispatch: ~ # on button click
 
 jobs:
   sync:
