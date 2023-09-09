@@ -587,6 +587,8 @@ Specify options (in the format of query string) in parameter `routeParams` param
 | `itemLinkAttr`  | The attributes of `link` element as link                       | `string`        | `href`                 |
 | `itemDesc`      | The HTML elements as `descrption` in `item` using CSS selector | `string`        | `item` element         |
 | `itemDescAttr`  | The attributes of `descrption` element as description          | `string`        | Element html           |
+| `itemPubDate`      | The HTML elements as `pubDate` in `item` using CSS selector | `string`        | `item` element         |
+| `itemPubDateAttr`  | The attributes of `pubDate` element as pubDate          | `string`        | Element html           |
 
 <Route author="ttttmr" example="/rsshub/transform/html/https%3A%2F%2Fwechat2rss.xlab.app%2Fposts%2Flist%2F/item=div%5Bclass%3D%27post%2Dcontent%27%5D%20p%20a" path="/rsshub/transform/html/:url/:routeParams" paramsDesc={['`encodeURIComponent`ed URL address', 'Transformation rules, requires URL encode']} selfhost="1">
 
@@ -616,6 +618,7 @@ Specify options (in the format of query string) in parameter `routeParams` param
 | `itemTitle` | The JSON Path as `title` in `item`       | `string`        | None                                       |
 | `itemLink`  | The JSON Path as `link` in `item`        | `string`        | None                                       |
 | `itemDesc`  | The JSON Path as `description` in `item` | `string`        | None                                       |
+| `itemPubDate`  | The JSON Path as `pubDate` in `item` | `string`        | None                                       |
 
 :::tip
 
@@ -1112,6 +1115,28 @@ Refer to [the list of supported currencies](https://wise.com/tools/exchange-rate
 ### 搜狗特色 LOGO {#sou-gou-sou-gou-te-se-logo}
 
 <Route author="xyqfer" example="/sogou/doodles" path="/sogou/doodles"/>
+
+## 台灣事實查核中心 {#tai-wan-shi-shi-cha-he-zhong-xin}
+
+### 最新相關資訊 / 最新查核報告 {#tai-wan-shi-shi-cha-he-zhong-xin-zui-xin-xiang-guan-zi-xun-%2F-zui-xin-cha-he-bao-gao}
+
+<Route author="TonyRL" example="/tfc-taiwan" path="/tfc-taiwan/:type?" paramsDesc={['分類，見下表，預設為 `report`']} radar="1" rssbud="1">
+
+| 最新相關資訊 | 最新查核報告 |
+| ---------- | ---------- |
+| info       | report     |
+
+</Route>
+
+### 專題 / 重點專區 {#tai-wan-shi-shi-cha-he-zhong-xin-zhuan-ti-%2F-zhong-dian-zhuan-qu}
+
+<Route author="TonyRL" example="/tfc-taiwan/category/242" path="/tfc-taiwan/:type/:id+" paramsDesc={['專題 / 重點專區，見下表', '專題 / 重點專區 ID']} radar="1" rssbud="1">
+
+| 專題      | 重點專區 |
+| -------- | ------- |
+| category | topic   |
+
+</Route>
 
 ## 腾讯吐个槽 {#teng-xun-tu-ge-cao}
 
