@@ -2,7 +2,8 @@ name: Sync Upstream to mine
 
 on:
   schedule:
-    - cron: '0 4 * * *'
+    # utc timezone to local shanghai at 04:00
+    - cron: '0 20 * * *'
   workflow_dispatch: ~ # on button click
 
 jobs:
@@ -23,7 +24,7 @@ jobs:
           git fetch upstream
       - name: Merge upstream/master changes
         run: |
-          git merge --ff upstream/master
+          git rebase upstream/master
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
