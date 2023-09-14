@@ -11,21 +11,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           # Number of commits to fetch. 0 indicates all history for all branches and tags.
           fetch-depth: 0
           token: ${{ secrets.PAT_TOKEN }}
+
       - name: Fetch upstream changes
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git remote add -f upstream https://github.com/DIYgod/RSSHub.git
           git fetch upstream
+
       - name: Merge upstream/master changes
-        run: |
-          git rebase upstream/master
+        run: git rebase upstream/master
+
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.PAT_TOKEN }}
+          force_with_lease: true
