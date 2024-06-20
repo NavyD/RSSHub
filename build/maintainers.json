@@ -800,6 +800,9 @@
   "/bjwxdxh/:type?": [
     "Misaka13514"
   ],
+  "/bjx/fd/:type": [
+    "hualiong"
+  ],
   "/bjx/huanbao": [
     "zsimple"
   ],
@@ -955,6 +958,15 @@
   "/cankaoxiaoxi/:id?": [
     "yuxinliu-alex",
     "nczitzk"
+  ],
+  "/cara/likes/:user": [
+    "KarasuShin"
+  ],
+  "/cara/portfolio/:user": [
+    "KarasuShin"
+  ],
+  "/cara/timeline/:user": [
+    "KarasuShin"
   ],
   "/cartoonmad/comic/:id": [
     "KellyHwong"
@@ -5208,6 +5220,9 @@
     "nczitzk"
   ],
   "/sicau/jiaowu/jxtz": [
+    "hualiong"
+  ],
+  "/sicau/jk/:gid/:typeId/:sortType/:token": [
     "hualiong"
   ],
   "/sicau/yan/:category?": [
