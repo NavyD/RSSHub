@@ -479,6 +479,9 @@
     "TonyRL"
   ],
   "/asiantolick/:category{.+}?": [],
+  "/asmr-200/works/:order?/:subtitle?/:sort?": [
+    "hualiong"
+  ],
   "/asus/bios/:model": [
     "Fatpandac"
   ],
@@ -3124,6 +3127,9 @@
   "/instructables/projects/:category?": [
     "wolfg1969"
   ],
+  "/investor/:category{.+}?": [
+    "nczitzk"
+  ],
   "/ippa/": [
     "cnkmmk"
   ],
@@ -4900,6 +4906,9 @@
   ],
   "/rawkuma/manga/:id": [
     "nczitzk"
+  ],
+  "/raycast/changelog": [
+    "equt"
   ],
   "/reactiflux/transcripts": [
     "nczitzk"
