@@ -4995,7 +4995,7 @@
         "categories": [
           "multimedia"
         ],
-        "example": "/works",
+        "example": "/asmr-200/works",
         "features": {
           "requireConfig": false,
           "requirePuppeteer": false,
@@ -5017,7 +5017,7 @@
             "target": "asmr-200/works"
           }
         ],
-        "name": "最新资源",
+        "name": "最新收录",
         "maintainers": [
           "hualiong"
         ],
@@ -15755,6 +15755,45 @@
     },
     "name": "雨苁博客",
     "url": "ddosi.org"
+  },
+  "deadbydaylight": {
+    "routes": {
+      "/blog": {
+        "path": "/blog",
+        "categories": [
+          "game"
+        ],
+        "example": "/deadbydaylight/blog",
+        "parameters": {},
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "deadbydaylight.com/news"
+            ],
+            "target": "/news"
+          }
+        ],
+        "name": "Latest News",
+        "maintainers": [
+          "NeverBehave"
+        ],
+        "location": "index.ts"
+      }
+    },
+    "name": "DeadbyDaylight",
+    "url": "deadbydaylight.com",
+    "description": "\n      DeadbyDaylight Official\n    ",
+    "zh": {
+      "name": "黎明杀机"
+    }
   },
   "deadline": {
     "routes": {
@@ -62404,12 +62443,12 @@
   },
   "utgd": {
     "routes": {
-      "/:category?": {
-        "path": "/:category?",
+      "/category/:category?": {
+        "path": "/category/:category?",
         "categories": [
           "new-media"
         ],
-        "example": "/utgd/method",
+        "example": "/utgd/category/method",
         "parameters": {
           "category": "分类，可在对应分类页的 URL 中找到，默认为方法"
         },
@@ -62427,7 +62466,7 @@
               "utgd.net/category/s/:category",
               "utgd.net/"
             ],
-            "target": "/:category"
+            "target": "/category/:category"
           }
         ],
         "name": "分类",

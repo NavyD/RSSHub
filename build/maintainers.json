@@ -1506,6 +1506,9 @@
   "/ddosi/": [
     "XinRoom"
   ],
+  "/deadbydaylight/blog": [
+    "NeverBehave"
+  ],
   "/deadline/": [
     "TonyRL"
   ],
@@ -6159,7 +6162,7 @@
     "jasongzy"
   ],
   "/usts/jwch/:type?": [],
-  "/utgd/:category?": [
+  "/utgd/category/:category?": [
     "nczitzk"
   ],
   "/utgd/timeline": [
