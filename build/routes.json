@@ -25983,7 +25983,7 @@
             "target": "/gov/stats/*path"
           }
         ],
-        "description": "::: tip\n    路径处填写对应页面 URL 中 `http://www.stats.gov.cn/` 后的字段。下面是一个例子。\n\n    若订阅 [数据 > 数据解读](http://www.stats.gov.cn/sj/sjjd/)\n    则将对应页面 URL `http://www.stats.gov.cn/sj/sjjd/` 中 `http://www.stats.gov.cn/` 后的字段 `sj/sjjd` 作为路径填入。\n    此时路由为 [`/gov/stats/sj/sjjd`](https://rsshub.app/gov/stats/sj/sjjd)\n\n    若订阅 [新闻 > 时政要闻 > 中央精神](http://www.stats.gov.cn/xw/szyw/zyjs/)\n    则将对应页面 URL `http://www.stats.gov.cn/xw/szyw/zyjs/` 中 `http://www.stats.gov.cn/`\n    后的字段 `xw/szyw/zyjs` 作为路径填入。此时路由为 [`/gov/stats/xw/szyw/zyjs`](https://rsshub.app/gov/stats/xw/szyw/zyjs)\n    :::",
+        "description": "::: tip\n路径处填写对应页面 URL 中 `http://www.stats.gov.cn/` 后的字段。下面是一个例子。\n\n若订阅 [数据 > 数据解读](http://www.stats.gov.cn/sj/sjjd/)\n则将对应页面 URL `http://www.stats.gov.cn/sj/sjjd/` 中 `http://www.stats.gov.cn/` 后的字段 `sj/sjjd` 作为路径填入。\n此时路由为 [`/gov/stats/sj/sjjd`](https://rsshub.app/gov/stats/sj/sjjd)\n\n若订阅 [新闻 > 时政要闻 > 中央精神](http://www.stats.gov.cn/xw/szyw/zyjs/)\n则将对应页面 URL `http://www.stats.gov.cn/xw/szyw/zyjs/` 中 `http://www.stats.gov.cn/`\n后的字段 `xw/szyw/zyjs` 作为路径填入。此时路由为 [`/gov/stats/xw/szyw/zyjs`](https://rsshub.app/gov/stats/xw/szyw/zyjs)\n:::",
         "location": "stats/index.ts"
       },
       "/suzhou/doc": {
@@ -60141,6 +60141,45 @@
     },
     "name": "The Ring of Wonder",
     "url": "trow.cc"
+  },
+  "tsdm39": {
+    "routes": {
+      "/bd/:type?": {
+        "path": "/bd/:type?",
+        "name": "BD",
+        "categories": [
+          "anime"
+        ],
+        "maintainers": [
+          "equt"
+        ],
+        "example": "/tsdm39/bd",
+        "parameters": {
+          "type": "BD type, checkout the table below for details"
+        },
+        "features": {
+          "requireConfig": [
+            {
+              "name": "TSDM39_COOKIES",
+              "optional": false,
+              "description": "天使动漫论坛登陆后的 cookie 值，可在浏览器控制台通过 `document.cookie` 获取。"
+            }
+          ],
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "description": "| 720P | 1080P | BDMV | 4K | AV1 |\n| :--: | :--: | :--: | :--: | :--: |\n| 403 | 404 | 405 | 4130 | 5815 |",
+        "location": "bd.ts"
+      }
+    },
+    "name": "天使动漫论坛",
+    "url": "www.tsdm39.com",
+    "categories": [
+      "anime"
+    ]
   },
   "tsinghua": {
     "routes": {
