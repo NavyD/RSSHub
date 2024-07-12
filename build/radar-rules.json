@@ -9050,6 +9050,19 @@
       }
     ]
   },
+  "j-test.com": {
+    "_name": "实用日本语鉴定考试（J.TEST）",
+    "www": [
+      {
+        "title": "公告",
+        "docs": "https://docs.rsshub.app/routes/study",
+        "source": [
+          "/"
+        ],
+        "target": "/j-test/news"
+      }
+    ]
+  },
   "javbus.com": {
     "_name": "JavBus",
     "www": [
@@ -10677,31 +10690,6 @@
           "/modpack/:id"
         ],
         "target": "/modrinth/project/:id/versions"
-      }
-    ]
-  },
-  "moduzy.cc": {
-    "_name": "魔都资源网",
-    ".": [
-      {
-        "title": "最新资源",
-        "docs": "https://docs.rsshub.app/routes/multimedia",
-        "source": [
-          "/",
-          "/",
-          "/",
-          "/",
-          "/",
-          "/",
-          "/",
-          "/",
-          "/",
-          "/",
-          "/",
-          "/",
-          "/"
-        ],
-        "target": "/moduzy/:type/:hours?"
       }
     ]
   },
