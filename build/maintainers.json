@@ -500,6 +500,9 @@
   "/auto-stats/:category?": [
     "nczitzk"
   ],
+  "/autocentre/": [
+    "driversti"
+  ],
   "/baai/hub/events": [
     "TonyRL"
   ],
@@ -1163,6 +1166,9 @@
     "yuxinliu-alex"
   ],
   "/chinawriter/:id{.+}?": [],
+  "/chlinlearn/daily-blog": [
+    "huyyi"
+  ],
   "/chsi/hotnews": [
     "yanbot-team"
   ],
@@ -3131,6 +3137,12 @@
   "/inoreader/html_clip/:user/:tag": [],
   "/inoreader/rss/:user/:tag": [
     "EthanWng97"
+  ],
+  "/inspirehep/authors/:id": [
+    "TonyRL"
+  ],
+  "/inspirehep/literature/:q": [
+    "TonyRL"
   ],
   "/instagram/:category/:key": [
     "oppilate",
@@ -6239,6 +6251,9 @@
   ],
   "/v2ex/topics/:type": [
     "WhiteWorld"
+  ],
+  "/v2ex/xna": [
+    "luckyscript"
   ],
   "/v2rayshare/": [
     "77taibai"

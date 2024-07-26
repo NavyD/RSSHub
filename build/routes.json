@@ -5236,6 +5236,25 @@
     "name": "中国汽车工业协会统计信息网",
     "url": "auto-stats.org.cn"
   },
+  "autocentre": {
+    "routes": {
+      "/": {
+        "path": "/",
+        "name": "Автомобільний сайт N1 в Україні",
+        "categories": [
+          "new-media"
+        ],
+        "maintainers": [
+          "driversti"
+        ],
+        "example": "/autocentre",
+        "location": "index.ts"
+      }
+    },
+    "name": "Автоцентр.ua",
+    "url": "autocentre.ua",
+    "description": "Автоцентр.ua: автоновини - Автомобільний сайт N1 в Україні"
+  },
   "baai": {
     "routes": {
       "/hub/events": {
@@ -12103,6 +12122,40 @@
     },
     "name": "中国作家网",
     "url": "chinawriter.com.cn"
+  },
+  "chlinlearn": {
+    "routes": {
+      "/daily-blog": {
+        "path": "/daily-blog",
+        "name": "值得一读技术博客",
+        "maintainers": [
+          "huyyi"
+        ],
+        "categories": [
+          "programming"
+        ],
+        "example": "/chlinlearn/daily-blog",
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "daily-blog.chlinlearn.top/blogs/*"
+            ],
+            "target": "/chlinlearn/daily-blog"
+          }
+        ],
+        "location": "daily-blog.ts"
+      }
+    },
+    "name": "chlinlearn的技术博客",
+    "url": "daily-blog.chlinlearn.top"
   },
   "chsi": {
     "routes": {
@@ -31871,6 +31924,53 @@
     },
     "name": "Inoreader",
     "url": "inoreader.com"
+  },
+  "inspirehep": {
+    "routes": {
+      "/authors/:id": {
+        "path": "/authors/:id",
+        "example": "/inspirehep/authors/1696909",
+        "parameters": {
+          "id": "Author ID"
+        },
+        "name": "Author Search",
+        "maintainers": [
+          "TonyRL"
+        ],
+        "radar": [
+          {
+            "source": [
+              "inspirehep.net/authors/:id"
+            ]
+          }
+        ],
+        "location": "author.ts"
+      },
+      "/literature/:q": {
+        "path": "/literature/:q",
+        "example": "/inspirehep/literature/Physics",
+        "parameters": {
+          "q": "Search keyword"
+        },
+        "name": "Literature Search",
+        "maintainers": [
+          "TonyRL"
+        ],
+        "radar": [
+          {
+            "source": [
+              "inspirehep.net/literature"
+            ]
+          }
+        ],
+        "location": "literature.ts"
+      }
+    },
+    "name": "INSPIRE",
+    "url": "inspirehep.net",
+    "categories": [
+      "journal"
+    ]
   },
   "instagram": {
     "routes": {
@@ -63726,6 +63826,29 @@
           "WhiteWorld"
         ],
         "location": "topics.ts"
+      },
+      "/xna": {
+        "path": "/xna",
+        "categories": [
+          "bbs",
+          "blog"
+        ],
+        "view": 0,
+        "example": "/v2ex/xna",
+        "parameters": {},
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "name": "XNA",
+        "maintainers": [
+          "luckyscript"
+        ],
+        "location": "xna.ts"
       }
     },
     "name": "V2EX",
