@@ -1106,6 +1106,9 @@
   "/cfachina/servicesupport/analygarden/:program?": [
     "TonyRL"
   ],
+  "/cffex/announcement": [
+    "ChenXiangcheng1"
+  ],
   "/cfmmc/:id{.+}?": [],
   "/cfr/:category/:subCategory?": [
     "KarasuShin"
@@ -6680,6 +6683,11 @@
   "/yahoo/news/:region/:category?": [
     "KeiLongW",
     "williamgateszhao"
+  ],
+  "/yahoo/news/list/:region/:listId": [
+    "TonyRL",
+    "williamgateszhao",
+    "tpnonthealps"
   ],
   "/yahoo/news/providers/:region/list": [
     "TonyRL",
