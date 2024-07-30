@@ -3418,6 +3418,9 @@
   "/juejin/column/:id": [
     "xiangzy1"
   ],
+  "/juejin/dynamic/:id": [
+    "CaoMeiYouRen"
+  ],
   "/juejin/collections/:userId": [
     "isQ"
   ],
@@ -4659,7 +4662,7 @@
   "/pixiv/ranking/:mode/:date?": [
     "EYHN"
   ],
-  "/pixiv/search/:keyword/:order?/:mode?": [
+  "/pixiv/search/:keyword/:order?/:mode?/:include_ai?": [
     "DIYgod"
   ],
   "/pixiv/user/:id": [

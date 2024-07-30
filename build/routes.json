@@ -34658,6 +34658,36 @@
         ],
         "location": "column.ts"
       },
+      "/dynamic/:id": {
+        "path": "/dynamic/:id",
+        "categories": [
+          "programming"
+        ],
+        "example": "/juejin/dynamic/3051900006845944",
+        "parameters": {
+          "id": "用户 id, 可在用户页 URL 中找到"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "juejin.cn/user/:id"
+            ]
+          }
+        ],
+        "name": "用户动态",
+        "maintainers": [
+          "CaoMeiYouRen"
+        ],
+        "location": "dynamic.ts"
+      },
       "/collections/:userId": {
         "path": "/collections/:userId",
         "categories": [
@@ -35338,6 +35368,20 @@
           "game"
         ],
         "example": "/keylol/f161-1",
+        "features": {
+          "requireConfig": [
+            {
+              "name": "KEYLOL_COOKIE",
+              "optional": true,
+              "description": "配置后可抓取具有阅读权限的帖子內容"
+            }
+          ],
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
         "radar": [
           {
             "source": [
@@ -47446,8 +47490,8 @@
         ],
         "location": "ranking.ts"
       },
-      "/search/:keyword/:order?/:mode?": {
-        "path": "/search/:keyword/:order?/:mode?",
+      "/search/:keyword/:order?/:mode?/:include_ai?": {
+        "path": "/search/:keyword/:order?/:mode?/:include_ai?",
         "categories": [
           "social-media",
           "popular"
@@ -47485,6 +47529,20 @@
               {
                 "label": "no filter",
                 "value": "no"
+              }
+            ]
+          },
+          "include_ai": {
+            "description": "whether AI-generated content is included",
+            "default": "yes",
+            "options": [
+              {
+                "label": "does not include AI-generated content",
+                "value": "no"
+              },
+              {
+                "label": "include AI-generated content",
+                "value": "yes"
               }
             ]
           }
@@ -70674,7 +70732,8 @@
       }
     },
     "name": "知乎",
-    "url": "www.zhihu.com"
+    "url": "www.zhihu.com",
+    "description": ":::tip\n自2024年7月，未登录状态下大部分路由[无法获取全文](https://github.com/DIYgod/RSSHub/issues/16260)。若有需要请在登陆知乎后寻找并添加包含`z_c0`的Cookies至环境变量`ZHIHU_COOKIES`。\n:::"
   },
   "zhitongcaijing": {
     "routes": {
