@@ -2626,6 +2626,12 @@
   "/gov/zhengce/zhengceku/:department": [
     "zxx-457"
   ],
+  "/gov/zj/ningbogzw-notice/:colId?": [
+    "HaoyuLee"
+  ],
+  "/gov/zj/ningborsjnotice/:colId?": [
+    "HaoyuLee"
+  ],
   "/gov/zj/search/:websiteid?/:word/:cateid?": [
     "HaoyuLee"
   ],
@@ -3114,6 +3120,9 @@
   ],
   "/imiker/ask/jinghua": [
     "nczitzk"
+  ],
+  "/imop/tianshu": [
+    "zhkgo"
   ],
   "/indiansinkuwait/latest": [
     "TonyRL"
@@ -3634,6 +3643,9 @@
   "/lkong/thread/:id": [
     "nczitzk",
     "ma6254"
+  ],
+  "/lmu/jobs": [
+    "StarDxxx"
   ],
   "/lofter/tag/:name?/:type?": [
     "hoilc",
