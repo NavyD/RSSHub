@@ -1099,7 +1099,7 @@
   "/cctv/lm/:id?": [
     "nczitzk"
   ],
-  "/cctv/xwlb": [
+  "/cctv/:site/:category/:name": [
     "zengxs"
   ],
   "/cde/:channel/:category": [
@@ -2896,6 +2896,9 @@
     "nczitzk"
   ],
   "/hostmonit/cloudflareyesv6": [],
+  "/hottoys/": [
+    "jw0903"
+  ],
   "/hotukdeals/hottest": [
     "DIYgod"
   ],
@@ -3400,6 +3403,9 @@
   ],
   "/jlu/ccst/xwzx/:category": [
     "mayouxi"
+  ],
+  "/joins/chinese/:category?": [
+    "nczitzk"
   ],
   "/jornada/:date?/:category?": [
     "Thealf154"
