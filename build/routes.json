@@ -19203,7 +19203,7 @@
         "maintainers": [
           "syzq"
         ],
-        "description": "| 策略报告       | 宏观研究    | 券商晨报     | 行业研究 |\n  | -------------- | ----------- | ------------ | -------- |\n  | strategyreport | macresearch | brokerreport | industry |",
+        "description": "| 策略报告       | 宏观研究    | 券商晨报     | 行业研究 | 个股研报 |\n  | -------------- | ----------- | ------------ | -------- | -------- |\n  | strategyreport | macresearch | brokerreport | industry | stock    |",
         "location": "report/index.ts"
       },
       "/search/:keyword": {
@@ -22420,7 +22420,7 @@
     "routes": {
       "/quest/:alias": {
         "path": "/quest/:alias",
-        "name": "Galxe",
+        "name": "Quest",
         "url": "app.galxe.com",
         "maintainers": [
           "cxheng315"
@@ -27618,6 +27618,47 @@
     },
     "name": "Grub Street",
     "url": "grubstreet.com"
+  },
+  "gs": {
+    "routes": {
+      "/developer/blog": {
+        "path": "/developer/blog",
+        "categories": [
+          "blog"
+        ],
+        "example": "/gs/developer/blog",
+        "parameters": {},
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "developer.gs.com/blog/posts"
+            ],
+            "target": "/developer/blog"
+          }
+        ],
+        "name": "Goldman Sachs Developer Blog",
+        "zh": {
+          "name": "高盛开发者博客"
+        },
+        "maintainers": [
+          "chesha1"
+        ],
+        "location": "developer/blog.ts"
+      }
+    },
+    "name": "Goldman Sachs",
+    "url": "goldmansachs.com",
+    "zh": {
+      "name": "高盛"
+    }
   },
   "guancha": {
     "routes": {
