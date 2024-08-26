@@ -9121,6 +9121,19 @@
       }
     ]
   },
+  "imhcg.cn": {
+    "_name": "imhcg的信息站",
+    "infos": [
+      {
+        "title": "Engineering blogs",
+        "docs": "https://docs.rsshub.app/routes/blog",
+        "source": [
+          "/"
+        ],
+        "target": "/imhcg/"
+      }
+    ]
+  },
   "imiker.com": {
     "_name": "米课",
     ".": [
@@ -10544,6 +10557,27 @@
           "/"
         ],
         "target": "/line/today/:edition?/:tab?"
+      }
+    ]
+  },
+  "link3.to": {
+    "_name": "Link3",
+    ".": [
+      {
+        "title": "Link3 Events",
+        "docs": "https://docs.rsshub.app/routes/other",
+        "source": [
+          "/events"
+        ],
+        "target": "/link3/events"
+      },
+      {
+        "title": "Link3 Profile",
+        "docs": "https://docs.rsshub.app/routes/other",
+        "source": [
+          "/:handle"
+        ],
+        "target": "/link3/:handle"
       }
     ]
   },
@@ -18710,6 +18744,19 @@
           "/"
         ],
         "target": "/watasuke/blog"
+      }
+    ]
+  },
+  "wchscu.cn": {
+    "_name": "华西医院",
+    "www": [
+      {
+        "title": "招聘公告",
+        "docs": "https://docs.rsshub.app/routes/other",
+        "source": [
+          "/public/notice/recruit"
+        ],
+        "target": "/wchscu/recruit"
       }
     ]
   },
