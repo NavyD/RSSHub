@@ -32228,7 +32228,7 @@
           "blog"
         ],
         "view": 5,
-        "example": "/",
+        "example": "/imhcg",
         "parameters": {},
         "radar": [
           {
@@ -51122,6 +51122,77 @@
     "name": "QuestMobile",
     "url": "questmobile.com.cn"
   },
+  "questn": {
+    "routes": {
+      "/community/:communityUrl": {
+        "path": "/community/:communityUrl",
+        "name": "Community Events",
+        "url": "app.questn.com",
+        "maintainers": [
+          "cxheng315"
+        ],
+        "example": "/questn/community/gmnetwork",
+        "parameters": {
+          "community_url": "Community URL"
+        },
+        "categories": [
+          "other"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "app.questn.com/:communityUrl"
+            ],
+            "target": "/community/:communityUrl"
+          }
+        ],
+        "location": "community.ts"
+      },
+      "/events/:filter?": {
+        "path": "/events/:filter?",
+        "name": "Events",
+        "url": "app.questn.com",
+        "maintainers": [
+          "cxheng315"
+        ],
+        "example": "/questn/events",
+        "parameters": {
+          "filter": "Filter string"
+        },
+        "description": "\n:::tip\n\nFilter parameters:\n- category: 100: trending, 200: newest, 300: top\n- status_filter: 0: all, 100: available, 400: missed\n- community_filter: 0: all community, 100: verified, 200: followed\n- rewards_filter: 0: all rewards, 100: nft, 200: token, 400: whitelist\n- chain_filter: 0: all chains, 1: ethereum, 56: bsc, 137: polygon, 42161: arb, 10: op, 324: zksync, 43114: avax\n- search: 'Search keyword',\n- count: 'Number of events to fetch',\n- page: 'Page number',\n:::",
+        "categories": [
+          "other"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "app.questn.com/explore"
+            ],
+            "target": "/events/:category?/:status_filter?/:community_filter?/:reward_filter?/:chain_filter?/:search?/:count?/:page?"
+          }
+        ],
+        "location": "events.ts"
+      }
+    },
+    "name": "QuestN",
+    "url": "app.questn.com"
+  },
   "quicker": {
     "routes": {
       "/qa/:category?/:state?": {
@@ -63015,6 +63086,48 @@
   },
   "twitter": {
     "routes": {
+      "/home_latest/:routeParams?": {
+        "path": "/home_latest/:routeParams?",
+        "categories": [
+          "social-media"
+        ],
+        "example": "/twitter/home_latest",
+        "features": {
+          "requireConfig": [
+            {
+              "name": "TWITTER_USERNAME",
+              "description": "Please see above for details."
+            },
+            {
+              "name": "TWITTER_PASSWORD",
+              "description": "Please see above for details."
+            },
+            {
+              "name": "TWITTER_AUTH_TOKEN",
+              "description": "Please see above for details."
+            }
+          ],
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "name": "Home latest timeline",
+        "maintainers": [
+          "DIYgod",
+          "CaoMeiYouRen"
+        ],
+        "radar": [
+          {
+            "source": [
+              "x.com/home"
+            ],
+            "target": "/home_latest"
+          }
+        ],
+        "location": "home-latest.ts"
+      },
       "/home/:routeParams?": {
         "path": "/home/:routeParams?",
         "categories": [
@@ -64999,6 +65112,39 @@
         "url": "math.ustc.edu.cn/",
         "description": "| 学院新闻 | 通知公告 | 学术交流 | 学术报告 |\n  | -------- | -------- | -------- | -------- |\n  | xyxw     | tzgg     | xsjl     | xsbg     |",
         "location": "math.ts"
+      },
+      "/scms/:type?": {
+        "path": "/scms/:type?",
+        "categories": [
+          "university"
+        ],
+        "example": "/ustc/scms/tzgg",
+        "parameters": {
+          "type": "分类，见下表，默认为通知公告"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "scms.ustc.edu.cn/:id/list.htm"
+            ],
+            "target": "/scms"
+          }
+        ],
+        "name": "化学与材料科学学院",
+        "maintainers": [
+          "boxie123"
+        ],
+        "url": "scms.ustc.edu.cn/",
+        "description": "| 院内新闻 | 通知公告 | 科研动态 | 学术活动 | 其他 |\n  | -------- | -------- | -------- | -------- | -------- |\n  | ynxw     | tzgg     | kydt     | xshd     | 自定义id  |",
+        "location": "scms.ts"
       },
       "/sist/:type?": {
         "path": "/sist/:type?",
@@ -68539,6 +68685,7 @@
           "supportScihub": false
         },
         "name": "计算机科学与技术学院",
+        "url": "cs.xidian.edu.cn",
         "maintainers": [
           "ZiHao256"
         ],
@@ -68570,6 +68717,7 @@
           "supportScihub": false
         },
         "name": "研究生院/卓越工程师学院",
+        "url": "gr.xidian.edu.cn",
         "maintainers": [
           "ZiHao256"
         ],
@@ -68601,6 +68749,7 @@
           "supportScihub": false
         },
         "name": "教务处",
+        "url": "jwc.xidian.edu.cn",
         "maintainers": [
           "ShadowySpirits"
         ],
@@ -68609,7 +68758,7 @@
       }
     },
     "name": "西安电子科技大学",
-    "url": "xidian.edu.cn"
+    "url": "www.xidian.edu.cn"
   },
   "ximalaya": {
     "routes": {
