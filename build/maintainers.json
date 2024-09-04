@@ -2192,6 +2192,15 @@
   "/gamersecret/:type?/:category?": [
     "nczitzk"
   ],
+  "/gamersky/ent/:category?": [
+    "LogicJake"
+  ],
+  "/gamersky/news/:type?": [
+    "yy4382"
+  ],
+  "/gamersky/review/:type?": [
+    "yy4382"
+  ],
   "/gamme/:domain/:category?": [],
   "/gamme/:domain/tag/:tag": [],
   "/gcores/category/:category": [
@@ -5492,6 +5501,9 @@
     "TonyRL"
   ],
   "/sinchew*": [],
+  "/sis001/author/:id?": [
+    "keocheung"
+  ],
   "/sis001/forum/:id?": [],
   "/sjtu/gs/:type/:num?": [
     "dzx-dzx"
@@ -5939,7 +5951,7 @@
   "/theatlantic/:category": [
     "EthanWng97"
   ],
-  "/theblockbeats/:channel?": [
+  "/theblockbeats/:channel?/:original?": [
     "Fatpandac",
     "jameshih"
   ],

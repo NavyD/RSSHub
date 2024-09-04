@@ -22749,6 +22749,104 @@
     "name": "Gamer Secret",
     "url": "gamersecret.com"
   },
+  "gamersky": {
+    "routes": {
+      "/ent/:category?": {
+        "path": "/ent/:category?",
+        "categories": [
+          "game"
+        ],
+        "example": "/gamersky/ent/xz",
+        "parameters": {
+          "type": "分类类型，留空为 `all`"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [],
+        "name": "娱乐",
+        "maintainers": [
+          "LogicJake"
+        ],
+        "description": "|\n|\n|\n",
+        "location": "ent.ts"
+      },
+      "/news/:type?": {
+        "path": "/news/:type?",
+        "categories": [
+          "game"
+        ],
+        "example": "/gamersky/news/pc",
+        "parameters": {
+          "type": "资讯类型，见表，默认为 `pc`"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "www.gamersky.com/news"
+            ],
+            "target": "/news"
+          }
+        ],
+        "name": "资讯",
+        "maintainers": [
+          "yy4382"
+        ],
+        "description": "|today|pc|ns|mobile|web|industry|hardware|tech|\n|---|---|---|---|---|---|---|---|\n|今日推荐|单机电玩|NS|手游|网游|业界|硬件|科技|\n",
+        "location": "news.ts"
+      },
+      "/review/:type?": {
+        "path": "/review/:type?",
+        "categories": [
+          "game"
+        ],
+        "example": "/gamersky/review/pc",
+        "parameters": {
+          "type": "评测类型，可选值为 `pc`、`tv`、`indie`、`web`、`mobile`、`all`，默认为 `pc`"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "www.gamersky.com/review"
+            ],
+            "target": "/review"
+          }
+        ],
+        "name": "评测",
+        "maintainers": [
+          "yy4382"
+        ],
+        "description": "|pc|tv|indie|web|mobile|all|\n|---|---|---|---|---|---|\n|单机|电视|独立游戏|网游|手游|全部评测|\n",
+        "location": "review.ts"
+      }
+    },
+    "name": "GamerSky",
+    "url": "gamersky.com",
+    "zh": {
+      "name": "游民星空"
+    }
+  },
   "gamme": {
     "routes": {
       "/:domain/:category?": {
@@ -56751,6 +56849,29 @@
   },
   "sis001": {
     "routes": {
+      "/author/:id?": {
+        "path": "/author/:id?",
+        "categories": [
+          "bbs"
+        ],
+        "example": "/sis001/author/13131575",
+        "parameters": {
+          "id": "作者 ID，可以在作者的个人空间地址找到"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "name": "作者",
+        "maintainers": [
+          "keocheung"
+        ],
+        "location": "author.ts"
+      },
       "/forum/:id?": {
         "path": "/forum/:id?",
         "categories": [
@@ -62015,14 +62136,15 @@
   },
   "theblockbeats": {
     "routes": {
-      "/:channel?": {
-        "path": "/:channel?",
+      "/:channel?/:original?": {
+        "path": "/:channel?/:original?",
         "categories": [
           "finance"
         ],
         "example": "/theblockbeats/newsflash",
         "parameters": {
-          "channel": "类型，见下表，默认为快讯"
+          "channel": "类型，见下表，默认为快讯",
+          "original": "文章类型，仅 `channel` 为 `article` 时有效，见下表，留空为全部"
         },
         "name": "新闻快讯",
         "maintainers": [
@@ -62045,7 +62167,7 @@
             "target": "/newsflash"
           }
         ],
-        "description": "|    快讯   |   文章  |\n  | :-------: | :-----: |\n  | newsflash | article |",
+        "description": "|    快讯   |   文章  |\n  | :-------: | :-----: |\n  | newsflash | article |\n\n  | 全部 | 深度 | 精选 | 热点追踪 |\n  | :--: | :--: | :--: | :---: |\n  |     | -2  | 1    |  2     |",
         "location": "index.ts"
       }
     },
