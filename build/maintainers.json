@@ -625,6 +625,9 @@
   "/bendibao/news/:city": [
     "nczitzk"
   ],
+  "/bestblogs/feeds/:category?": [
+    "zhenlohuang"
+  ],
   "/bgmlist/onair/:lang?": [
     "x2cf"
   ],
@@ -2338,6 +2341,9 @@
   "/globallawreview/": [
     "nczitzk"
   ],
+  "/go/niid/idwr-dl/:year?": [
+    "nczitzk"
+  ],
   "/gocn/jobs": [
     "AtlanCI",
     "CcccFz"
@@ -3763,6 +3769,9 @@
   ],
   "/lsnu/jiaowc/tzgg/:category?": [
     "nyaShine"
+  ],
+  "/luma/:url": [
+    "cxheng315"
   ],
   "/luogu/contest": [
     "prnake"

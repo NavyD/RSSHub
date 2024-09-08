@@ -7083,6 +7083,19 @@
       }
     ]
   },
+  "niid.go.jp": {
+    "_name": "JapanGov",
+    "www": [
+      {
+        "title": "感染症発生動向調査週報ダウンロード",
+        "docs": "https://docs.rsshub.app/routes/government",
+        "source": [
+          "/niid/ja/idwr-dl/:year"
+        ],
+        "target": "/goparams=>{const year=params.year;return`/niid/idwr-dl/${year?`/${year}`:\"\"}`}"
+      }
+    ]
+  },
   "gocn.vip": {
     "_name": "GoCN",
     ".": [
@@ -11590,6 +11603,19 @@
           "/"
         ],
         "target": "/lsnu/jiaowc/tzgg"
+      }
+    ]
+  },
+  "lu.ma": {
+    "_name": "LuMa",
+    ".": [
+      {
+        "title": "Events",
+        "docs": "https://docs.rsshub.app/routes/other",
+        "source": [
+          "/:url"
+        ],
+        "target": "/luma/:url"
       }
     ]
   },
