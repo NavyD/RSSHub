@@ -1170,6 +1170,9 @@
   "/chiculture/topic/:category?": [
     "nczitzk"
   ],
+  "/chikubi/:category?": [
+    "snowagar25"
+  ],
   "/china/finance/:category?": [
     "KingJem"
   ],
@@ -2339,6 +2342,9 @@
     "TonyRL"
   ],
   "/globallawreview/": [
+    "nczitzk"
+  ],
+  "/go/mhlw/pdf/:category{.+}?": [
     "nczitzk"
   ],
   "/go/niid/idwr-dl/:year?": [
