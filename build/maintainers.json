@@ -802,6 +802,9 @@
   "/bitbucket/tags/:workspace/:repo_slug": [
     "AuroraDysis"
   ],
+  "/bitget/announcement/:type/:lang?": [
+    "YukiCoco"
+  ],
   "/bitmovin/blog": [
     "elxy"
   ],
@@ -1624,6 +1627,10 @@
     "TonyRL"
   ],
   "/discourse/:configId/notifications/:fulltext?": [],
+  "/discourse/:configId/official/:path{.+}": [
+    "Raikyou",
+    "dzx-dzx"
+  ],
   "/discourse/:configId/posts": [
     "dzx-dzx"
   ],
@@ -2092,7 +2099,8 @@
     "nczitzk"
   ],
   "/follow/profile/:uid": [
-    "KarasuShin"
+    "KarasuShin",
+    "DIYgod"
   ],
   "/followin/:categoryId?/:lang?": [
     "TonyRL"
