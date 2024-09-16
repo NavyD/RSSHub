@@ -10132,6 +10132,48 @@
   },
   "bupt": {
     "routes": {
+      "/jwc/:type": {
+        "path": "/jwc/:type",
+        "categories": [
+          "university"
+        ],
+        "example": "/bupt/jwc/tzgg",
+        "parameters": {
+          "type": {
+            "type": "string",
+            "optional": false,
+            "description": "信息类型，可选值：tzgg（通知公告），xwzx（新闻资讯）"
+          }
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "jwc.bupt.edu.cn/tzgg1.htm"
+            ],
+            "target": "/jwc/tzgg"
+          },
+          {
+            "source": [
+              "jwc.bupt.edu.cn/xwzx2.htm"
+            ],
+            "target": "/jwc/xwzx"
+          }
+        ],
+        "name": "教务处",
+        "maintainers": [
+          "Yoruet"
+        ],
+        "url": "https://jwc.bupt.edu.cn/",
+        "location": "jwc.ts"
+      },
       "/rczp": {
         "path": "/rczp",
         "categories": [
@@ -18354,6 +18396,35 @@
           "xyqfer"
         ],
         "location": "event/hot.ts"
+      },
+      "/movie/coming": {
+        "path": "/movie/coming",
+        "categories": [
+          "social-media"
+        ],
+        "example": "/douban/movie/coming",
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "name": "电影即将上映",
+        "maintainers": [
+          "reonokiy"
+        ],
+        "radar": [
+          {
+            "title": "豆瓣电影-即将上映",
+            "source": [
+              "movie.douban.com/coming"
+            ],
+            "target": "/movie/coming"
+          }
+        ],
+        "location": "movie/coming.ts"
       },
       "/bookstore": {
         "path": "/bookstore",
@@ -40194,6 +40265,74 @@
     },
     "name": "Email"
   },
+  "malaysiakini": {
+    "routes": {
+      "/:lang/:category?": {
+        "path": "/:lang/:category?",
+        "categories": [
+          "new-media"
+        ],
+        "example": "/malaysiakini/en",
+        "parameters": {
+          "lang": "Language, see below",
+          "category": "Category, see below, news by default"
+        },
+        "features": {
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false,
+          "requireConfig": [
+            {
+              "name": "MALAYSIAKINI_EMAIL",
+              "optional": true,
+              "description": "Malaysiakini Email or Username"
+            },
+            {
+              "name": "MALAYSIAKINI_PASSWORD",
+              "optional": true,
+              "description": "Malaysiakini Password"
+            },
+            {
+              "name": "MALAYSIAKINI_REFRESHTOKEN",
+              "optional": true,
+              "description": "To obtain the refresh token, log into Malaysiakini and look for the cookie `nl____refreshToken` within document.cookie in the browser console. The token is the value of the cookie."
+            }
+          ]
+        },
+        "name": "News",
+        "maintainers": [
+          "quiniapiezoelectricity"
+        ],
+        "description": "\n  | Language | English | Bahasa Malaysia | 华文     |\n  | -------- | ------ | ------- | ------ | \n  | `:lang`  | `en`    | `my`   | `zh`    |\n\n  | Category               | `:category` |\n  | ---------------------- | ------------- |\n  | News                   | `news`      |\n  | Columns                | `columns`   |\n  | From Our Readers       | `letters`   |",
+        "radar": [
+          {
+            "source": [
+              "malaysiakini.com/"
+            ],
+            "target": "/en"
+          },
+          {
+            "source": [
+              "malaysiakini.com/:lang"
+            ],
+            "target": "/:lang"
+          },
+          {
+            "source": [
+              "www.malaysiakini.com/:lang/latest/:category"
+            ],
+            "target": "/:lang/:category"
+          }
+        ],
+        "location": "index.ts"
+      }
+    },
+    "name": "Malaysiakini 当今大马",
+    "url": "malaysiakini.com",
+    "description": "Provides an easy-to-use RSS feed for Malaysiakini.com with teaser/full-text fetching.\n:::warning\nA subscription is required for fetching full articles. \nPlease refer to the deployment config for more information.\n:::"
+  },
   "mangadex": {
     "routes": {
       "/:id/:lang?": {
@@ -51309,6 +51448,49 @@
     },
     "name": "Paul Graham",
     "url": "paulgraham.com"
+  },
+  "pconline": {
+    "routes": {
+      "/focus/:category?": {
+        "path": "/focus/:category?",
+        "categories": [
+          "new-media"
+        ],
+        "example": "/pconline/focus",
+        "parameters": {
+          "category": {
+            "description": "科技新闻的类别，获取最新的一页，分别：all, tech, finance, life, company, character",
+            "default": "all"
+          }
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "pconline.com.cn/focus/",
+              "pconline.com.cn/"
+            ],
+            "target": "/focus"
+          }
+        ],
+        "name": "科技新闻",
+        "maintainers": [
+          "CH563"
+        ],
+        "description": "::: tip\n| 全部 | 科技 | 财经 | 生活 | 公司 | 人物 |\n| --- | --- | --- | --- | --- | --- |\n| all | tech | finance | life | company | character |\n:::",
+        "location": "focus.ts"
+      }
+    },
+    "name": "太平洋科技",
+    "url": "pconline.com.cn",
+    "description": "\n:::tip\n太平洋科技是专业IT门户网站,为用户和经销商提供IT资讯和行情报价,涉及电脑,手机,数码产品,软件等.\n:::"
   },
   "penguin-random-house": {
     "routes": {

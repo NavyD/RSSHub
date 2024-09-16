@@ -949,6 +949,9 @@
   "/bulianglin/": [
     "cnkmmk"
   ],
+  "/bupt/jwc/:type": [
+    "Yoruet"
+  ],
   "/bupt/rczp": [
     "nczitzk"
   ],
@@ -1737,6 +1740,9 @@
   ],
   "/douban/event/hot/:locationId": [
     "xyqfer"
+  ],
+  "/douban/movie/coming": [
+    "reonokiy"
   ],
   "/douban/bookstore": [
     "xyqfer"
@@ -3855,6 +3861,9 @@
     "EthanWng97"
   ],
   "/mail/imap/:email/:folder{.+}?": [],
+  "/malaysiakini/:lang/:category?": [
+    "quiniapiezoelectricity"
+  ],
   "/mangadex/:id/:lang?": [
     "vzz64"
   ],
@@ -4733,6 +4742,9 @@
   "/paulgraham/": [
     "Maecenas",
     "nczitzk"
+  ],
+  "/pconline/focus/:category?": [
+    "CH563"
   ],
   "/penguin-random-house/articles": [
     "StevenRCE0"

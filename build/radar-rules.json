@@ -2819,6 +2819,24 @@
   },
   "bupt.edu.cn": {
     "_name": "北京邮电大学",
+    "jwc": [
+      {
+        "title": "教务处",
+        "docs": "https://docs.rsshub.app/routes/university",
+        "source": [
+          "/tzgg1.htm"
+        ],
+        "target": "/bupt/jwc/tzgg"
+      },
+      {
+        "title": "教务处",
+        "docs": "https://docs.rsshub.app/routes/university",
+        "source": [
+          "/xwzx2.htm"
+        ],
+        "target": "/bupt/jwc/xwzx"
+      }
+    ],
     ".": [
       {
         "title": "人才招聘",
@@ -5433,6 +5451,16 @@
   },
   "douban.com": {
     "_name": "豆瓣",
+    "movie": [
+      {
+        "title": "豆瓣电影-即将上映",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/coming"
+        ],
+        "target": "/douban/movie/coming"
+      }
+    ],
     "book": [
       {
         "title": "豆瓣读书论坛",
@@ -11921,6 +11949,37 @@
       }
     ]
   },
+  "malaysiakini.com": {
+    "_name": "Malaysiakini 当今大马",
+    ".": [
+      {
+        "title": "News",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/"
+        ],
+        "target": "/malaysiakini/en"
+      },
+      {
+        "title": "News",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/:lang"
+        ],
+        "target": "/malaysiakini/:lang"
+      }
+    ],
+    "www": [
+      {
+        "title": "News",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/:lang/latest/:category"
+        ],
+        "target": "/malaysiakini/:lang/:category"
+      }
+    ]
+  },
   "mangadex.org": {
     "_name": "MangaDex",
     ".": [
@@ -16891,6 +16950,20 @@
           "/articles.html"
         ],
         "target": "/paulgraham/"
+      }
+    ]
+  },
+  "pconline.com.cn": {
+    "_name": "太平洋科技",
+    ".": [
+      {
+        "title": "科技新闻",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/focus/",
+          "/"
+        ],
+        "target": "/pconline/focus"
       }
     ]
   },
