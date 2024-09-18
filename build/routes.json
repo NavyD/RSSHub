@@ -26183,6 +26183,31 @@
         "maintainers": [],
         "location": "cmse/index.ts"
       },
+      "/cn/news/:uid": {
+        "path": "/cn/news/:uid",
+        "categories": [
+          "government"
+        ],
+        "example": "/gov/cn/news/bm",
+        "parameters": {
+          "uid": "分类名"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "name": "政府新闻",
+        "maintainers": [
+          "EsuRt",
+          "howfool"
+        ],
+        "description": "| 政务部门 | 滚动新闻 | 新闻要闻 | 国务院新闻 | 国务院工作会议 | 政策文件 |\n| :------: | :------: | :------: | :--------: | :------------: | :------: |\n|    bm    |    gd    |    yw    |     gwy    |     gwyzzjg    |  zhengce |",
+        "location": "cn/news/index.ts"
+      },
       "/cnnic/*": {
         "path": "/cnnic/*",
         "name": "Unknown",
@@ -27243,30 +27268,6 @@
         ],
         "url": "nea.gov.cn/sjzz/ghs/",
         "location": "nea/ghs.ts"
-      },
-      "/news/:uid": {
-        "path": "/news/:uid",
-        "categories": [
-          "government"
-        ],
-        "example": "/gov/news/bm",
-        "parameters": {
-          "uid": "分类名"
-        },
-        "features": {
-          "requireConfig": false,
-          "requirePuppeteer": false,
-          "antiCrawler": false,
-          "supportBT": false,
-          "supportPodcast": false,
-          "supportScihub": false
-        },
-        "name": "政府新闻",
-        "maintainers": [
-          "EsuRt"
-        ],
-        "description": "| 政务部门 | 滚动新闻 | 新闻要闻 | 国务院新闻 | 政策文件 |\n  | :------: | :------: | :------: | :--------: | :------: |\n  |    bm    |    gd    |    yw    |     gwy    |  zhengce |",
-        "location": "news/index.ts"
       },
       "/nifdc/:path{.+}?": {
         "path": "/nifdc/:path{.+}?",
@@ -31250,8 +31251,10 @@
       "/items/all/:order?": {
         "path": "/items/all/:order?",
         "categories": [
-          "anime"
+          "anime",
+          "popular"
         ],
+        "view": 2,
         "example": "/hpoi/items/all",
         "parameters": {
           "order": "排序, 见下表，默认为 add"
@@ -31312,8 +31315,10 @@
       "/items/character/:id/:order?": {
         "path": "/items/character/:id/:order?",
         "categories": [
-          "anime"
+          "anime",
+          "popular"
         ],
+        "view": 2,
         "example": "/hpoi/items/character/1035374",
         "parameters": {
           "id": "角色 ID",
@@ -31387,8 +31392,10 @@
       "/items/work/:id/:order?": {
         "path": "/items/work/:id/:order?",
         "categories": [
-          "anime"
+          "anime",
+          "popular"
         ],
+        "view": 2,
         "example": "/hpoi/items/work/4117491",
         "parameters": {
           "id": "作品 ID",
@@ -40509,9 +40516,11 @@
       "/acct/:acct/statuses/:only_media?": {
         "path": "/acct/:acct/statuses/:only_media?",
         "categories": [
-          "social-media"
+          "social-media",
+          "popular"
         ],
-        "example": "/mastodon/acct/CatWhitney@mastodon.social/statuses",
+        "view": 1,
+        "example": "/mastodon/acct/Mastodon@mastodon.social/statuses",
         "parameters": {
           "acct": "Webfinger account URI, like `user@host`",
           "only_media": "whether only display media content, default to false, any value to true"
@@ -40534,8 +40543,10 @@
       "/timeline/:site/:only_media?": {
         "path": "/timeline/:site/:only_media?",
         "categories": [
-          "social-media"
+          "social-media",
+          "popular"
         ],
+        "view": 1,
         "example": "/mastodon/timeline/pawoo.net/true",
         "parameters": {
           "site": "instance address, only domain, no `http://` or `https://` protocol header",
@@ -40559,8 +40570,10 @@
       "/remote/:site/:only_media?": {
         "path": "/remote/:site/:only_media?",
         "categories": [
-          "social-media"
+          "social-media",
+          "popular"
         ],
+        "view": 1,
         "example": "/mastodon/remote/pawoo.net/true",
         "parameters": {
           "site": "instance address, only domain, no `http://` or `https://` protocol header",
@@ -52417,6 +52430,51 @@
     "name": "pixiv",
     "url": "www.pixiv.net"
   },
+  "pixivision": {
+    "routes": {
+      "/:lang/:category?": {
+        "path": "/:lang/:category?",
+        "categories": [
+          "anime"
+        ],
+        "example": "/pixivision/zh-tw",
+        "parameters": {
+          "lang": "Language",
+          "category": "Category"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "name": "Category",
+        "maintainers": [
+          "SnowAgar25"
+        ],
+        "description": ":::tip\n  `https://www.pixivision.net/zh-tw/c/interview` → `/pixivision/zh-tw/interview`\n  :::",
+        "radar": [
+          {
+            "source": [
+              "www.pixivision.net/:lang"
+            ],
+            "target": "/:lang"
+          },
+          {
+            "source": [
+              "www.pixivision.net/:lang/c/:category"
+            ],
+            "target": "/:lang/:category"
+          }
+        ],
+        "location": "index.ts"
+      }
+    },
+    "name": "pixivision",
+    "url": "www.pixivision.net"
+  },
   "piyao": {
     "routes": {
       "/jrpy": {
@@ -53201,8 +53259,10 @@
       "/category/:caty": {
         "path": "/category/:caty",
         "categories": [
-          "multimedia"
+          "multimedia",
+          "popular"
         ],
+        "view": 3,
         "example": "/pornhub/category/popular-with-women",
         "parameters": {
           "caty": "category, see [categories](https://www.pornhub.com/webmasters/categories)"
@@ -53224,8 +53284,10 @@
       "/model/:username/:language?/:sort?": {
         "path": "/model/:username/:language?/:sort?",
         "categories": [
-          "multimedia"
+          "multimedia",
+          "popular"
         ],
+        "view": 3,
         "example": "/pornhub/model/stacy-starando",
         "parameters": {
           "language": "language, see below",
@@ -53248,7 +53310,7 @@
             "target": "/model/:username"
           }
         ],
-        "name": "Verified amateur / Model",
+        "name": "Model",
         "maintainers": [
           "I2IMk",
           "queensferryme"
@@ -53258,8 +53320,10 @@
       "/pornstar/:username/:language?/:sort?": {
         "path": "/pornstar/:username/:language?/:sort?",
         "categories": [
-          "multimedia"
+          "multimedia",
+          "popular"
         ],
+        "view": 3,
         "example": "/pornhub/pornstar/june-liu",
         "parameters": {
           "language": "language, see below",
@@ -53282,7 +53346,7 @@
             "target": "/pornstar/:username"
           }
         ],
-        "name": "Verified model / Pornstar",
+        "name": "Pornstar",
         "maintainers": [
           "I2IMk",
           "queensferryme"
@@ -53293,8 +53357,10 @@
       "/search/:keyword": {
         "path": "/search/:keyword",
         "categories": [
-          "multimedia"
+          "multimedia",
+          "popular"
         ],
+        "view": 3,
         "example": "/pornhub/search/stepsister",
         "parameters": {
           "keyword": "keyword"
@@ -64832,8 +64898,10 @@
       "/blog": {
         "path": "/blog",
         "categories": [
-          "social-media"
+          "social-media",
+          "popular"
         ],
+        "view": 0,
         "example": "/telegram/blog",
         "parameters": {},
         "features": {
@@ -64897,8 +64965,10 @@
       "/stickerpack/:name": {
         "path": "/stickerpack/:name",
         "categories": [
-          "social-media"
+          "social-media",
+          "popular"
         ],
+        "view": 2,
         "example": "/telegram/stickerpack/DIYgod",
         "parameters": {
           "name": "Sticker Pack name, available in the sharing URL"
@@ -66057,18 +66127,21 @@
       "/:user/:routeParams?": {
         "path": "/:user/:routeParams?",
         "categories": [
-          "social-media"
+          "social-media",
+          "popular"
         ],
+        "view": 1,
         "example": "/threads/zuck",
         "parameters": {
           "user": "Username",
-          "routeParams": "Extra parameters, see the table below"
+          "routeParams": {
+            "description": "Extra parameters, see the table below\nSpecify options (in the format of query string) in parameter `routeParams` to control some extra features for threads\n\n| Key                            | Description                                                                                                                  | Accepts                | Defaults to |\n| ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------- | ----------- |\n| `showAuthorInTitle`            | Show author name in title                                                                                                    | `0`/`1`/`true`/`false` | `true`      |\n| `showAuthorInDesc`             | Show author name in description (RSS body)                                                                                   | `0`/`1`/`true`/`false` | `true`      |\n| `showQuotedAuthorAvatarInDesc` | Show avatar of quoted author in description (RSS body) (Not recommended if your RSS reader extracts images from description) | `0`/`1`/`true`/`false` | `false`     |\n| `showAuthorAvatarInDesc`       | Show avatar of author in description (RSS body) (Not recommended if your RSS reader extracts images from description)        | `0`/`1`/`true`/`false` | `falseP`    |\n| `showEmojiForQuotesAndReply`   | Use \"🔁\" instead of \"QT\", \"↩️\" instead of \"Re\"                                                                               | `0`/`1`/`true`/`false` | `true`      |\n| `showQuotedInTitle`            | Show quoted tweet in title                                                                                                   | `0`/`1`/`true`/`false` | `true`      |\n| `replies`                      | Show replies                                                                                                                 | `0`/`1`/`true`/`false` | `true`      |\n\nSpecify different option values than default values to improve readability. The URL\n\n```\nhttps://rsshub.app/threads/zuck/showAuthorInTitle=1&showAuthorInDesc=1&showQuotedAuthorAvatarInDesc=1&showAuthorAvatarInDesc=1&showEmojiForQuotesAndReply=1&showQuotedInTitle=1\n```"
+          }
         },
         "name": "User timeline",
         "maintainers": [
           "ninboy"
         ],
-        "description": "Specify options (in the format of query string) in parameter `routeParams` to control some extra features for threads\n\n  | Key                            | Description                                                                                                                  | Accepts                | Defaults to |\n  | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------- | ----------- |\n  | `showAuthorInTitle`            | Show author name in title                                                                                                    | `0`/`1`/`true`/`false` | `true`      |\n  | `showAuthorInDesc`             | Show author name in description (RSS body)                                                                                   | `0`/`1`/`true`/`false` | `true`      |\n  | `showQuotedAuthorAvatarInDesc` | Show avatar of quoted author in description (RSS body) (Not recommended if your RSS reader extracts images from description) | `0`/`1`/`true`/`false` | `false`     |\n  | `showAuthorAvatarInDesc`       | Show avatar of author in description (RSS body) (Not recommended if your RSS reader extracts images from description)        | `0`/`1`/`true`/`false` | `falseP`    |\n  | `showEmojiForQuotesAndReply`   | Use \"🔁\" instead of \"QT\", \"↩️\" instead of \"Re\"                                                                               | `0`/`1`/`true`/`false` | `true`      |\n  | `showQuotedInTitle`            | Show quoted tweet in title                                                                                                   | `0`/`1`/`true`/`false` | `true`      |\n  | `replies`                      | Show replies                                                                                                                 | `0`/`1`/`true`/`false` | `true`      |\n\n  Specify different option values than default values to improve readability. The URL\n\n  ```\n  https://rsshub.app/threads/zuck/showAuthorInTitle=1&showAuthorInDesc=1&showQuotedAuthorAvatarInDesc=1&showAuthorAvatarInDesc=1&showEmojiForQuotesAndReply=1&showQuotedInTitle=1\n  ```",
         "location": "index.ts"
       }
     },
@@ -67416,8 +67489,10 @@
       "/live/:login": {
         "path": "/live/:login",
         "categories": [
-          "live"
+          "live",
+          "popular"
         ],
+        "view": 5,
         "example": "/twitch/live/riotgames",
         "parameters": {
           "login": "Twitch username"
@@ -67469,8 +67544,10 @@
       "/video/:login/:filter?": {
         "path": "/video/:login/:filter?",
         "categories": [
-          "live"
+          "live",
+          "popular"
         ],
+        "view": 3,
         "example": "/twitch/video/riotgames/highlights",
         "parameters": {
           "login": "Twitch username",
