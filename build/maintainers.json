@@ -1094,6 +1094,9 @@
   "/ccf/tfbd/:caty/:id": [
     "tudou027"
   ],
+  "/ccfa/:type?": [
+    "nczitzk"
+  ],
   "/ccnu/career": [
     "jackyu1996"
   ],
@@ -3763,6 +3766,9 @@
   "/lmu/jobs": [
     "StarDxxx"
   ],
+  "/lofter/collection/:collectionID": [
+    "SrakhiuMeow"
+  ],
   "/lofter/tag/:name?/:type?": [
     "hoilc",
     "nczitzk",
@@ -5652,6 +5658,9 @@
   "/soundofhope/:channel/:id": [
     "Fatpandac"
   ],
+  "/soundon/p/:id": [
+    "TonyRL"
+  ],
   "/sourceforge/:routeParams?": [
     "JimenezLi"
   ],
@@ -6029,6 +6038,9 @@
   ],
   "/thehindu/topic/:topic": [
     "TonyRL"
+  ],
+  "/theinitium/app/:category?": [
+    "quiniapiezoelectricity"
   ],
   "/theinitium/author/:type/:language?": [
     "AgFlore"
