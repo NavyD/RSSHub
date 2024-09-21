@@ -17393,6 +17393,19 @@
       }
     ]
   },
+  "oct0pu5.cn": {
+    "_name": "Oct0pu5 blog",
+    ".": [
+      {
+        "title": "Oct的小破站",
+        "docs": "https://docs.rsshub.app/routes/blog",
+        "source": [
+          "/"
+        ],
+        "target": "/oct0pu5/"
+      }
+    ]
+  },
   "0daily.com": {
     "_name": "Odaily 星球日报",
     ".": [
@@ -21645,6 +21658,16 @@
           "/"
         ],
         "target": "/swjtu/gsee/yjs"
+      }
+    ],
+    "scai": [
+      {
+        "title": "计算机与人工智能学院",
+        "docs": "https://docs.rsshub.app/routes/university",
+        "source": [
+          "/"
+        ],
+        "target": "/swjtu/scai/bks"
       }
     ]
   },
