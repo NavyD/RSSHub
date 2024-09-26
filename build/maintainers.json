@@ -1196,8 +1196,26 @@
   "/chiculture/topic/:category?": [
     "nczitzk"
   ],
-  "/chikubi/:category?": [
-    "snowagar25"
+  "/chikubi/category/:keyword": [
+    "SnowAgar25"
+  ],
+  "/chikubi/": [
+    "SnowAgar25"
+  ],
+  "/chikubi/:keyword": [
+    "SnowAgar25"
+  ],
+  "/chikubi/nipple-video-category/:keyword": [
+    "SnowAgar25"
+  ],
+  "/chikubi/nipple-video-maker/:keyword": [
+    "SnowAgar25"
+  ],
+  "/chikubi/search/:keyword": [
+    "SnowAgar25"
+  ],
+  "/chikubi/tag/:keyword": [
+    "SnowAgar25"
   ],
   "/china/finance/:category?": [
     "KingJem"
@@ -4222,6 +4240,9 @@
   "/ncepu/master/:type": [
     "nilleo"
   ],
+  "/ncku/csie/:catagory?": [
+    "simbafs"
+  ],
   "/ncpssd/newlist": [
     "LyleLee"
   ],
@@ -6598,6 +6619,24 @@
   ],
   "/vom/featured/:lang?": [
     "TonyRL"
+  ],
+  "/voronoiapp/author/:username": [
+    "Cesaryuan"
+  ],
+  "/voronoiapp/editors-pick/:category?": [
+    "Cesaryuan"
+  ],
+  "/voronoiapp/home/:category?": [
+    "Cesaryuan"
+  ],
+  "/voronoiapp/latest/:category?": [
+    "Cesaryuan"
+  ],
+  "/voronoiapp/popular/:tab?/:time_range?/:category?": [
+    "Cesaryuan"
+  ],
+  "/voronoiapp/search/:keyword": [
+    "Cesaryuan"
   ],
   "/wallhaven/search/:filter?/:needDetails?": [
     "nczitzk",
