@@ -17300,6 +17300,41 @@
           }
         ],
         "location": "homepage.ts"
+      },
+      "/threads/:type?": {
+        "path": "/threads/:type?",
+        "categories": [
+          "bbs"
+        ],
+        "example": "/deepin/threads/latest",
+        "parameters": {
+          "type": {
+            "description": "主题类型",
+            "options": [
+              {
+                "value": "hot",
+                "label": "最热主题"
+              },
+              {
+                "value": "latest",
+                "label": "最新主题"
+              }
+            ]
+          }
+        },
+        "name": "首页主题列表",
+        "maintainers": [
+          "myml"
+        ],
+        "radar": [
+          {
+            "source": [
+              "bbs.deepin.org"
+            ],
+            "target": "/threads/latest"
+          }
+        ],
+        "location": "thread.ts"
       }
     },
     "name": "Deepin",
@@ -39312,6 +39347,37 @@
     "name": "The Korea Institute of Marine Law",
     "url": "kimlaw.or.kr"
   },
+  "konachan": {
+    "routes": {
+      "/post/popular_recent/:period?": {
+        "path": "/post/popular_recent/:period?",
+        "categories": [
+          "picture"
+        ],
+        "example": "/konachan/post/popular_recent/1d",
+        "parameters": {
+          "period": "展示时间"
+        },
+        "radar": [
+          {
+            "source": [
+              "konachan.com/post"
+            ]
+          }
+        ],
+        "name": "Popular Recent Posts",
+        "maintainers": [
+          "magic-akari",
+          "NekoAria"
+        ],
+        "description": "| 最近 24 小时    | 最近一周     | 最近一月    | 最近一年     |\n  | ------- | -------- | ------- | -------- |\n  | 1d | 1w | 1m | 1y |",
+        "location": "post.ts"
+      }
+    },
+    "name": "Konachan.com Anime Wallpapers",
+    "url": "konachan.com",
+    "description": "konachan post"
+  },
   "konghq": {
     "routes": {
       "/blog-posts": {
@@ -47564,10 +47630,15 @@
         "radar": [
           {
             "source": [
-              "www.csie.ncku.edu.tw/zh-hant/news/:catagory?/",
-              "www.csie.ncku.edu.tw/en/news/:catagory?/"
+              "www.csie.ncku.edu.tw/zh-hant/news/"
             ],
-            "target": "/zh-hant/:catagory"
+            "target": "/csie/_all"
+          },
+          {
+            "source": [
+              "www.csie.ncku.edu.tw/zh-hant/news/:catagory"
+            ],
+            "target": "/csie/:catagory"
           }
         ],
         "maintainers": [
@@ -71222,6 +71293,50 @@
         "url": "auto.uestc.edu.cn/",
         "location": "auto.ts"
       },
+      "/bbs/:types?": {
+        "path": "/bbs/:types?",
+        "name": "清水河畔",
+        "maintainers": [
+          "huyyi"
+        ],
+        "categories": [
+          "university"
+        ],
+        "url": "bbs.uestc.edu.cn",
+        "example": "/uestc/bbs/newthread",
+        "parameters": {
+          "types": "选择内容类型(多选`,`分割），可选值：[newreply,newthread,digest,life,hotlist]。默认为所有。"
+        },
+        "features": {
+          "requireConfig": [
+            {
+              "name": "UESTC_BBS_COOKIE",
+              "optional": false,
+              "description": "河畔的cookie"
+            },
+            {
+              "name": "UESTC_BBS_AUTH_KEY",
+              "optional": false,
+              "description": "河畔Header中的authorization字段"
+            }
+          ],
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "description": "\n:::tip\n仅支持自建，您需要设置以下配置才能正常使用：\n-   河畔cookie: `UESTC_BBS_COOKIE`\n-   Header中的授权字段: `UESTC_BBS_AUTH_KEY`\n:::\n",
+        "radar": [
+          {
+            "source": [
+              "bbs.uestc.edu.cn/*"
+            ],
+            "target": "/bbs/newthread"
+          }
+        ],
+        "location": "bbs.ts"
+      },
       "/cqe/:type?": {
         "path": "/cqe/:type?",
         "categories": [
@@ -71450,7 +71565,7 @@
       }
     },
     "name": "电子科技大学",
-    "url": "gr.uestc.edu.cn"
+    "url": "www.uestc.edu.cn"
   },
   "uibe": {
     "routes": {
@@ -77722,6 +77837,34 @@
     "name": "Yahoo",
     "url": "hk.news.yahoo.com"
   },
+  "yamap": {
+    "routes": {
+      "/": {
+        "path": "/",
+        "categories": [
+          "travel"
+        ],
+        "example": "/yamap",
+        "parameters": {},
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "name": "文章",
+        "maintainers": [
+          "valuex"
+        ],
+        "description": "",
+        "location": "articles.ts"
+      }
+    },
+    "name": "YAMAP",
+    "url": "yamap.com"
+  },
   "yamibo": {
     "routes": {
       "/bbs/forum/:fid/:type?": {
@@ -77811,9 +77954,10 @@
         ],
         "name": "posts",
         "maintainers": [
-          "fashioncj"
+          "fashioncj",
+          "NekoAria"
         ],
-        "description": "| 最近 24 小时    | 最近一周     | 最近一月    | 最近一年     | \n  | ------- | -------- | ------- | -------- | \n  | 1d | 1w | 1m ｜1y｜",
+        "description": "| 最近 24 小时    | 最近一周     | 最近一月    | 最近一年     | \n  | ------- | -------- | ------- | -------- | \n  | 1d | 1w | 1m | 1y |",
         "location": "post.ts"
       }
     },

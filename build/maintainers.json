@@ -1619,6 +1619,9 @@
   "/deepin/homepage/:user_id": [
     "tensor-tech"
   ],
+  "/deepin/threads/:type?": [
+    "myml"
+  ],
   "/deeplearning/thebatch": [
     "nczitzk",
     "juvenn"
@@ -3675,6 +3678,10 @@
   ],
   "/kimlaw/thesis": [
     "TonyRL"
+  ],
+  "/konachan/post/popular_recent/:period?": [
+    "magic-akari",
+    "NekoAria"
   ],
   "/konghq/blog-posts": [
     "piglei"
@@ -6446,6 +6453,9 @@
     "talengu",
     "mobyw"
   ],
+  "/uestc/bbs/:types?": [
+    "huyyi"
+  ],
   "/uestc/cqe/:type?": [
     "truobel",
     "mobyw"
@@ -7060,6 +7070,9 @@
     "TonyRL",
     "williamgateszhao"
   ],
+  "/yamap/": [
+    "valuex"
+  ],
   "/yamibo/bbs/forum/:fid/:type?": [
     "KarasuShin"
   ],
@@ -7067,7 +7080,8 @@
     "KarasuShin"
   ],
   "/yande/post/popular_recent/:period?": [
-    "fashioncj"
+    "fashioncj",
+    "NekoAria"
   ],
   "/yangtzeu/dongke/*": [],
   "/ycwb/:node": [

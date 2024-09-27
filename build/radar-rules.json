@@ -5280,6 +5280,14 @@
           "/user/:user_id"
         ],
         "target": "/deepin/homepage/:user_id"
+      },
+      {
+        "title": "首页主题列表",
+        "docs": "https://docs.rsshub.app/routes/bbs",
+        "source": [
+          "/"
+        ],
+        "target": "/deepin/threads/latest"
       }
     ]
   },
@@ -12147,6 +12155,19 @@
       }
     ]
   },
+  "konachan.com": {
+    "_name": "Konachan.com Anime Wallpapers",
+    ".": [
+      {
+        "title": "Popular Recent Posts",
+        "docs": "https://docs.rsshub.app/routes/picture",
+        "source": [
+          "/post"
+        ],
+        "target": "/konachan/post/popular_recent/:period?"
+      }
+    ]
+  },
   "konghq.com": {
     "_name": "Kong API 网关平台",
     ".": [
@@ -16456,10 +16477,17 @@
         "title": "CSIE News",
         "docs": "https://docs.rsshub.app/routes/university",
         "source": [
-          "/zh-hant/news/:catagory?/",
-          "/en/news/:catagory?/"
+          "/zh-hant/news/"
         ],
-        "target": "/ncku/zh-hant/:catagory"
+        "target": "/ncku/csie/_all"
+      },
+      {
+        "title": "CSIE News",
+        "docs": "https://docs.rsshub.app/routes/university",
+        "source": [
+          "/zh-hant/news/:catagory"
+        ],
+        "target": "/ncku/csie/:catagory"
       }
     ]
   },
@@ -23427,6 +23455,16 @@
           "/"
         ],
         "target": "/uestc/auto"
+      }
+    ],
+    "bbs": [
+      {
+        "title": "清水河畔",
+        "docs": "https://docs.rsshub.app/routes/university",
+        "source": [
+          "/*"
+        ],
+        "target": "/uestc/bbs/newthread"
       }
     ],
     "cqe": [
