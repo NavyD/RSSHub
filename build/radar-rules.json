@@ -5242,6 +5242,27 @@
       }
     ]
   },
+  "dealstreetasia.com": {
+    "_name": "DealStreetAsia",
+    ".": [
+      {
+        "title": "Home",
+        "docs": "https://docs.rsshub.app/routes/traditional-media",
+        "source": [
+          "/"
+        ],
+        "target": "/dealstreetasia/home"
+      },
+      {
+        "title": "Section",
+        "docs": "https://docs.rsshub.app/routes/traditional-media",
+        "source": [
+          "/"
+        ],
+        "target": "/dealstreetasia/section/:section"
+      }
+    ]
+  },
   "dedao.cn": {
     "_name": "得到",
     ".": [
@@ -11642,6 +11663,29 @@
           "/"
         ],
         "target": "/javdb/video_codes/:code/:filter?"
+      }
+    ]
+  },
+  "javtiful.com": {
+    "_name": "Javtiful",
+    ".": [
+      {
+        "title": "Actress",
+        "docs": "https://docs.rsshub.app/routes/multimedia",
+        "source": [
+          "/actress/:id",
+          "/actress/:id/*"
+        ],
+        "target": "/javtiful/actress/:id"
+      },
+      {
+        "title": "Channel",
+        "docs": "https://docs.rsshub.app/routes/multimedia",
+        "source": [
+          "/channel/:id",
+          "/channel/:id/*"
+        ],
+        "target": "/javtiful/channel/:id"
       }
     ]
   },
