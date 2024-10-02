@@ -3849,6 +3849,19 @@
       }
     ]
   },
+  "ceph.io": {
+    "_name": "Ceph",
+    ".": [
+      {
+        "title": "Blog",
+        "docs": "https://docs.rsshub.app/routes/blog",
+        "source": [
+          "/"
+        ],
+        "target": "/ceph/blog/:topic?"
+      }
+    ]
+  },
   "cfachina.org": {
     "_name": "中国期货业协会",
     ".": [
@@ -7389,6 +7402,16 @@
           "/:user/:repo"
         ],
         "target": "/github/contributors/:user/:repo"
+      },
+      {
+        "title": "Repo Discussions",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/:user/:repo/discussions",
+          "/:user/:repo/discussions/:id",
+          "/:user/:repo"
+        ],
+        "target": "/github/discussion/:user/:repo"
       },
       {
         "title": "File Commits",

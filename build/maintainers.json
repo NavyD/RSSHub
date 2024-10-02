@@ -600,6 +600,9 @@
   "/bangumi/tv/user/blog/:id": [
     "nczitzk"
   ],
+  "/bangumi/tv/user/collections/:id/:subjectType/:type": [
+    "youyou-sudo"
+  ],
   "/bangumi/tv/user/wish/:id": [
     "honue"
   ],
@@ -1156,6 +1159,9 @@
   ],
   "/cebbank/quotation/history/:type": [
     "linbuxiao"
+  ],
+  "/ceph/blog/:topic?": [
+    "pandada8"
   ],
   "/cfachina/servicesupport/analygarden/:program?": [
     "TonyRL"
@@ -2378,6 +2384,9 @@
   ],
   "/github/contributors/:user/:repo/:order?/:anon?": [
     "zoenglinghou"
+  ],
+  "/github/discussion/:user/:repo/:state?": [
+    "waynzh"
   ],
   "/github/file/:user/:repo/:branch/:filepath{.+}": [
     "zengxs"
