@@ -1302,6 +1302,9 @@
   "/ciweimao/chapter/:id": [
     "keocheung"
   ],
+  "/cjlu/yjsy/:cate": [
+    "chrisis58"
+  ],
   "/clickme/:site/:grouping/:name": [
     "hoilc"
   ],
@@ -1580,7 +1583,8 @@
     "TonyRL"
   ],
   "/damai/activity/:city/:category/:subcategory/:keyword?": [
-    "hoilc"
+    "hoilc",
+    "Konano"
   ],
   "/dangdang/notice/:type?": [
     "353325487"
@@ -3013,6 +3017,12 @@
     "hellodword ",
     "TonyRL",
     "Mas0n"
+  ],
+  "/hfut/hf/notice/:type?": [
+    "batemax"
+  ],
+  "/hfut/xc/notice/:type?": [
+    "batemax"
   ],
   "/hicairo/": [
     "cnkmmk"
@@ -4950,10 +4960,11 @@
     "TonyRL",
     "micheal-death"
   ],
-  "/picuki/profile/:id/:functionalFlag?": [
+  "/picuki/profile/:id/:type?/:functionalFlag?": [
     "hoilc",
     "Rongronggg9",
-    "devinmugen"
+    "devinmugen",
+    "NekoAria"
   ],
   "/pikabu/:type/:name": [],
   "/pikabu/user/:name": [

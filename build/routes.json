@@ -15505,6 +15505,58 @@
     "name": "刺猬猫",
     "url": "wap.ciweimao.com"
   },
+  "cjlu": {
+    "routes": {
+      "/yjsy/:cate": {
+        "path": "/yjsy/:cate",
+        "categories": [
+          "university"
+        ],
+        "example": "/cjlu/yjsy/yjstz",
+        "parameters": {
+          "cate": "订阅的类型，支持 yjstz（研究生通知）和 jstz（教师通知）"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportRadar": true,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "title": "研究生通知",
+            "source": [
+              "yjsy.cjlu.edu.cn/index/yjstz/:suffix",
+              "yjsy.cjlu.edu.cn/index/yjstz.htm"
+            ],
+            "target": "/yjsy/yjstz"
+          },
+          {
+            "title": "教师通知",
+            "source": [
+              "yjsy.cjlu.edu.cn/index/jstz/:suffix",
+              "yjsy.cjlu.edu.cn/index/jstz.htm"
+            ],
+            "target": "/yjsy/jstz"
+          }
+        ],
+        "name": "研究生院",
+        "maintainers": [
+          "chrisis58"
+        ],
+        "description": "| 研究生通知 | 教师通知 |\n  | -------- | -------- |\n  | yjstz    | jstz     |",
+        "location": "yjsy/index.ts"
+      }
+    },
+    "name": "China Jiliang University",
+    "url": "www.cjlu.edu.cn",
+    "zh": {
+      "name": "中国计量大学"
+    }
+  },
   "clickme": {
     "routes": {
       "/:site/:grouping/:name": {
@@ -18537,14 +18589,15 @@
         "features": {
           "requireConfig": false,
           "requirePuppeteer": false,
-          "antiCrawler": false,
+          "antiCrawler": true,
           "supportBT": false,
           "supportPodcast": false,
           "supportScihub": false
         },
         "name": "票务更新",
         "maintainers": [
-          "hoilc"
+          "hoilc",
+          "Konano"
         ],
         "description": "城市、分类名、子分类名，请参见[大麦网搜索页面](https://search.damai.cn/search.htm)",
         "location": "activity.ts"
@@ -34270,6 +34323,76 @@
     },
     "name": "Hex-Rays",
     "url": "hex-rays.com"
+  },
+  "hfut": {
+    "routes": {
+      "/hf/notice/:type?": {
+        "path": "/hf/notice/:type?",
+        "categories": [
+          "university"
+        ],
+        "example": "/hfut/hf/notice/tzgg",
+        "parameters": {
+          "type": "分类，见下表（默认为 `tzgg`)"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportRadar": true,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "news.hfut.edu.cn"
+            ]
+          }
+        ],
+        "name": "合肥校区通知",
+        "maintainers": [
+          "batemax"
+        ],
+        "description": "| 通知公告(https://news.hfut.edu.cn/tzgg2.htm) | 教学科研(https://news.hfut.edu.cn/tzgg2/jxky.htm) | 其他通知(https://news.hfut.edu.cn/tzgg2/qttz.htm) |\n  | ------------ | -------------- | ------------------ |\n  | tzgg         | jxky            | qttz              |",
+        "location": "hf/notice.ts"
+      },
+      "/xc/notice/:type?": {
+        "path": "/xc/notice/:type?",
+        "categories": [
+          "university"
+        ],
+        "example": "/hfut/xc/notice/tzgg",
+        "parameters": {
+          "type": "分类，见下表（默认为 `tzgg`)"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportRadar": true,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "xc.hfut.edu.cn"
+            ]
+          }
+        ],
+        "name": "宣城校区通知",
+        "maintainers": [
+          "batemax"
+        ],
+        "description": "| 通知公告(https://xc.hfut.edu.cn/1955/list.htm) | 院系动态-工作通知(https://xc.hfut.edu.cn/gztz/list.htm) |\n  | ------------ | -------------- |\n  | tzgg         | gztz           |",
+        "location": "xc/notice.ts"
+      }
+    },
+    "name": "合肥工业大学",
+    "url": "hfut.edu.cn"
   },
   "hicairo": {
     "routes": {
@@ -57481,14 +57604,15 @@
   },
   "picuki": {
     "routes": {
-      "/profile/:id/:functionalFlag?": {
-        "path": "/profile/:id/:functionalFlag?",
+      "/profile/:id/:type?/:functionalFlag?": {
+        "path": "/profile/:id/:type?/:functionalFlag?",
         "categories": [
           "social-media"
         ],
         "example": "/picuki/profile/stefaniejoosten",
         "parameters": {
           "id": "Instagram user id",
+          "type": "Type of profile page (profile or tagged)",
           "functionalFlag": "functional flag, see the table below\n| functionalFlag | Video embedding                         | Fetching Instagram Stories |\n| -------------- | --------------------------------------- | -------------------------- |\n| 0              | off, only show video poster as an image | off                        |\n| 1 (default)    | on                                      | off                        |\n| 10             | on                                      | on                         |\n"
         },
         "features": {
@@ -57505,13 +57629,20 @@
               "www.picuki.com/profile/:id"
             ],
             "target": "/profile/:id"
+          },
+          {
+            "source": [
+              "www.picuki.com/profile-tagged/:id"
+            ],
+            "target": "/profile/:id/tagged"
           }
         ],
         "name": "User Profile - Picuki",
         "maintainers": [
           "hoilc",
           "Rongronggg9",
-          "devinmugen"
+          "devinmugen",
+          "NekoAria"
         ],
         "description": "\n  :::warning\n  Instagram Stories do not have a reliable guid. It is possible that your RSS reader show the same story more than once.\n  Though, every Story expires after 24 hours, so it may be not so serious.\n  :::",
         "location": "profile.ts"
@@ -66368,7 +66499,7 @@
         "categories": [
           "picture"
         ],
-        "example": "/following_creators/@brm2_1925",
+        "example": "/skeb/following_creators/@brm2_1925",
         "parameters": {
           "username": "Skeb Username with @"
         },
@@ -66407,7 +66538,7 @@
         "categories": [
           "picture"
         ],
-        "example": "/following_works/@brm2_1925",
+        "example": "/skeb/following_works/@brm2_1925",
         "parameters": {
           "username": "Skeb Username with @"
         },
@@ -66446,7 +66577,7 @@
         "categories": [
           "picture"
         ],
-        "example": "/friend_works/@brm2_1925",
+        "example": "/skeb/friend_works/@brm2_1925",
         "parameters": {
           "username": "Skeb Username with @"
         },
@@ -66485,9 +66616,9 @@
         "categories": [
           "picture"
         ],
-        "example": "/new_art_works",
+        "example": "/skeb/new_art_works",
         "parameters": {
-          "category": "Category, the div id of the section title on the homepage. Default is new_art_works"
+          "category": "Category, the div id of the section title on the homepage."
         },
         "features": {
           "requireConfig": false,
@@ -66580,7 +66711,7 @@
         "categories": [
           "picture"
         ],
-        "example": "/search/初音ミク",
+        "example": "/skeb/search/初音ミク",
         "parameters": {
           "keyword": "Search keyword"
         },
@@ -66604,7 +66735,7 @@
         "categories": [
           "picture"
         ],
-        "example": "/works/@brm2_1925",
+        "example": "/skeb/works/@brm2_1925",
         "parameters": {
           "username": "Skeb Username with @"
         },

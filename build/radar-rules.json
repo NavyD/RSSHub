@@ -5941,6 +5941,29 @@
       }
     ]
   },
+  "cjlu.edu.cn": {
+    "_name": "China Jiliang University",
+    "yjsy": [
+      {
+        "title": "研究生通知",
+        "docs": "https://docs.rsshub.app/routes/university",
+        "source": [
+          "/index/yjstz/:suffix",
+          "/index/yjstz.htm"
+        ],
+        "target": "/cjlu/yjsy/yjstz"
+      },
+      {
+        "title": "教师通知",
+        "docs": "https://docs.rsshub.app/routes/university",
+        "source": [
+          "/index/jstz/:suffix",
+          "/index/jstz.htm"
+        ],
+        "target": "/cjlu/yjsy/jstz"
+      }
+    ]
+  },
   "cls.cn": {
     "_name": "财联社",
     ".": [
@@ -12169,6 +12192,29 @@
           "/blog"
         ],
         "target": "/hex-rays/news"
+      }
+    ]
+  },
+  "hfut.edu.cn": {
+    "_name": "合肥工业大学",
+    "news": [
+      {
+        "title": "合肥校区通知",
+        "docs": "https://docs.rsshub.app/routes/university",
+        "source": [
+          "/"
+        ],
+        "target": "/hfut/hf/notice/:type?"
+      }
+    ],
+    "xc": [
+      {
+        "title": "宣城校区通知",
+        "docs": "https://docs.rsshub.app/routes/university",
+        "source": [
+          "/"
+        ],
+        "target": "/hfut/xc/notice/:type?"
       }
     ]
   },
@@ -21249,6 +21295,14 @@
           "/profile/:id"
         ],
         "target": "/picuki/profile/:id"
+      },
+      {
+        "title": "User Profile - Picuki",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/profile-tagged/:id"
+        ],
+        "target": "/picuki/profile/:id/tagged"
       }
     ]
   },
