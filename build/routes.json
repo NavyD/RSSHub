@@ -4047,6 +4047,37 @@
         ],
         "location": "discover.ts"
       },
+      "/news": {
+        "path": "/news",
+        "name": "资讯",
+        "url": "www.aibase.com",
+        "maintainers": [
+          "zreo0"
+        ],
+        "example": "/aibase/news",
+        "description": "获取 AI 资讯列表",
+        "categories": [
+          "new-media"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportRadar": true,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "www.aibase.com/zh/news"
+            ],
+            "target": "/news"
+          }
+        ],
+        "location": "news.ts"
+      },
       "/topic/:id?/:filter?": {
         "path": "/topic/:id?/:filter?",
         "name": "标签",
@@ -9308,7 +9339,8 @@
         "name": "UP 主投稿",
         "maintainers": [
           "DIYgod",
-          "Konano"
+          "Konano",
+          "pseudoyu"
         ],
         "location": "video.ts"
       },
@@ -32623,7 +32655,7 @@
         "maintainers": [
           "HaoyuLee"
         ],
-        "description": "\n        | 行政区域         | websiteid |\n        | ------------ | -- |\n        | 宁波市本级     | 330201000000000  |\n\n        | 搜索关键词         | word    |\n\n        | 信息分类         | cateid    |\n\n        | 排序类型         | sortType    |\n        | ------------ | -- |\n        | 按相关度     | 1  |\n        | 按时间     | 2  |\n    ",
+        "description": "\n| 行政区域         | websiteid |\n| ------------ | -- |\n| 宁波市本级     | 330201000000000  |\n\n| 搜索关键词         | word    |\n\n| 信息分类         | cateid    |\n\n| 排序类型         | sortType    |\n| ------------ | -- |\n| 按相关度     | 1  |\n| 按时间     | 2  |\n    ",
         "location": "zj/search.ts"
       }
     },
@@ -37896,6 +37928,51 @@
     "categories": [
       "game"
     ]
+  },
+  "i-cable": {
+    "routes": {
+      "/news/:category?": {
+        "path": "/news/:category?",
+        "categories": [
+          "traditional-media"
+        ],
+        "example": "/i-cable/news",
+        "parameters": {
+          "category": "分類，默認為新聞資訊"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "www.i-cable.com"
+            ],
+            "target": "/news"
+          },
+          {
+            "source": [
+              "www.i-cable.com/category/:category"
+            ],
+            "target": "/news/:category"
+          }
+        ],
+        "name": "新聞",
+        "maintainers": [
+          "quiniapiezoelectricity"
+        ],
+        "url": "www.i-cable.com/",
+        "description": "\n:::tip\n分類只可用分類名稱，如：新聞資訊/港聞\n:::",
+        "location": "news.ts"
+      }
+    },
+    "name": "有線新聞",
+    "url": "i-cable.com"
   },
   "ianspriggs": {
     "routes": {
