@@ -3377,6 +3377,9 @@
   "/inewsweek/:channel": [
     "changren-wcr"
   ],
+  "/infoq/presentations/:conference?": [
+    "nczitzk"
+  ],
   "/infoq/recommend": [
     "brilon"
   ],
@@ -3774,6 +3777,9 @@
   ],
   "/kpmg/insights/:lang?": [
     "LogicJake"
+  ],
+  "/ktown4u/artistBrandlist/:grpNo/:grpNo2?": [
+    "JamesWDGu"
   ],
   "/kuaidi100/track/:number/:id/:phone?": [
     "NeverBehave"
@@ -4188,6 +4194,15 @@
   ],
   "/misskey/users/notes/:username": [
     "siygle"
+  ],
+  "/misskon/posts/:routeParams?": [
+    "Urabartin"
+  ],
+  "/misskon/tag/:tag": [
+    "Urabartin"
+  ],
+  "/misskon/top/:k": [
+    "Urabartin"
   ],
   "/mittrchina/:type?": [
     "EsuRt",
@@ -4669,7 +4684,7 @@
     "Seiry",
     "Xm798"
   ],
-  "/nudt/yjszs/:type?": [
+  "/nudt/yjszs/:keyId?": [
     "Blank0120"
   ],
   "/nuist/bulletin/:category?": [
@@ -5819,6 +5834,15 @@
   "/skeb/works/:username": [
     "SnowAgar25"
   ],
+  "/skebetter/illust/:type": [
+    "SnowAgar25"
+  ],
+  "/skebetter/:type": [
+    "SnowAgar25"
+  ],
+  "/skebetter/manga/:order": [
+    "SnowAgar25"
+  ],
   "/sketis/isabelle-dev/blog/:blog": [
     "Ritsuka314"
   ],
@@ -6032,6 +6056,9 @@
   ],
   "/storyfm/index": [
     "sanmmm"
+  ],
+  "/straitstimes/:category?/:section?": [
+    "quiniapiezoelectricity"
   ],
   "/stratechery/": [
     "chazeon"
@@ -6507,7 +6534,8 @@
   ],
   "/twitter/list/:id/:routeParams?": [
     "DIYgod",
-    "xyqfer"
+    "xyqfer",
+    "pseudoyu"
   ],
   "/twitter/media/:id/:routeParams?": [
     "DIYgod",
