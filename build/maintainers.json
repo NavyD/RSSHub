@@ -5432,7 +5432,8 @@
     "nczitzk"
   ],
   "/rss3/:account/:network?/:tag?": [
-    "DIYgod"
+    "DIYgod",
+    "pseudoyu"
   ],
   "/rsshub/routes/:lang?": [
     "DIYgod"
@@ -7599,6 +7600,9 @@
     "yikZero"
   ],
   "/zjut/jwc/:type": [
+    "zhullyb"
+  ],
+  "/zjut/www/:type": [
     "zhullyb"
   ],
   "/zjuvag/blog": [
