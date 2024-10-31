@@ -490,6 +490,9 @@
   "/appleinsider/:category?": [
     "nczitzk"
   ],
+  "/appstare/comments/:country/:appid": [
+    "zhixideyu"
+  ],
   "/appstore/iap/:country/:id": [
     "HenryQW"
   ],
@@ -2956,6 +2959,9 @@
     "alphardex",
     "nczitzk"
   ],
+  "/guozaoke/default": [
+    "xiaoshame"
+  ],
   "/gxmzu/aitzgg": [
     "real-jiakai"
   ],
@@ -4871,6 +4877,9 @@
     "nczitzk"
   ],
   "/openai/chatgpt/release-notes": [],
+  "/openai/cookbook": [
+    "liyaozhong"
+  ],
   "/openai/research": [
     "yuguorui"
   ],

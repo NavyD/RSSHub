@@ -2858,6 +2858,19 @@
       }
     ]
   },
+  "appstare.net": {
+    "_name": "AppStare",
+    ".": [
+      {
+        "title": "Comments",
+        "docs": "https://docs.rsshub.app/routes/program-update",
+        "source": [
+          "/"
+        ],
+        "target": "/appstare/comments/:country/:appid"
+      }
+    ]
+  },
   "app.so": {
     "_name": "App Store/Mac App Store",
     ".": [
@@ -21304,6 +21317,19 @@
           "/"
         ],
         "target": "/onet/news"
+      }
+    ]
+  },
+  "openai.com": {
+    "_name": "OpenAI",
+    "cookbook": [
+      {
+        "title": "Cookbook",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/"
+        ],
+        "target": "/openai/cookbook"
       }
     ]
   },
