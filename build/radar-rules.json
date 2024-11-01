@@ -6627,6 +6627,19 @@
       }
     ]
   },
+  "counter-strike.net": {
+    "_name": "Counter Strike",
+    "www": [
+      {
+        "title": "News",
+        "docs": "https://docs.rsshub.app/routes/game",
+        "source": [
+          "/news/:category"
+        ],
+        "target": "/counter-strike(params,url)=>{url=new URL(url);const category=params.category;const language=url.searchParams.get(\"l\");return`/news${category?`/${category}${language?`/${language}`:\"\"}`:\"\"}`}"
+      }
+    ]
+  },
   "cpcaauto.com": {
     "_name": "cpcaauto.com",
     ".": [
@@ -7494,6 +7507,20 @@
       }
     ]
   },
+  "dianping.com": {
+    "_name": "大众点评",
+    ".": [
+      {
+        "title": "用户动态",
+        "docs": "https://docs.rsshub.app/routes/shopping",
+        "source": [
+          "/member/:id",
+          "/userprofile/:id"
+        ],
+        "target": "/dianping/dianping/user/:id"
+      }
+    ]
+  },
   "diershoubing.com": {
     "_name": "二柄 APP",
     ".": [
@@ -8258,6 +8285,19 @@
           "/"
         ],
         "target": "/sciencedirect/journal/:id"
+      }
+    ]
+  },
+  "enterprisecraftsmanship.com": {
+    "_name": "Enterprise Craftsmanship",
+    ".": [
+      {
+        "title": "Archives",
+        "docs": "https://docs.rsshub.app/routes/blog",
+        "source": [
+          "/archives/"
+        ],
+        "target": "/enterprisecraftsmanship/archives"
       }
     ]
   },
@@ -22699,6 +22739,35 @@
           "/"
         ],
         "target": "/qust/jw"
+      }
+    ]
+  },
+  "qztc.edu.cn": {
+    "_name": "泉州师范学院",
+    "www": [
+      {
+        "title": "首页",
+        "docs": "https://docs.rsshub.app/routes/university",
+        "source": [
+          "/:type/list.htm"
+        ],
+        "target": "/qztc/home/:type"
+      },
+      {
+        "title": "教务处",
+        "docs": "https://docs.rsshub.app/routes/university",
+        "source": [
+          "/jwc/:type/list.htm"
+        ],
+        "target": "/qztc/jwc/:type"
+      },
+      {
+        "title": "数学与计算机科学学院 软件学院",
+        "docs": "https://docs.rsshub.app/routes/university",
+        "source": [
+          "/sjxy/:type/list.htm"
+        ],
+        "target": "/qztc/sjxy/:type"
       }
     ]
   },

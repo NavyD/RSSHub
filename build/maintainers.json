@@ -1487,6 +1487,9 @@
     "marvolo666",
     "yan12125"
   ],
+  "/counter-strike/news/:category?/:language?": [
+    "nczitzk"
+  ],
   "/cpcaauto/news/:type?/:id?": [
     "nczitzk"
   ],
@@ -1720,6 +1723,9 @@
   ],
   "/diandong/news/:cate?": [
     "Fatpandac"
+  ],
+  "/dianping/user/:id": [
+    "pseudoyu"
   ],
   "/diershoubing/news": [
     "wushijishan"
@@ -2070,6 +2076,9 @@
   "/elsevier/:journal": [],
   "/embassy/:country/:city?": [
     "HenryQW"
+  ],
+  "/enterprisecraftsmanship/archives": [
+    "liyaozhong"
   ],
   "/epicgames/freegames/:locale?/:country?": [
     "DIYgod",
@@ -5346,6 +5355,9 @@
   "/qq/pd/guild/:id/:sub?/:sort?": [
     "mobyw"
   ],
+  "/qq/weread/:category": [
+    "gogo-100"
+  ],
   "/qq88/:category?": [
     "nczitzk"
   ],
@@ -5389,6 +5401,15 @@
   ],
   "/qweather/now/:location": [
     "Rein-Ou"
+  ],
+  "/qztc/home/:type": [
+    "iQNRen"
+  ],
+  "/qztc/jwc/:type": [
+    "iQNRen"
+  ],
+  "/qztc/sjxy/:type": [
+    "iQNRen"
   ],
   "/radio/album/:id": [
     "nczitzk"

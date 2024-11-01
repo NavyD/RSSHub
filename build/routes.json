@@ -17827,6 +17827,50 @@
     "name": "拷贝漫画",
     "url": "copymanga.com"
   },
+  "counter-strike": {
+    "routes": {
+      "/news/:category?/:language?": {
+        "path": "/news/:category?/:language?",
+        "name": "News",
+        "url": "www.counter-strike.net",
+        "maintainers": [
+          "nczitzk"
+        ],
+        "example": "/counter-strike/news",
+        "parameters": {
+          "category": "Category, `updates` or `all`, `all` by default",
+          "language": "Language, english by default, see below for more languages"
+        },
+        "description": ":::tip\n  If you subscribe to [Updates in English](https://www.counter-strike.net/news/updates?l=english)，where the URL is `https://www.counter-strike.net/news/updates?l=english`, extract the `l`, which is `english`, and use it as the parameter to fill in. Therefore, the route will be [`/counter-strike/news/updates/english`](https://rsshub.app/counter-strike/news/updates/english).\n  :::\n\n  <details>\n    <summary>More languages</summary>\n\n| 语言代码                                          | 语言名称   |\n| ------------------------------------------------- | ---------- |\n| English                                           | english    |\n| Español - España (Spanish - Spain)                | spanish    |\n| Français (French)                                 | french     |\n| Italiano (Italian)                                | italian    |\n| Deutsch (German)                                  | german     |\n| Ελληνικά (Greek)                                  | greek      |\n| 한국어 (Korean)                                   | koreana    |\n| 简体中文 (Simplified Chinese)                     | schinese   |\n| 繁體中文 (Traditional Chinese)                    | tchinese   |\n| Русский (Russian)                                 | russian    |\n| ไทย (Thai)                                        | thai       |\n| 日本語 (Japanese)                                 | japanese   |\n| Português (Portuguese)                            | portuguese |\n| Português - Brasil (Portuguese - Brazil)          | brazilian  |\n| Polski (Polish)                                   | polish     |\n| Dansk (Danish)                                    | danish     |\n| Nederlands (Dutch)                                | dutch      |\n| Suomi (Finnish)                                   | finnish    |\n| Norsk (Norwegian)                                 | norwegian  |\n| Svenska (Swedish)                                 | swedish    |\n| Čeština (Czech)                                   | czech      |\n| Magyar (Hungarian)                                | hungarian  |\n| Română (Romanian)                                 | romanian   |\n| Български (Bulgarian)                             | bulgarian  |\n| Türkçe (Turkish)                                  | turkish    |\n| Українська (Ukrainian)                            | ukrainian  |\n| Tiếng Việt (Vietnamese)                           | vietnamese |\n| Español - Latinoamérica (Spanish - Latin America) | latam      |\n\n  </details>\n    ",
+        "categories": [
+          "game"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportRadar": true,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "www.counter-strike.net/news/:category"
+            ]
+          }
+        ],
+        "location": "news.ts"
+      }
+    },
+    "name": "Counter Strike",
+    "url": "counter-strike.net",
+    "categories": [
+      "game"
+    ],
+    "description": ""
+  },
   "cpcaauto": {
     "routes": {
       "/news/:type?/:id?": {
@@ -20401,6 +20445,51 @@
     },
     "name": "电动邦",
     "url": "diandong.com"
+  },
+  "dianping": {
+    "routes": {
+      "/user/:id": {
+        "path": "/user/:id",
+        "categories": [
+          "shopping"
+        ],
+        "example": "/dianping/user/808259118",
+        "parameters": {
+          "id": "User id，打开网页端从 URL 中获取，在 `/member/:id` 中"
+        },
+        "features": {
+          "requireConfig": [
+            {
+              "name": "DIANPING_COOKIE",
+              "optional": false,
+              "description": "大众点评的 Cookie"
+            }
+          ],
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "dianping.com/member/:id",
+              "m.dianping.com/userprofile/:id"
+            ],
+            "target": "/dianping/user/:id"
+          }
+        ],
+        "name": "用户动态",
+        "maintainers": [
+          "pseudoyu"
+        ],
+        "description": "获取用户点评、签到、攻略等动态。",
+        "location": "user.ts"
+      }
+    },
+    "name": "大众点评",
+    "url": "dianping.com"
   },
   "diershoubing": {
     "routes": {
@@ -23914,6 +24003,33 @@
     "name": "中国驻外使领馆",
     "url": "ca.china-embassy.org",
     "description": "支持国家列表\n\n加拿大 `CA`\n\n-   大使馆: `/embassy/ca`\n\n-   领事馆城市列表:\n\n| 城市     | 路由                   |\n| -------- | ---------------------- |\n| 蒙特利尔 | `/embassy/ca/montreal` |\n\n* * *\n\n德国 `DE`\n\n-   大使馆: `/embassy/de`\n\n-   领事馆城市列表:\n\n| 城市   | 路由                 |\n| ------ | -------------------- |\n| 慕尼黑 | `/embassy/de/munich` |\n\n* * *\n\n法国 `FR`\n\n-   大使馆: `/embassy/fr`\n\n-   领事馆城市列表:\n\n| 城市       | 路由                     |\n| ---------- | ------------------------ |\n| 马赛       | `/embassy/fr/marseille`  |\n| 斯特拉斯堡 | `/embassy/fr/strasbourg` |\n| 里昂       | `/embassy/fr/lyon`       |\n\n* * *\n\n日本 `JP`\n\n-   大使馆: `/embassy/jp`\n\n-   领事馆城市列表:\n\n| 城市   | 路由                   |\n| ------ | ---------------------- |\n| 长崎   | `/embassy/jp/nagasaki` |\n| 大阪   | `/embassy/jp/osaka`    |\n| 福冈   | `/embassy/jp/fukuoka`  |\n| 名古屋 | `/embassy/jp/nagoya`   |\n| 札幌   | `/embassy/jp/sapporo`  |\n| 新潟   | `/embassy/jp/niigata`  |\n\n* * *\n\n韩国 `KR`\n\n-   大使馆: `/embassy/kr`\n\n-   领事馆城市列表:\n\n| 城市 | 路由                  |\n| ---- | --------------------- |\n| 釜山 | `/embassy/kr/busan`   |\n| 济州 | `/embassy/kr/jeju`    |\n| 光州 | `/embassy/kr/gwangju` |\n\n* * *\n\n马来西亚 `MY`\n\n-   大使馆: `/embassy/my`\n\n* * *\n\n新加坡 `SG`\n\n-   大使馆: `/embassy/sg`\n\n* * *\n\n美国 `US`\n\n-   大使馆: `/embassy/us`\n\n-   领事馆城市列表:\n\n| 城市   | 路由                       |\n| ------ | -------------------------- |\n| 纽约   | `/embassy/us/newyork`      |\n| 芝加哥 | `/embassy/us/chicago`      |\n| 旧金山 | `/embassy/us/sanfrancisco` |\n\n* * *\n\n英国 `UK`\n\n-   大使馆: `/embassy/uk`\n\n-   领事馆城市列表:\n\n| 城市       | 路由                     |\n| ---------- | ------------------------ |\n| 爱丁堡     | `/embassy/uk/edinburgh`  |\n| 贝尔法斯特 | `/embassy/uk/belfast`    |\n| 曼彻斯特   | `/embassy/uk/manchester` |"
+  },
+  "enterprisecraftsmanship": {
+    "routes": {
+      "/archives": {
+        "path": "/archives",
+        "categories": [
+          "blog"
+        ],
+        "example": "/enterprisecraftsmanship/archives",
+        "radar": [
+          {
+            "source": [
+              "enterprisecraftsmanship.com/archives/"
+            ]
+          }
+        ],
+        "url": "enterprisecraftsmanship.com/",
+        "name": "Archives",
+        "maintainers": [
+          "liyaozhong"
+        ],
+        "description": "Enterprise Craftsmanship blog archives",
+        "location": "index.ts"
+      }
+    },
+    "name": "Enterprise Craftsmanship",
+    "url": "enterprisecraftsmanship.com"
   },
   "epicgames": {
     "routes": {
@@ -62792,6 +62908,30 @@
         ],
         "url": "pd.qq.com/",
         "location": "pd/guild.ts"
+      },
+      "/weread/:category": {
+        "path": "/weread/:category",
+        "categories": [
+          "new-media"
+        ],
+        "example": "/qq/weread/newbook",
+        "parameters": {
+          "category": "榜单名，见下表"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "name": "微信读书榜单",
+        "maintainers": [
+          "gogo-100"
+        ],
+        "description": "| 榜单                  | 榜单名     |\n| ---------------------- | ---------- |\n| Top50飙升榜           | rising     |\n| Top50热搜榜           | hot_search |\n| Top50新书榜           | newbook    |\n| Top50小说榜           | general_novel_rising |\n| Top200总榜            | all        |\n| 神作榜                 | newrating_publish |\n| 神作潜力榜            | newrating_potential_publish |\n| 精品小说              | 100000     |\n| 历史                  | 200000     |\n| 文学                  | 300000     |\n| 艺术                  | 400000     |\n| 人物传记              | 500000     |\n| 哲学宗教              | 600000     |\n| 计算机                | 700000     |\n| 心理                  | 800000     |\n| 社会文化              | 900000     |\n| 个人成长              | 1000000    |\n| 经济理财              | 1100000    |\n| 政治军事              | 1200000    |\n| 童书                  | 1300000    |\n| 教育学习              | 1400000    |\n| 科学技术              | 1500000    |\n| 生活百科              | 1600000    |\n| 期刊杂志              | 1700000    |\n| 原版书                | 1800000    |\n| 男生小说              | 1900000    |\n| 女生小说              | 2000000    |\n| 医学健康              | 2100000    |\n\n还可以分得更细 见 https://weread.qq.com/web/category/100000 的小标题栏\n",
+        "location": "weread/category.ts"
       }
     },
     "name": "腾讯网",
@@ -63187,6 +63327,111 @@
     },
     "name": "和风天气",
     "url": "qweather.com"
+  },
+  "qztc": {
+    "routes": {
+      "/home/:type": {
+        "path": "/home/:type",
+        "categories": [
+          "university"
+        ],
+        "example": "/qztc/home/2093",
+        "parameters": {
+          "type": "分类，见下表"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "name": "首页",
+        "maintainers": [
+          "iQNRen"
+        ],
+        "url": "www.qztc.edu.cn",
+        "radar": [
+          {
+            "source": [
+              "www.qztc.edu.cn/:type/list.htm"
+            ],
+            "target": "/home/:type"
+          }
+        ],
+        "description": "| 板块 | 参数 |\n| ------- | ------- |\n| 泉师新闻 | 2093 |\n| 通知公告 | 2094 |\n| 采购公告 | 2095 |\n| 学术资讯 | xszx |\n| 招聘信息 | 2226 |\n",
+        "location": "home/index.ts"
+      },
+      "/jwc/:type": {
+        "path": "/jwc/:type",
+        "categories": [
+          "university"
+        ],
+        "example": "/qztc/jwc/jwdt",
+        "parameters": {
+          "type": "分类，见下表"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "name": "教务处",
+        "maintainers": [
+          "iQNRen"
+        ],
+        "url": "www.qztc.edu.cn",
+        "radar": [
+          {
+            "source": [
+              "www.qztc.edu.cn/jwc/:type/list.htm"
+            ],
+            "target": "/jwc/:type"
+          }
+        ],
+        "description": "| 板块 | 参数 |\n| ------- | ------- |\n| 教务动态 | jwdt |\n| 首 页 | 1020 |\n| 岗位介绍 | 1021 |\n| 管理文件 | 1022 |\n| 教学教改 | 1023 |\n| 办事指南 | 1024 |\n| 通知公告 | 1025 |\n| 下载中心 | 1026 |\n| 对外交流 | 1027 |\n| 政策文件 | 1028 |\n| 会议纪要 | 1029 |\n",
+        "location": "jwc/index.ts"
+      },
+      "/sjxy/:type": {
+        "path": "/sjxy/:type",
+        "categories": [
+          "university"
+        ],
+        "example": "/qztc/sjxy/1939",
+        "parameters": {
+          "type": "分类，见下表"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "name": "数学与计算机科学学院 软件学院",
+        "maintainers": [
+          "iQNRen"
+        ],
+        "url": "www.qztc.edu.cn",
+        "radar": [
+          {
+            "source": [
+              "www.qztc.edu.cn/sjxy/:type/list.htm"
+            ],
+            "target": "/sjxy/:type"
+          }
+        ],
+        "description": "| 板块 | 参数 |\n| ------- | ------- |\n| 学院概况 | 1938 |\n| 学院动态 | 1939 |\n| 学科建设 | 1940 |\n| 教学教务 | 1941 |\n| 人才培养 | 1942 |\n| 科研工作 | 1943 |\n| 党群工作 | 1944 |\n| 团学工作 | 1945 |\n| 资料下载 | 1947 |\n| 采购信息 | 1948 |\n| 信息公开 | xxgk |\n",
+        "location": "sjxy/index.ts"
+      }
+    },
+    "name": "泉州师范学院",
+    "url": "www.qztc.edu.cn"
   },
   "radio": {
     "routes": {
