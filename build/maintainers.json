@@ -249,7 +249,8 @@
   ],
   "/aamacau/:category?/:id?": [],
   "/abc/:category{.+}?": [
-    "nczitzk"
+    "nczitzk",
+    "pseudoyu"
   ],
   "/abmedia/:category?": [],
   "/abmedia/index": [],
@@ -1401,6 +1402,9 @@
   "/cngal/weekly": [
     "chengyuhui"
   ],
+  "/cngold/:category?": [
+    "nczitzk"
+  ],
   "/cnjxol/:category?/:id?": [],
   "/cnki/author/:code": [
     "harveyqiu",
@@ -2230,7 +2234,8 @@
   ],
   "/follow/profile/:uid": [
     "KarasuShin",
-    "DIYgod"
+    "DIYgod",
+    "DFobain"
   ],
   "/followin/:categoryId?/:lang?": [
     "TonyRL"
@@ -2560,7 +2565,8 @@
     "Fatpandac"
   ],
   "/google/news/:category/:locale": [
-    "zoenglinghou"
+    "zoenglinghou",
+    "pseudoyu"
   ],
   "/google/research": [
     "Levix"
@@ -4511,6 +4517,9 @@
   ],
   "/nicovideo/user/:id/video/:embed?": [
     "TonyRL"
+  ],
+  "/nielsberglund/blog": [
+    "liyaozhong"
   ],
   "/nifd/research/:categoryGuid?": [
     "Fatpandac"
