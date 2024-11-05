@@ -627,6 +627,9 @@
     "youyou-sudo",
     "honue"
   ],
+  "/baoyu/blog": [
+    "liyaozhong"
+  ],
   "/baozimh/comic/:name": [
     "Fatpandac"
   ],
@@ -1001,7 +1004,7 @@
   "/bytes/": [
     "meixger"
   ],
-  "/c114/roll": [
+  "/c114/roll/:original?": [
     "nczitzk"
   ],
   "/caai/:caty": [
@@ -2225,6 +2228,9 @@
   ],
   "/flyert/creditcard/:bank": [
     "nicolaszf"
+  ],
+  "/flyert/forum/:params{.+}?": [
+    "nczitzk"
   ],
   "/flyert/preferential": [
     "howel52"
@@ -3694,6 +3700,9 @@
   "/jlu/ccst/xwzx/:category": [
     "mayouxi"
   ],
+  "/jlu/phy/:category/:column/:subcolumn?": [
+    "tsurumi-yizhou"
+  ],
   "/joins/chinese/:category?": [
     "nczitzk"
   ],
@@ -4898,6 +4907,9 @@
   ],
   "/openai/research": [
     "yuguorui"
+  ],
+  "/openrice/:lang/hongkong/explore/chart/:category": [
+    "after9"
   ],
   "/openrice/:lang/hongkong/offers": [
     "after9"
