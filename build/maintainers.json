@@ -764,8 +764,9 @@
   "/bilibili/popular/all/:embed?": [
     "ziminliu"
   ],
-  "/bilibili/ranking/:rid?/:day?/:arc_type?/:embed?": [
-    "DIYgod"
+  "/bilibili/ranking/:rid_index?/:embed?": [
+    "DIYgod",
+    "hyoban"
   ],
   "/bilibili/readlist/:listid": [
     "hoilc"
@@ -1747,6 +1748,9 @@
   "/discord/channel/:channelId": [
     "TonyRL"
   ],
+  "/discord/search/:guildId/:routeParams": [
+    "NekoAria"
+  ],
   "/discourse/:configId/notifications/:fulltext?": [],
   "/discourse/:configId/official/:path{.+}": [
     "Raikyou",
@@ -2320,6 +2324,58 @@
   "/fuliba/latest": [
     "shinemoon"
   ],
+  "/furaffinity/art/:folder/:username/:mode?": [
+    "TigerCubDen",
+    "SkyNetX007"
+  ],
+  "/furaffinity/browse/:mode?": [
+    "TigerCubDen",
+    "SkyNetX007"
+  ],
+  "/furaffinity/commissions/:username": [
+    "TigerCubDen",
+    "SkyNetX007"
+  ],
+  "/furaffinity/home/:category/:mode?": [
+    "TigerCubDen",
+    "SkyNetX007"
+  ],
+  "/furaffinity/journal-comments/:id": [
+    "TigerCubDen",
+    "SkyNetX007"
+  ],
+  "/furaffinity/journals/:username": [
+    "TigerCubDen",
+    "SkyNetX007"
+  ],
+  "/furaffinity/search/:query/:mode?/:routeParams?": [
+    "TigerCubDen",
+    "SkyNetX007"
+  ],
+  "/furaffinity/shouts/:username": [
+    "TigerCubDen",
+    "SkyNetX007"
+  ],
+  "/furaffinity/status": [
+    "TigerCubDen",
+    "SkyNetX007"
+  ],
+  "/furaffinity/submission-comments/:id": [
+    "TigerCubDen",
+    "SkyNetX007"
+  ],
+  "/furaffinity/user/:username": [
+    "TigerCubDen",
+    "SkyNetX007"
+  ],
+  "/furaffinity/watchers/:username": [
+    "TigerCubDen",
+    "SkyNetX007"
+  ],
+  "/furaffinity/watching/:username": [
+    "TigerCubDen",
+    "SkyNetX007"
+  ],
   "/furstar/archive/:lang?": [
     "NeverBehave"
   ],
@@ -2569,6 +2625,9 @@
   "/google/citations/:id": [
     "KellyHwong",
     "const7"
+  ],
+  "/google/developers/:locale?": [
+    "Loongphy"
   ],
   "/google/doodles/:language?": [
     "xyqfer"
@@ -5657,6 +5716,9 @@
   "/sctv/programme/:id?/:limit?/:isFull?": [
     "nczitzk"
   ],
+  "/scu/scupi": [
+    "sitdownkevin"
+  ],
   "/scut/yjs": [
     "shengmaosu"
   ],
@@ -6600,7 +6662,7 @@
   "/tongji/yjs": [
     "shengmaosu"
   ],
-  "/tongji/sem": [
+  "/tongji/sem/:type?": [
     "sitdownkevin"
   ],
   "/tongji/sse/:type?": [
