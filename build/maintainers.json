@@ -299,6 +299,12 @@
   "/afdian/explore/:type/:category?": [
     "sanmmm"
   ],
+  "/afr/latest": [
+    "TonyRL"
+  ],
+  "/afr/navigation/:path{.+}": [
+    "TonyRL"
+  ],
   "/agefans/detail/:id": [
     "s2marine"
   ],
@@ -764,7 +770,7 @@
   "/bilibili/popular/all/:embed?": [
     "ziminliu"
   ],
-  "/bilibili/ranking/:rid_index?/:embed?": [
+  "/bilibili/ranking/:rid_index?/:embed?/:redirect1?/:redirect2?": [
     "DIYgod",
     "hyoban"
   ],
@@ -3290,6 +3296,9 @@
   "/hrbeu/job/list/:id": [
     "Derekmini"
   ],
+  "/hrbeu/sec/:id": [
+    "Chi-hong22"
+  ],
   "/hrbeu/uae/:id": [],
   "/hrbeu/ugs/news/:author?/:category?": [
     "XYenon"
@@ -5190,6 +5199,9 @@
   "/pixiv/user/illustfollows": [
     "ClarkeCheng"
   ],
+  "/pixiv/novel/series/:id": [
+    "SnowAgar25"
+  ],
   "/pixiv/user/novels/:id/:full_content?": [
     "TonyRL",
     "SnowAgar25"
@@ -6984,6 +6996,9 @@
   ],
   "/verfghbw/press/:keyword?": [
     "quinn-dev"
+  ],
+  "/vertikal/latest": [
+    "TonyRL"
   ],
   "/vice/topic/:topic/:language?": [
     "K33k0"

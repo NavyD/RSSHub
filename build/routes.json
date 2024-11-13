@@ -3510,6 +3510,73 @@
     "url": "afdian.net",
     "lang": "zh-CN"
   },
+  "afr": {
+    "routes": {
+      "/latest": {
+        "path": "/latest",
+        "categories": [
+          "traditional-media"
+        ],
+        "example": "/afr/latest",
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "www.afr.com/latest",
+              "www.afr.com/"
+            ]
+          }
+        ],
+        "name": "Latest",
+        "maintainers": [
+          "TonyRL"
+        ],
+        "url": "www.afr.com/latest",
+        "location": "latest.ts"
+      },
+      "/navigation/:path{.+}": {
+        "path": "/navigation/:path{.+}",
+        "categories": [
+          "traditional-media"
+        ],
+        "example": "/afr/navigation/markets",
+        "parameters": {
+          "path": "Navigation path, can be found in the URL of the page"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "www.afr.com/path*"
+            ]
+          }
+        ],
+        "name": "Navigation",
+        "maintainers": [
+          "TonyRL"
+        ],
+        "url": "www.afr.com",
+        "location": "navigation.ts"
+      }
+    },
+    "name": "The Australian Financial Review",
+    "url": "afr.com",
+    "lang": "en"
+  },
   "agefans": {
     "routes": {
       "/detail/:id": {
@@ -9496,8 +9563,8 @@
         ],
         "location": "popular.ts"
       },
-      "/ranking/:rid_index?/:embed?": {
-        "path": "/ranking/:rid_index?/:embed?",
+      "/ranking/:rid_index?/:embed?/:redirect1?/:redirect2?": {
+        "path": "/ranking/:rid_index?/:embed?/:redirect1?/:redirect2?",
         "name": "排行榜",
         "maintainers": [
           "DIYgod",
@@ -9592,7 +9659,9 @@
               }
             ]
           },
-          "embed": "默认为开启内嵌视频, 任意值为关闭"
+          "embed": "默认为开启内嵌视频, 任意值为关闭",
+          "redirect1": "留空，用于兼容之前的路由",
+          "redirect2": "留空，用于兼容之前的路由"
         },
         "location": "ranking.ts"
       },
@@ -38709,6 +38778,37 @@
         "description": "| 通知公告 | 热点新闻 |\n    | :------: | :------: |\n    |   tzgg   |   rdxw   |",
         "location": "job/list.ts"
       },
+      "/sec/:id": {
+        "path": "/sec/:id",
+        "categories": [
+          "university"
+        ],
+        "example": "/hrbeu/sec/xshd",
+        "parameters": {
+          "id": "栏目编号，由 `URL` 中获取。"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "sec.hrbeu.edu.cn/:id/list.htm"
+            ]
+          }
+        ],
+        "name": "船舶工程学院",
+        "maintainers": [
+          "Chi-hong22"
+        ],
+        "description": "| 学院要闻 | 学术活动 | 通知公告 | 学科方向 |\n| :------: | :------: |:------: | :------: |\n|   xyyw   |   xshd   |  229   |   xkfx   |",
+        "location": "sec/list.ts"
+      },
       "/uae/:id": {
         "path": "/uae/:id",
         "categories": [
@@ -54084,9 +54184,10 @@
           {
             "source": [
               "natgeomedia.com/:cat/:type",
+              "natgeomedia.com/:cat/",
               "natgeomedia.com/"
             ],
-            "target": "/:cat/:type"
+            "target": "/:cat/:type?"
           }
         ],
         "name": "分类",
@@ -62058,6 +62159,43 @@
         "description": ":::warning\n  Only for self-hosted\n  :::",
         "location": "illustfollow.ts"
       },
+      "/novel/series/:id": {
+        "path": "/novel/series/:id",
+        "categories": [
+          "social-media"
+        ],
+        "example": "/pixiv/novel/series/11586857",
+        "parameters": {
+          "id": "Series id, can be found in URL"
+        },
+        "features": {
+          "requireConfig": [
+            {
+              "name": "PIXIV_REFRESHTOKEN",
+              "optional": true,
+              "description": "\nrefresh_token after Pixiv login, required for accessing R18 novels\nPixiv 登錄後的 refresh_token，用於獲取 R18 小說\n[https://docs.rsshub.app/deploy/config#pixiv](https://docs.rsshub.app/deploy/config#pixiv)"
+            }
+          ],
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "name": "Novel Series",
+        "maintainers": [
+          "SnowAgar25"
+        ],
+        "radar": [
+          {
+            "source": [
+              "www.pixiv.net/novel/series/:id"
+            ],
+            "target": "/novel/series/:id"
+          }
+        ],
+        "location": "novel-series.ts"
+      },
       "/user/novels/:id/:full_content?": {
         "path": "/user/novels/:id/:full_content?",
         "categories": [
@@ -62100,14 +62238,16 @@
           {
             "title": "User Novels (簡介 Basic info)",
             "source": [
-              "www.pixiv.net/users/:id/novels"
+              "www.pixiv.net/users/:id/novels",
+              "www.pixiv.net/users/:id"
             ],
             "target": "/user/novels/:id"
           },
           {
             "title": "User Novels (全文 Full text)",
             "source": [
-              "www.pixiv.net/users/:id/novels"
+              "www.pixiv.net/users/:id/novels",
+              "www.pixiv.net/users/:id"
             ],
             "target": "/user/novels/:id/true"
           }
@@ -81982,6 +82122,34 @@
     "name": "Constitutional Court of Baden-Württemberg (Germany)",
     "url": "verfgh.baden-wuerttemberg.de",
     "lang": "de"
+  },
+  "vertikal": {
+    "routes": {
+      "/latest": {
+        "path": "/latest",
+        "categories": [
+          "new-media"
+        ],
+        "example": "/vertikal/latest",
+        "radar": [
+          {
+            "source": [
+              "vertikal.net/en/news",
+              "vertikal.net"
+            ]
+          }
+        ],
+        "name": "News Archive",
+        "maintainers": [
+          "TonyRL"
+        ],
+        "url": "vertikal.net/en/news",
+        "location": "latest.ts"
+      }
+    },
+    "name": "Vertikal.net",
+    "url": "vertikal.net",
+    "lang": "en"
   },
   "vice": {
     "routes": {
