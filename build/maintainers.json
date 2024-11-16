@@ -682,7 +682,8 @@
   ],
   "/bilibili/user/article/:uid": [
     "lengthmin",
-    "Qixingchen"
+    "Qixingchen",
+    "hyoban"
   ],
   "/bilibili/audio/:id": [
     "LogicJake"
@@ -1988,6 +1989,12 @@
   ],
   "/dut/*/*": [],
   "/dut/:0?": [],
+  "/dw/news/:lang?/:id?": [
+    "quiniapiezoelectricity"
+  ],
+  "/dw/rss/:channel?": [
+    "quiniapiezoelectricity"
+  ],
   "/dx2025/:type?/:category?": [
     "nczitzk"
   ],
@@ -3707,6 +3714,15 @@
   "/javtiful/channel/:id": [
     "huanfe1"
   ],
+  "/javtrailers/casts/:cast": [
+    "TonyRL"
+  ],
+  "/javtrailers/categories/:category": [
+    "TonyRL"
+  ],
+  "/javtrailers/studios/:studio": [
+    "TonyRL"
+  ],
   "/jd/price/:id": [
     "nczitzk"
   ],
@@ -4103,6 +4119,9 @@
   ],
   "/logonews*": [
     "nczitzk"
+  ],
+  "/logrocket/:type": [
+    "findwei"
   ],
   "/loltw/news/:category?": [
     "hoilc"
@@ -5480,6 +5499,12 @@
   ],
   "/qqorw/:category?": [
     "nczitzk"
+  ],
+  "/qstheory/:category?": [
+    "nczitzk"
+  ],
+  "/qstheory/magazine/:magazine": [
+    "TonyRL"
   ],
   "/questmobile/report/:industry?/:label?": [
     "nczitzk"
@@ -7053,6 +7078,9 @@
   "/wallpaperhub/": [
     "nczitzk"
   ],
+  "/wallstreetcn/calendar/:section?": [
+    "TonyRL"
+  ],
   "/wallstreetcn/hot/:period?": [
     "nczitzk"
   ],
@@ -7060,9 +7088,6 @@
     "nczitzk"
   ],
   "/wallstreetcn/news/:category?": [
-    "nczitzk"
-  ],
-  "/wallstreetcn/:category?": [
     "nczitzk"
   ],
   "/wanqu/news": [

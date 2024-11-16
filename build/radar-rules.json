@@ -3453,7 +3453,7 @@
     "_name": "哔哩哔哩 bilibili",
     "space": [
       {
-        "title": "UP 主专栏",
+        "title": "UP 主图文",
         "docs": "https://docs.rsshub.app/routes/social-media",
         "source": [
           "/:uid"
@@ -8250,6 +8250,19 @@
           "/search/book/:wd"
         ],
         "target": "/duozhuayu/search/:wd"
+      }
+    ]
+  },
+  "dw.com": {
+    "_name": "DW Deutsche Welle",
+    "www": [
+      {
+        "title": "News",
+        "docs": "https://docs.rsshub.app/routes/traditional-media",
+        "source": [
+          "/:lang/:name/:id"
+        ],
+        "target": "/dw/news/:lang/:id"
       }
     ]
   },
@@ -15543,6 +15556,35 @@
       }
     ]
   },
+  "javtrailers.com": {
+    "_name": "JavTrailers",
+    ".": [
+      {
+        "title": "Casts",
+        "docs": "https://docs.rsshub.app/routes/multimedia",
+        "source": [
+          "/casts/:category"
+        ],
+        "target": "/javtrailers/casts/:cast"
+      },
+      {
+        "title": "Categories",
+        "docs": "https://docs.rsshub.app/routes/multimedia",
+        "source": [
+          "/categories/:category"
+        ],
+        "target": "/javtrailers/categories/:category"
+      },
+      {
+        "title": "Studios",
+        "docs": "https://docs.rsshub.app/routes/multimedia",
+        "source": [
+          "/studios/:category"
+        ],
+        "target": "/javtrailers/studios/:studio"
+      }
+    ]
+  },
   "jianshu.com": {
     "_name": "简书",
     "www": [
@@ -16710,6 +16752,19 @@
           "/work/tags/:tag"
         ],
         "target": "/logonews*"
+      }
+    ]
+  },
+  "logrocket.com": {
+    "_name": "logrocket blog",
+    "blog": [
+      {
+        "title": "blog.logrocket",
+        "docs": "https://docs.rsshub.app/routes/blog",
+        "source": [
+          "/"
+        ],
+        "target": "/logrocket/:type"
       }
     ]
   },
@@ -23266,6 +23321,29 @@
       }
     ]
   },
+  "qstheory.cn": {
+    "_name": "求是网",
+    "www": [
+      {
+        "title": "分类",
+        "docs": "https://docs.rsshub.app/routes/traditional-media",
+        "source": [
+          "/v9zhuanqu/:category/index.htm",
+          "/qszq/:category/index.htm",
+          "/:category/index.htm"
+        ],
+        "target": "/qstheory/:category?"
+      },
+      {
+        "title": "在线读刊",
+        "docs": "https://docs.rsshub.app/routes/traditional-media",
+        "source": [
+          "/:magazine/mulu.htm"
+        ],
+        "target": "/qstheory/magazine/:magazine"
+      }
+    ]
+  },
   "questn.com": {
     "_name": "QuestN",
     "app": [
@@ -28658,8 +28736,16 @@
     "_name": "华尔街见闻",
     ".": [
       {
+        "title": "财经日历",
+        "docs": "https://docs.rsshub.app/routes/finance",
+        "source": [
+          "/calendar"
+        ],
+        "target": "/wallstreetcn/calendar/:section?"
+      },
+      {
         "title": "最热文章",
-        "docs": "https://docs.rsshub.app/routes/traditional-media",
+        "docs": "https://docs.rsshub.app/routes/finance",
         "source": [
           "/"
         ],
@@ -28667,7 +28753,7 @@
       },
       {
         "title": "实时快讯",
-        "docs": "https://docs.rsshub.app/routes/traditional-media",
+        "docs": "https://docs.rsshub.app/routes/finance",
         "source": [
           "/live/:category",
           "/"
@@ -28675,22 +28761,13 @@
         "target": "/wallstreetcn/live/:category?"
       },
       {
-        "title": "Unknown",
-        "docs": "https://docs.rsshub.app/routes/traditional-media",
+        "title": "资讯",
+        "docs": "https://docs.rsshub.app/routes/finance",
         "source": [
           "/news/:category",
           "/"
         ],
         "target": "/wallstreetcn/news/:category?"
-      },
-      {
-        "title": "Unknown",
-        "docs": "https://docs.rsshub.app/routes/traditional-media",
-        "source": [
-          "/news/:category",
-          "/"
-        ],
-        "target": "/wallstreetcn/:category?"
       }
     ]
   },
