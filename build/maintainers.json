@@ -3451,6 +3451,9 @@
     "zphw",
     "nczitzk"
   ],
+  "/idolmaster/news/:routeParams?": [
+    "keocheung"
+  ],
   "/idolypride/news": [
     "Mingxia1"
   ],
@@ -4189,6 +4192,9 @@
   ],
   "/lxixsxa/info": [
     "Kiotlin"
+  ],
+  "/m-78/news/:category?": [
+    "KarasuShin"
   ],
   "/m4/:id?/:category{.+}?": [],
   "/maccms/:domain/:type?/:size?": [
@@ -7309,6 +7315,9 @@
   ],
   "/wtu/job/:type": [
     "ticks-tan"
+  ],
+  "/wufazhuce/one": [
+    "sicheng1806"
   ],
   "/wyzxwk/article/:id?": [
     "nczitzk"
