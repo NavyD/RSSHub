@@ -1698,7 +1698,10 @@
   "/dedao/articles/:id?": [
     "Jacky-Chen-Pro"
   ],
-  "/dedao/:category?": [],
+  "/dedao/:category?": [
+    "nczitzk",
+    "pseudoyu"
+  ],
   "/dedao/knowledge/:topic?/:type?": [
     "nczitzk"
   ],
@@ -1823,7 +1826,9 @@
   "/dockerhub/repositories/:owner": [
     "CaoMeiYouRen"
   ],
-  "/dockerhub/tag/:owner/:image/:limits?": [],
+  "/dockerhub/tag/:owner/:image/:limits?": [
+    "pseudoyu"
+  ],
   "/docschina/weekly/:category?": [
     "daijinru",
     "hestudy"
@@ -3417,8 +3422,12 @@
     "AlexdanerZe",
     "nczitzk"
   ],
-  "/huxiu/author/:id/:type?": [],
-  "/huxiu/member/:id/:type?": [],
+  "/huxiu/author/:id/:type?": [
+    "nczitzk"
+  ],
+  "/huxiu/member/:id/:type?": [
+    "nczitzk"
+  ],
   "/huxiu/moment": [
     "nczitzk"
   ],
@@ -4458,7 +4467,7 @@
   "/mrm/:category?": [
     "TonyRL"
   ],
-  "/mvm/:category?": [
+  "/mwm/:category?": [
     "nczitzk"
   ],
   "/my-formosa/": [
