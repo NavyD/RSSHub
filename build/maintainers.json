@@ -497,7 +497,7 @@
     "HenryQW",
     "kt286"
   ],
-  "/apple/podcast/:id": [
+  "/apple/podcast/:id/:region?": [
     "Acring"
   ],
   "/appleinsider/:category?": [
@@ -5251,6 +5251,9 @@
   "/pingwest/user/:uid/:type?/:option?": [
     "sanmmm"
   ],
+  "/pinterest/user/:username/:type?": [
+    "TonyRL"
+  ],
   "/pixabay/search/:q/:order?": [
     "TonyRL"
   ],
@@ -6517,7 +6520,8 @@
   ],
   "/taptap/intl/review/:id/:order?/:lang?": [
     "hoilc",
-    "TonyRL"
+    "TonyRL",
+    "ETiV"
   ],
   "/taptap/topic/:id/:type?/:sort?/:lang?": [
     "hoilc",

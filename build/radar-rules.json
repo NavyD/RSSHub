@@ -1489,7 +1489,7 @@
   },
   "aeon.co": {
     "_name": "AEON",
-    "aeon": [
+    ".": [
       {
         "title": "Categories",
         "docs": "https://docs.rsshub.app/routes/new-media",
@@ -3271,9 +3271,9 @@
         "title": "播客",
         "docs": "https://docs.rsshub.app/routes/multimedia",
         "source": [
-          "/cn/podcast/:id"
+          "/:region/podcast/:id"
         ],
-        "target": "/apple/podcast/:id"
+        "target": "/apple/podcast/:id/:region?"
       }
     ]
   },
@@ -23082,6 +23082,20 @@
       }
     ]
   },
+  "pinterest.com": {
+    "_name": "Pinterest",
+    "www": [
+      {
+        "title": "User",
+        "docs": "https://docs.rsshub.app/routes/picture",
+        "source": [
+          "/:id/:type",
+          "/:id"
+        ],
+        "target": "/pinterest/user/:id/:type?"
+      }
+    ]
+  },
   "pixabay.com": {
     "_name": "Pixabay",
     ".": [
@@ -28026,43 +28040,28 @@
       }
     ]
   },
-  "taptap.com": {
-    "_name": "TapTap 中国",
+  "taptap.cn": {
+    "_name": "TapTap",
+    "www": [
+      {
+        "title": "游戏更新",
+        "docs": "https://docs.rsshub.app/routes/game",
+        "source": [
+          "/app/:id"
+        ],
+        "target": "/taptap/changelog/:id"
+      },
+      {
+        "title": "游戏评价",
+        "docs": "https://docs.rsshub.app/routes/game",
+        "source": [
+          "/app/:id/review",
+          "/app/:id"
+        ],
+        "target": "/taptap/review/:id"
+      }
+    ],
     ".": [
-      {
-        "title": "游戏更新",
-        "docs": "https://docs.rsshub.app/routes/game",
-        "source": [
-          "/app/:id"
-        ],
-        "target": "/taptap/changelog/:id"
-      },
-      {
-        "title": "游戏更新",
-        "docs": "https://docs.rsshub.app/routes/game",
-        "source": [
-          "/app/:id"
-        ],
-        "target": "/taptap/changelog/:id"
-      },
-      {
-        "title": "游戏评价",
-        "docs": "https://docs.rsshub.app/routes/game",
-        "source": [
-          "/app/:id/review",
-          "/app/:id"
-        ],
-        "target": "/taptap/review/:id"
-      },
-      {
-        "title": "游戏评价",
-        "docs": "https://docs.rsshub.app/routes/game",
-        "source": [
-          "/app/:id/review",
-          "/app/:id"
-        ],
-        "target": "/taptap/review/:id"
-      },
       {
         "title": "游戏论坛",
         "docs": "https://docs.rsshub.app/routes/game",
@@ -28071,6 +28070,28 @@
           "/app/:id"
         ],
         "target": "/taptap/topic/:id"
+      }
+    ]
+  },
+  "taptap.io": {
+    "_name": "TapTap",
+    "www": [
+      {
+        "title": "Game's Changelog",
+        "docs": "https://docs.rsshub.app/routes/game",
+        "source": [
+          "/app/:id"
+        ],
+        "target": "/taptap/intl/changelog/:id"
+      },
+      {
+        "title": "Ratings & Reviews",
+        "docs": "https://docs.rsshub.app/routes/game",
+        "source": [
+          "/app/:id/review",
+          "/app/:id"
+        ],
+        "target": "/taptap/intl/review/:id"
       }
     ]
   },
