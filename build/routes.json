@@ -6429,6 +6429,48 @@
     "url": "amazon.com",
     "lang": "en"
   },
+  "amz123": {
+    "routes": {
+      "/kx": {
+        "path": "/kx",
+        "categories": [
+          "new-media"
+        ],
+        "example": "/amz123/kx",
+        "parameters": {},
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "amz123.com/kx"
+            ],
+            "target": "/kx"
+          }
+        ],
+        "name": "AMZ123 快讯",
+        "maintainers": [
+          "defp"
+        ],
+        "url": "amz123.com/kx",
+        "view": 0,
+        "location": "kx.ts"
+      }
+    },
+    "name": "Amz123",
+    "url": "www.amz123.com",
+    "categories": [
+      "new-media"
+    ],
+    "description": "跨境电商平台",
+    "lang": "zh-CN"
+  },
   "android": {
     "routes": {
       "/platform-tools-releases": {
@@ -9681,7 +9723,8 @@
         "radar": [
           {
             "source": [
-              "www.bilibili.com/"
+              "www.bilibili.com/",
+              "m.bilibili.com/"
             ]
           }
         ],
@@ -37667,12 +37710,30 @@
       "/topic/:topic?/:type?": {
         "path": "/topic/:topic?/:type?",
         "categories": [
-          "new-media"
+          "new-media",
+          "popular"
         ],
-        "example": "/hbr/topic/leadership",
+        "example": "/hbr/topic/Leadership/Popular",
         "parameters": {
           "topic": "Topic, can be found in URL, Leadership by default",
-          "type": "Type, see below, Latest by default"
+          "type": {
+            "description": "Type, see below, Popular by default",
+            "options": [
+              {
+                "value": "Popular",
+                "label": "Popular"
+              },
+              {
+                "value": "From the Store",
+                "label": "From the Store"
+              },
+              {
+                "value": "For You",
+                "label": "For You"
+              }
+            ],
+            "default": "Popular"
+          }
         },
         "features": {
           "requireConfig": false,
@@ -37692,9 +37753,10 @@
         ],
         "name": "Topic",
         "maintainers": [
-          "nczitzk"
+          "nczitzk",
+          "pseudoyu"
         ],
-        "description": "| LATEST | POPULAR | FROM THE STORE | FOR YOU |\n  | ------ | ------- | -------------- | ------- |\n  | Latest | Popular | From the Store | For You |\n\n  :::tip\n  Click here to view [All Topics](https://hbr.org/topics)\n  :::",
+        "description": "| POPULAR | FROM THE STORE | FOR YOU |\n  | ------- | -------------- | ------- |\n  | Popular | From the Store | For You |\n\n  :::tip\n  Click here to view [All Topics](https://hbr.org/topics)\n  :::",
         "location": "topic.ts"
       }
     },
@@ -45965,6 +46027,140 @@
     ],
     "description": "",
     "lang": "ko"
+  },
+  "joneslanglasalle": {
+    "routes": {
+      "/:language?/:category{.+}?": {
+        "path": "/:language?/:category{.+}?",
+        "name": "Trends & Insights",
+        "url": "joneslanglasalle.com.cn",
+        "maintainers": [
+          "nczitzk"
+        ],
+        "example": "/joneslanglasalle/en/trends-and-insights",
+        "parameters": {
+          "language": "Language, `zh` by default",
+          "category": "Category, `trends-and-insights` by default"
+        },
+        "description": ":::tip\nIf you subscribe to [Trends & Insights](https://www.joneslanglasalle.com.cn/en/trends-and-insights)，where the URL is `https://www.joneslanglasalle.com.cn/en/trends-and-insights`, extract the part `https://joneslanglasalle.com.cn/` to the end. Use `zh` and `trends-and-insights` as the parameters to fill in. Therefore, the route will be [`/joneslanglasalle/en/trends-and-insights`](https://rsshub.app/joneslanglasalle/en/trends-and-insights).\n:::\n\n| Category  | ID                            |\n| --------- | ----------------------------- |\n| Latest    | trends-and-insights           |\n| Workplace | trends-and-insights/workplace |\n| Investor  | trends-and-insights/investor  |\n| Cities    | trends-and-insights/cities    |\n| Research  | trends-and-insights/research  |\n",
+        "categories": [
+          "new-media"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportRadar": true,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "joneslanglasalle.com.cn/:language/:category"
+            ]
+          },
+          {
+            "title": "Latest",
+            "source": [
+              "joneslanglasalle.com.cn/en/trends-and-insights"
+            ],
+            "target": "/en/trends-and-insights"
+          },
+          {
+            "title": "Workplace",
+            "source": [
+              "joneslanglasalle.com.cn/en/trends-and-insights/workplace"
+            ],
+            "target": "/en/trends-and-insights/workplace"
+          },
+          {
+            "title": "Investor",
+            "source": [
+              "joneslanglasalle.com.cn/en/trends-and-insights/investor"
+            ],
+            "target": "/en/trends-and-insights/investor"
+          },
+          {
+            "title": "Cities",
+            "source": [
+              "joneslanglasalle.com.cn/en/trends-and-insights/cities"
+            ],
+            "target": "/en/trends-and-insights/cities"
+          },
+          {
+            "title": "Research",
+            "source": [
+              "joneslanglasalle.com.cn/en/trends-and-insights/research"
+            ],
+            "target": "/en/trends-and-insights/research"
+          },
+          {
+            "title": "房地产趋势与洞察",
+            "source": [
+              "joneslanglasalle.com.cn/zh/trends-and-insights"
+            ],
+            "target": "/zh/trends-and-insights"
+          },
+          {
+            "title": "办公空间",
+            "source": [
+              "joneslanglasalle.com.cn/zh/trends-and-insights/workplace"
+            ],
+            "target": "/zh/trends-and-insights/workplace"
+          },
+          {
+            "title": "投资者",
+            "source": [
+              "joneslanglasalle.com.cn/zh/trends-and-insights/investor"
+            ],
+            "target": "/zh/trends-and-insights/investor"
+          },
+          {
+            "title": "城市",
+            "source": [
+              "joneslanglasalle.com.cn/zh/trends-and-insights/cities"
+            ],
+            "target": "/zh/trends-and-insights/cities"
+          },
+          {
+            "title": "研究报告",
+            "source": [
+              "joneslanglasalle.com.cn/zh/trends-and-insights/research"
+            ],
+            "target": "/zh/trends-and-insights/research"
+          }
+        ],
+        "view": 0,
+        "zh": {
+          "path": "/:language?/:category{.+}?",
+          "name": "房地产趋势与洞察",
+          "url": "joneslanglasalle.com.cn",
+          "maintainers": [
+            "nczitzk"
+          ],
+          "example": "/joneslanglasalle/zh/trends-and-insights",
+          "parameters": {
+            "language": "语言，默认为 `zh`，可在对应分类页 URL 中找到",
+            "category": "分类，默认为 `trends-and-insights`，可在对应分类页 URL 中找到"
+          },
+          "description": ":::tip\n若订阅 [房地产趋势与洞察](https://www.joneslanglasalle.com.cn/zh/trends-and-insights)，网址为 `https://www.joneslanglasalle.com.cn/zh/trends-and-insights`，请截取 `https://joneslanglasalle.com.cn/` 到末尾的部分 `zh` 和 `trends-and-insights` 作为 `language` 和 `category` 参数填入，此时目标路由为 [`/joneslanglasalle/zh/trends-and-insights`](https://rsshub.app/joneslanglasalle/zh/trends-and-insights)。\n:::\n\n| 分类名称   | 分类 ID                       |\n| ---------- | ----------------------------- |\n| 趋势及洞察 | trends-and-insights           |\n| 办公空间   | trends-and-insights/workplace |\n| 投资者     | trends-and-insights/investor  |\n| 城市       | trends-and-insights/cities    |\n| 研究报告   | trends-and-insights/research  |\n"
+        },
+        "location": "index.ts"
+      }
+    },
+    "name": "Jones Lang LaSalle",
+    "url": "joneslanglasalle.com.cn",
+    "categories": [
+      "new-media"
+    ],
+    "description": "JLL is a global real estate services firm in commercial property and investment management, providing services for real estate owners, occupiers and investors.",
+    "lang": "zh-CN",
+    "zh": {
+      "name": "仲量联行JLL",
+      "description": "仲量联行JLL是全球领先的房地产专业服务和投资管理公司，为企业、房地产业主、投资者及政府提供各类资产的施工、租赁、管理、投资咨询服务。仲量联行也致力于高质量城市发展、打造理想空间、提供可持续的房地产解决方案。"
+    }
   },
   "jornada": {
     "routes": {
@@ -74439,8 +74635,10 @@
       "/show/:id": {
         "path": "/show/:id",
         "categories": [
-          "multimedia"
+          "multimedia",
+          "popular"
         ],
+        "view": 4,
         "example": "/spotify/show/5CfCWKI5pZ28U0uOzXkDHe",
         "parameters": {
           "id": "Show ID"
@@ -74469,9 +74667,10 @@
             ]
           }
         ],
-        "name": "Show",
+        "name": "Show/Podcasts",
         "maintainers": [
-          "caiohsramos"
+          "caiohsramos",
+          "pseudoyu"
         ],
         "location": "show.ts"
       },
