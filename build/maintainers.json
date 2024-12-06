@@ -922,7 +922,8 @@
     "fashioncj"
   ],
   "/bloomberg/authors/:id/:slug/:source?": [
-    "josh"
+    "josh",
+    "pseudoyu"
   ],
   "/bloomberg/:site?": [
     "bigfei"
@@ -4205,11 +4206,16 @@
     "prnake"
   ],
   "/luogu/daily/:id?": [
-    "LogicJake ",
-    "prnake ",
+    "LogicJake",
+    "prnake",
     "nczitzk"
   ],
-  "/luogu/user/blog/:name": [],
+  "/luogu/user/article/:uid": [
+    "TonyRL"
+  ],
+  "/luogu/user/blog/:name": [
+    "ftiasch"
+  ],
   "/luogu/user/feed/:uid": [
     "solstice23"
   ],
@@ -6633,7 +6639,8 @@
     "nczitzk"
   ],
   "/theatlantic/:category": [
-    "EthanWng97"
+    "EthanWng97",
+    "pseudoyu"
   ],
   "/theblockbeats/:channel?/:original?": [
     "Fatpandac",
@@ -7670,6 +7677,9 @@
   ],
   "/ymgal/game/release": [
     "SunBK201"
+  ],
+  "/yna/:lang?/:channel?": [
+    "quiniapiezoelectricity"
   ],
   "/yoasobi-music/info/:category?": [],
   "/yoasobi-music/live": [
