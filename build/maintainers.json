@@ -1612,6 +1612,9 @@
   "/curius/links/:name": [
     "Ovler-Young"
   ],
+  "/cursor/changelog": [
+    "p3psi-boo"
+  ],
   "/cw/author/:channel": [
     "TonyRL"
   ],
@@ -3407,6 +3410,10 @@
   "/huggingface/blog-zh": [
     "zcf0508"
   ],
+  "/huggingface/blog": [
+    "cesaryuan",
+    "zcf0508"
+  ],
   "/huggingface/daily-papers": [
     "zeyugao"
   ],
@@ -4572,6 +4579,9 @@
   "/mrm/:category?": [
     "TonyRL"
   ],
+  "/msn/:market/:name/:id": [
+    "KTachibanaM"
+  ],
   "/mwm/:category?": [
     "nczitzk"
   ],
@@ -5271,8 +5281,11 @@
   "/panewslab/topic/:id": [
     "nczitzk"
   ],
-  "/papers/:category{.+}?": [
+  "/papers/arxiv/:category{.+}?": [
     "nczitzk",
+    "Muyun99"
+  ],
+  "/papers/query/:keyword{.+}?": [
     "Muyun99"
   ],
   "/paradigm/writing": [
@@ -6837,6 +6850,9 @@
   "/thwiki/calendar/:before?/:after?": [
     "aether17"
   ],
+  "/tiddlywiki/releases": [
+    "p3psi-boo"
+  ],
   "/tiktok/user/:user/:iframe?": [
     "TonyRL"
   ],
@@ -7329,6 +7345,9 @@
     "KarasuShin"
   ],
   "/web3caff*": [],
+  "/webcatalog/changelog": [
+    "Tsuyumi25"
+  ],
   "/wechat/announce": [
     "xyqfer"
   ],
