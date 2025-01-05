@@ -1142,6 +1142,9 @@
     "KarasuShin",
     "TonyRL"
   ],
+  "/catti/news/:category": [
+    "PrinOrange"
+  ],
   "/cau/ele": [
     "shengmaosu"
   ],
@@ -2278,10 +2281,10 @@
   "/finology/bullets": [
     "Rjnishant530"
   ],
-  "/finology/:category": [
+  "/finology/category/:category": [
     "Rjnishant530"
   ],
-  "/finology/most-viewed/:time": [
+  "/finology/most-viewed": [
     "Rjnishant530"
   ],
   "/finology/tag/:topic": [
@@ -5222,6 +5225,9 @@
   "/oreno3d/tags/:tagid/:sort/:pagelimit?": [
     "xueli_sherryli"
   ],
+  "/oschina/column/:id": [
+    "nczitzk"
+  ],
   "/oschina/news/:category?": [
     "tgly307",
     "zengxs"
@@ -5280,6 +5286,9 @@
   ],
   "/p-articles/section/:section": [
     "Insomnia1437"
+  ],
+  "/pacilution/latest": [
+    "PrinOrange"
   ],
   "/panewslab/author/:id": [
     "nczitzk"
@@ -5847,6 +5856,9 @@
   "/ruancan/": [],
   "/ruancan/search/:keyword?": [],
   "/ruancan/user/:id": [],
+  "/ruankao/news": [
+    "PrinOrange"
+  ],
   "/ruc/ai/:category?": [
     "yinhanyan"
   ],
@@ -6527,6 +6539,9 @@
     "nczitzk"
   ],
   "/subhd/:type?/:category?": [],
+  "/substack/subscribe/:user": [
+    "pseudoyu"
+  ],
   "/supchina/": [
     "nczitzk"
   ],
@@ -7280,6 +7295,12 @@
   ],
   "/vimeo/user/:username/:cat?": [
     "MisteryMonster"
+  ],
+  "/visionias/newsToday/:filter?": [
+    "Rjnishant530"
+  ],
+  "/visionias/weeklyFocus": [
+    "Rjnishant530"
   ],
   "/vocus/publication/:id": [
     "Maecenas"
