@@ -21198,6 +21198,55 @@
     "url": "cpc.ey.gov.tw",
     "lang": "zh-TW"
   },
+  "cpta": {
+    "routes": {
+      "/:category": {
+        "path": "/:category",
+        "name": "中国人事考试网发布",
+        "maintainers": [
+          "PrinOrange"
+        ],
+        "parameters": {
+          "category": "栏目参数，可见下表描述。"
+        },
+        "description": "\n| Category    | Title     | Description                         |\n|-------------|-----------|-------------------------------------|\n| notice      | 通知公告  | 中国人事考试网 考试通知公告汇总    |\n| performance | 成绩公布  | 中国人事考试网 考试成绩公布汇总    |\n",
+        "categories": [
+          "study"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false,
+          "supportRadar": true,
+          "antiCrawler": true
+        },
+        "radar": [
+          {
+            "title": "中国人事考试网通知公告",
+            "source": [
+              "www.cpta.com.cn/notice.html",
+              "www.cpta.com.cn"
+            ],
+            "target": "/notice"
+          },
+          {
+            "title": "中国人事考试网成绩发布",
+            "source": [
+              "www.cpta.com.cn/performance.html",
+              "www.cpta.com.cn"
+            ],
+            "target": "/performance"
+          }
+        ],
+        "example": "/cpta/notice",
+        "location": "handler.ts"
+      }
+    },
+    "name": "中国人事考试网",
+    "url": "www.cpta.com.cn"
+  },
   "cpuid": {
     "routes": {
       "/news": {
@@ -34379,7 +34428,8 @@
         "example": "/google/research",
         "name": "Research Blog",
         "maintainers": [
-          "Levix"
+          "Levix",
+          "cscnk52"
         ],
         "radar": [
           {
@@ -42442,27 +42492,30 @@
     "routes": {
       "/jwzx/:type?/:page?": {
         "path": "/jwzx/:type?/:page?",
-        "categories": [
-          "university"
+        "name": "教务处",
+        "url": "jwzx.hrbust.edu.cn",
+        "maintainers": [
+          "LenaNouzen",
+          "cscnk52"
         ],
         "example": "/hrbust/jwzx",
         "parameters": {
-          "type": "分类名，默认为教务公告",
-          "page": "文章数，默认为12"
+          "type": "分类编号，默认为 354（教务公告），具体见下表",
+          "page": "文章数，默认为 12"
         },
+        "description": "::: tip\n由于源站未提供精确时间，只能抓取日期粒度的时间。\n:::\n| 339  | 340  | 342  | 346  | 351  | 353  | 354  | 355  | 442  | 443  | 444  | 445  | 2106   | 2332 | 2333 | 2334 | 2335 | 2336 | 2730     | 2855 | 2857 | 2859 | 3271 | 3508    | 3519        | 3981 | 4057 | 4058 | 4059 | 4060 | 4061 | 4062 |\n|------|------|------|------|------|------|------|------|------|------|------|------|--------|------|------|------|------|------|----------|------|------|------|------|---------|-------------|------|------|------|------|------|------|------|\n| 组织机构 | 工作职责 | 专业设置 | 教务信箱 | 名师风采 | 热点新闻 | 教务公告 | 教学新闻 | 教学管理 | 教务管理 | 学籍管理 | 实践教学 | 系统使用动画 | 教学管理 | 教务管理 | 学籍管理 | 实验教学 | 实践教学 | 教研论文教材认定 | 教学管理 | 学籍管理 | 实践教学 | 网络教学 | 多媒体教室管理 |  实验教学与实验室管理 | 教学成果 | 国创计划 | 学科竞赛 | 微专业  | 众创空间 | 示范基地 | 学生社团 |",
+        "categories": [
+          "university"
+        ],
         "features": {
           "requireConfig": false,
           "requirePuppeteer": false,
           "antiCrawler": false,
           "supportBT": false,
           "supportPodcast": false,
-          "supportScihub": false
+          "supportScihub": false,
+          "supportRadar": true
         },
-        "name": "教务处",
-        "maintainers": [
-          "LenaNouzen"
-        ],
-        "description": "| 名师风采 | 热点新闻 | 教务公告 | 教学新闻 |\n  | -------- | -------- | -------- | -------- |\n  | 351      | 353      | 354      | 355      |",
         "radar": [
           {
             "source": [
@@ -42471,6 +42524,7 @@
             "target": "/jwzx"
           }
         ],
+        "view": 5,
         "location": "jwzx.ts"
       },
       "/news/:category?": {
@@ -42484,7 +42538,7 @@
         "parameters": {
           "category": "栏目标识，默认为理工要闻"
         },
-        "description": "\n| lgyw | xwdd | zhenew | jxky | ycdt | xskc | jlhz | zsjy | djsz | zxbf | lgxb | mtlg | jzlt |\n| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |\n| 理工要闻 | 新闻导读 | 综合新闻 | 教学科研 | 院处动态 | 学术科创 | 交流合作 | 招生就业 | 党建思政 | 在线播放 | 理工校报 | 媒体理工 | 讲座论坛 |\n",
+        "description": "| lgyw | xwdd | zhenew | jxky | ycdt | xskc | jlhz | zsjy | djsz | zxbf | lgxb | mtlg | jzlt |\n| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |\n| 理工要闻 | 新闻导读 | 综合新闻 | 教学科研 | 院处动态 | 学术科创 | 交流合作 | 招生就业 | 党建思政 | 在线播放 | 理工校报 | 媒体理工 | 讲座论坛 |",
         "categories": [
           "university"
         ],
@@ -65763,6 +65817,41 @@
   },
   "osu": {
     "routes": {
+      "/latest-ranked/:routeParams?": {
+        "path": "/latest-ranked/:routeParams?",
+        "categories": [
+          "game"
+        ],
+        "example": "/osu/latest-ranked/includeMode=osu&difficultyLimit=L3&difficultyLimit=U7",
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false,
+          "supportRadar": true
+        },
+        "parameters": {
+          "routeParams": {
+            "description": "Used to pass route parameters in Query String format. Check out route description for more info.",
+            "default": "null"
+          }
+        },
+        "name": "Latest Ranked Beatmap",
+        "description": "\nSubscribe to the new beatmaps on https://osu.ppy.sh/beatmapsets.\n\n#### Parameter Description\n\nParameters allows you to:\n\n- Filter game mode\n- Limit beatmap difficulty\n- Show/hide game mode in feed title\n\nBelow is a table of all allowed parameters passed to `routeParams`\n\n\n| Name              | Default  | Description                                                                                                                                                                                                                                          |\n| ----------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| `includeMode`     | All mode | Could be `osu`, `mania`, `fruits` or `taiko`. Specify included game mode of beatmaps. Including this paramseter multiple times to specify multiple game modes, e.g.: `includeMode=osu&includeMode=mania`. Subscribe to all game modes if not specified |\n| `difficultyLimit` | None     | Lower/upper limit of star rating of the beatmaps in the beatmapset item, e.g.:`difficultyLimit=U6`. Checkout tips in descriptions for detailed explaination and examples.                                                                            |\n| `modeInTitle`     | `true`   | `true` or `false` Add mode info into feed title.\n\n\nThis actual parameters should be passed as `routeParams` in URL Query String format without `?`, e.g.:\n\n    /osu/latest-ranked/modeInTitle=true&includeMode=osu\n\n:::tip\nYou could make use of `difficultyLimit` paramters to create a \"high difficulty/low difficulty only\" only feed.\n\nFor example, if you only wants to play low star rating beatmap like 1 or 2 star, you could subscribe to:\n\n    /osu/latest-ranked/difficultyLimit=U2\n\nThis will filter out all beatmapsets that do not provide at least one beatmap with star rating<=`2.00`.\n\nSimilarly, you could use lower bound to filter out beatmapsets which don't have at least one beatmap\nwith star rating higher than a certain threshold.\n\n    /osu/latest-ranked/difficultyLimit=L6\n\nNow all beatmapsets that don't provided at least one beatmap with star rating higher than `6.00` will be filtered.\n:::\n",
+        "maintainers": [
+          "nfnfgo"
+        ],
+        "radar": [
+          {
+            "source": [
+              "osu.ppy.sh/beatmapsets"
+            ]
+          }
+        ],
+        "location": "beatmaps/latest-ranked.ts"
+      },
       "/packs/:type?": {
         "path": "/packs/:type?",
         "categories": [
@@ -85182,10 +85271,7 @@
   "taoguba": {
     "routes": {
       "/blog/:id": {
-        "path": [
-          "/blog/:id",
-          "/user/:id"
-        ],
+        "path": "/blog/:id",
         "categories": [
           "finance"
         ],
@@ -85204,8 +85290,8 @@
         "radar": [
           {
             "source": [
-              "taoguba.com.cn/blog/:id",
-              "taoguba.com.cn/"
+              "tgb.cn/blog/:id",
+              "tgb.cn/"
             ]
           }
         ],
@@ -85214,59 +85300,17 @@
           "nczitzk"
         ],
         "location": "blog.ts"
-      },
-      "/user/:id": {
-        "path": [
-          "/blog/:id",
-          "/user/:id"
-        ],
-        "categories": [
-          "finance"
-        ],
-        "example": "/taoguba/blog/252069",
-        "parameters": {
-          "id": "博客 id，可在对应博客页中找到"
-        },
-        "features": {
-          "requireConfig": false,
-          "requirePuppeteer": false,
-          "antiCrawler": false,
-          "supportBT": false,
-          "supportPodcast": false,
-          "supportScihub": false
-        },
-        "radar": [
-          {
-            "source": [
-              "taoguba.com.cn/blog/:id",
-              "taoguba.com.cn/"
-            ]
-          }
-        ],
-        "name": "用户博客",
-        "maintainers": [
-          "nczitzk"
-        ],
-        "location": "blog.ts"
-      },
-      "/index": {
-        "path": [
-          "/index",
-          "/:category?"
-        ],
-        "name": "Unknown",
-        "maintainers": [
-          "nczitzk"
-        ],
-        "description": "| 淘股论坛 | 社区总版 | 精华加油 | 网友点赞 |\n  | -------- | -------- | -------- | -------- |\n  | bbs      | zongban  | jinghua  | dianzan  |",
-        "location": "index.ts"
       },
       "/:category?": {
-        "path": [
-          "/index",
-          "/:category?"
+        "path": "/:category?",
+        "categories": [
+          "finance"
         ],
-        "name": "Unknown",
+        "example": "/taoguba",
+        "parameters": {
+          "id": "分类，见下表，默认为社区总版"
+        },
+        "name": "淘股论坛",
         "maintainers": [
           "nczitzk"
         ],
@@ -85275,7 +85319,7 @@
       }
     },
     "name": "淘股吧",
-    "url": "taoguba.com.cn",
+    "url": "tgb.cn",
     "lang": "zh-CN"
   },
   "taptap": {

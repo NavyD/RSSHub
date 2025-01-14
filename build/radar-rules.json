@@ -9298,6 +9298,29 @@
       }
     ]
   },
+  "cpta.com.cn": {
+    "_name": "中国人事考试网",
+    "www": [
+      {
+        "title": "中国人事考试网通知公告",
+        "docs": "https://docs.rsshub.app/routes/study",
+        "source": [
+          "/notice.html",
+          "/"
+        ],
+        "target": "/cpta/notice"
+      },
+      {
+        "title": "中国人事考试网成绩发布",
+        "docs": "https://docs.rsshub.app/routes/study",
+        "source": [
+          "/performance.html",
+          "/"
+        ],
+        "target": "/cpta/performance"
+      }
+    ]
+  },
   "cpuid.com": {
     "_name": "CPUID",
     ".": [
@@ -25156,6 +25179,19 @@
       }
     ]
   },
+  "ppy.sh": {
+    "_name": "osu!",
+    "osu": [
+      {
+        "title": "Latest Ranked Beatmap",
+        "docs": "https://docs.rsshub.app/routes/game",
+        "source": [
+          "/beatmapsets"
+        ],
+        "target": "/osu/latest-ranked/:routeParams?"
+      }
+    ]
+  },
   "otobanana.com": {
     "_name": "OTOBANANA",
     ".": [
@@ -30781,7 +30817,7 @@
       }
     ]
   },
-  "taoguba.com.cn": {
+  "tgb.cn": {
     "_name": "淘股吧",
     ".": [
       {
@@ -30792,15 +30828,6 @@
           "/"
         ],
         "target": "/taoguba/blog/:id"
-      },
-      {
-        "title": "用户博客",
-        "docs": "https://docs.rsshub.app/routes/finance",
-        "source": [
-          "/blog/:id",
-          "/"
-        ],
-        "target": "/taoguba/user/:id"
       }
     ]
   },

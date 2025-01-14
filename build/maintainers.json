@@ -1567,6 +1567,9 @@
   "/cpcey/:type?": [
     "Fatpandac"
   ],
+  "/cpta/:category": [
+    "PrinOrange"
+  ],
   "/cpuid/news": [],
   "/cqgas/tqtz": [
     "Mai19930513"
@@ -2755,7 +2758,8 @@
     "pseudoyu"
   ],
   "/google/research": [
-    "Levix"
+    "Levix",
+    "cscnk52"
   ],
   "/google/scholar/:query": [
     "HenryQW"
@@ -3426,7 +3430,8 @@
     "Derekmini"
   ],
   "/hrbust/jwzx/:type?/:page?": [
-    "LenaNouzen"
+    "LenaNouzen",
+    "cscnk52"
   ],
   "/hrbust/news/:category?": [
     "cscnk52"
@@ -5276,6 +5281,9 @@
   "/oshwhub/:sortType?": [
     "tylinux"
   ],
+  "/osu/latest-ranked/:routeParams?": [
+    "nfnfgo"
+  ],
   "/osu/packs/:type?": [
     "JimenezLi"
   ],
@@ -6713,12 +6721,6 @@
     "Fatpandac"
   ],
   "/taoguba/blog/:id": [
-    "nczitzk"
-  ],
-  "/taoguba/user/:id": [
-    "nczitzk"
-  ],
-  "/taoguba/index": [
     "nczitzk"
   ],
   "/taoguba/:category?": [
