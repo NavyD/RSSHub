@@ -42503,7 +42503,7 @@
           "type": "分类编号，默认为 354（教务公告），具体见下表",
           "page": "文章数，默认为 12"
         },
-        "description": "::: tip\n由于源站未提供精确时间，只能抓取日期粒度的时间。\n:::\n| 339  | 340  | 342  | 346  | 351  | 353  | 354  | 355  | 442  | 443  | 444  | 445  | 2106   | 2332 | 2333 | 2334 | 2335 | 2336 | 2730     | 2855 | 2857 | 2859 | 3271 | 3508    | 3519        | 3981 | 4057 | 4058 | 4059 | 4060 | 4061 | 4062 |\n|------|------|------|------|------|------|------|------|------|------|------|------|--------|------|------|------|------|------|----------|------|------|------|------|---------|-------------|------|------|------|------|------|------|------|\n| 组织机构 | 工作职责 | 专业设置 | 教务信箱 | 名师风采 | 热点新闻 | 教务公告 | 教学新闻 | 教学管理 | 教务管理 | 学籍管理 | 实践教学 | 系统使用动画 | 教学管理 | 教务管理 | 学籍管理 | 实验教学 | 实践教学 | 教研论文教材认定 | 教学管理 | 学籍管理 | 实践教学 | 网络教学 | 多媒体教室管理 |  实验教学与实验室管理 | 教学成果 | 国创计划 | 学科竞赛 | 微专业  | 众创空间 | 示范基地 | 学生社团 |",
+        "description": "::: tip\n- type 可以从 URL 中的 columnId 获取。\n- 由于源站未提供精确时间，只能抓取日期粒度的时间。\n:::\n| 组织机构 | 工作职责 | 专业设置 | 教务信箱 | 名师风采 | 热点新闻 | 教务公告 | 教学新闻 | 教学管理 | 教务管理 | 学籍管理 | 实践教学 | 系统使用动画 | 教学管理 | 教务管理 | 学籍管理 | 实验教学 | 实践教学 | 教研论文教材认定 | 教学管理 | 学籍管理 | 实践教学 | 网络教学 | 多媒体教室管理 | 实验教学与实验室管理 | 教学成果 | 国创计划 | 学科竞赛 | 微专业  | 众创空间 | 示范基地 | 学生社团 |\n|------|------|------|------|------|------|------|------|------|------|------|------|--------|------|------|------|------|------|----------|------|------|------|------|---------|------------|------|------|------|------|------|------|------|\n| 339  | 340  | 342  | 346  | 351  | 353  | 354  | 355  | 442  | 443  | 444  | 445  | 2106   | 2332 | 2333 | 2334 | 2335 | 2336 | 2730     | 2855 | 2857 | 2859 | 3271 | 3508    | 3519       | 3981 | 4057 | 4058 | 4059 | 4060 | 4061 | 4062 |",
         "categories": [
           "university"
         ],
@@ -42538,7 +42538,7 @@
         "parameters": {
           "category": "栏目标识，默认为理工要闻"
         },
-        "description": "| lgyw | xwdd | zhenew | jxky | ycdt | xskc | jlhz | zsjy | djsz | zxbf | lgxb | mtlg | jzlt |\n| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |\n| 理工要闻 | 新闻导读 | 综合新闻 | 教学科研 | 院处动态 | 学术科创 | 交流合作 | 招生就业 | 党建思政 | 在线播放 | 理工校报 | 媒体理工 | 讲座论坛 |",
+        "description": "| 理工要闻 | 新闻导读 | 综合新闻   | 教学科研 | 院处动态 | 学术科创 | 交流合作 | 招生就业 | 党建思政 | 在线播放 | 理工校报 | 媒体理工 | 讲座论坛 |\n|------|------|--------|------|------|------|------|------|------|------|------|------|------|\n| lgyw | xwdd | zhenew | jxky | ycdt | xskc | jlhz | zsjy | djsz | zxbf | lgxb | mtlg | jzlt |",
         "categories": [
           "university"
         ],
@@ -42549,7 +42549,14 @@
           {
             "source": [
               "news.hrbust.edu.cn/:category.htm"
-            ]
+            ],
+            "target": "/news/:category"
+          },
+          {
+            "source": [
+              "news.hrbust.edu.cn/"
+            ],
+            "target": "/news/"
           }
         ],
         "view": 5,
@@ -49947,11 +49954,18 @@
           "supportPodcast": false,
           "supportScihub": false
         },
+        "radar": [
+          {
+            "source": [
+              "juejin.cn/:category"
+            ]
+          }
+        ],
         "name": "分类",
         "maintainers": [
           "DIYgod"
         ],
-        "description": "| 后端    | 前端     | Android | iOS | 人工智能 | 开发工具 | 代码人生 | 阅读    |\n  | ------- | -------- | ------- | --- | -------- | -------- | -------- | ------- |\n  | backend | frontend | android | ios | ai       | freebie  | career   | article |",
+        "description": "| 后端    | 前端     | Android | iOS | 人工智能 | 开发工具 | 代码人生 | 阅读    |\n| ------- | -------- | ------- | --- | -------- | -------- | -------- | ------- |\n| backend | frontend | android | ios | ai       | freebie  | career   | article |",
         "location": "category.ts"
       },
       "/collection/:collectionId": {
@@ -49980,9 +49994,41 @@
         ],
         "name": "单个收藏夹",
         "maintainers": [
-          "isQ"
+          "yang131323"
         ],
         "location": "collection.ts"
+      },
+      "/collections/:userId": {
+        "path": "/collections/:userId",
+        "categories": [
+          "programming"
+        ],
+        "example": "/juejin/collections/1697301682482439",
+        "parameters": {
+          "userId": "用户唯一标志符, 在浏览器地址栏URL中能够找到"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "juejin.cn/user/:id",
+              "juejin.cn/user/:id/collections"
+            ],
+            "target": "/collections/:id"
+          }
+        ],
+        "name": "收藏集",
+        "maintainers": [
+          "yang131323"
+        ],
+        "location": "collections.ts"
       },
       "/column/:id": {
         "path": "/column/:id",
@@ -50043,38 +50089,6 @@
           "CaoMeiYouRen"
         ],
         "location": "dynamic.ts"
-      },
-      "/collections/:userId": {
-        "path": "/collections/:userId",
-        "categories": [
-          "programming"
-        ],
-        "example": "/juejin/collections/1697301682482439",
-        "parameters": {
-          "userId": "用户唯一标志符, 在浏览器地址栏URL中能够找到"
-        },
-        "features": {
-          "requireConfig": false,
-          "requirePuppeteer": false,
-          "antiCrawler": false,
-          "supportBT": false,
-          "supportPodcast": false,
-          "supportScihub": false
-        },
-        "radar": [
-          {
-            "source": [
-              "juejin.cn/user/:id",
-              "juejin.cn/user/:id/collections"
-            ],
-            "target": "/collections/:id"
-          }
-        ],
-        "name": "收藏集",
-        "maintainers": [
-          "isQ"
-        ],
-        "location": "favorites.ts"
       },
       "/pins/:type?": {
         "path": "/pins/:type?",
@@ -88629,6 +88643,36 @@
   },
   "tsinghua": {
     "routes": {
+      "/lib/tzgg/:category": {
+        "path": "/lib/tzgg/:category",
+        "categories": [
+          "university"
+        ],
+        "example": "/tsinghua/lib/tzgg/qtkx",
+        "parameters": {
+          "category": "分类，可在对应分类页 URL 中找到"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "lib.tsinghua.edu.cn/tzgg/:category"
+            ]
+          }
+        ],
+        "name": "图书馆通知公告",
+        "maintainers": [
+          "linsenwang"
+        ],
+        "location": "lib/tzgg.ts"
+      },
       "/lib/zydt/:category?": {
         "path": "/lib/zydt/:category?",
         "name": "图书馆资源动态",
@@ -96249,6 +96293,42 @@
     "name": "厦门网",
     "url": "epaper.xmnn.cn",
     "lang": "zh-CN"
+  },
+  "xmu": {
+    "routes": {
+      "/kydt": {
+        "path": "/kydt",
+        "categories": [
+          "university"
+        ],
+        "example": "/xmu/kydt",
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "soe.xmu.edu.cn/kxyj/kydt.htm"
+            ]
+          }
+        ],
+        "name": "科研动态",
+        "maintainers": [
+          "linsenwang"
+        ],
+        "location": "kydt.ts"
+      }
+    },
+    "name": "Xiamen University",
+    "url": "soe.xmu.edu.cn",
+    "zh": {
+      "name": "厦门大学经济学院"
+    }
   },
   "xmut": {
     "routes": {
