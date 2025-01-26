@@ -4172,6 +4172,9 @@
   "/lala/": [
     "cnkmmk"
   ],
+  "/landiannews/": [
+    "nczitzk"
+  ],
   "/lang/live/room/:id": [
     "MittWillson"
   ],
@@ -4777,7 +4780,7 @@
   "/neea/local/:type": [
     "SunShinenny"
   ],
-  "/neea/global/jlpt": [
+  "/neea/jlpt": [
     "nczitzk"
   ],
   "/nenu/sohac/*": [],
@@ -4849,7 +4852,8 @@
   ],
   "/nhk/news/:lang?": [
     "TonyRL",
-    "pseudoyu"
+    "pseudoyu",
+    "cscnk52"
   ],
   "/niaogebiji/cat/:cat": [
     "cKotoriKat"
