@@ -23328,6 +23328,19 @@
       }
     ]
   },
+  "misskey.io": {
+    "_name": "Misskey",
+    ".": [
+      {
+        "title": "Home Timeline",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/"
+        ],
+        "target": "/misskey/timeline/home/:site/:routeParams?"
+      }
+    ]
+  },
   "misskon.com": {
     "_name": "MissKON",
     ".": [
@@ -23803,6 +23816,19 @@
           "/topics/:tid"
         ],
         "target": "/nautil/topic/:tid"
+      }
+    ]
+  },
+  "nautiljon.com": {
+    "_name": "Nautiljon",
+    ".": [
+      {
+        "title": "France manga releases",
+        "docs": "https://docs.rsshub.app/routes/reading",
+        "source": [
+          "/"
+        ],
+        "target": "/nautiljon/releases/manga"
       }
     ]
   },
