@@ -20731,6 +20731,20 @@
       }
     ]
   },
+  "mashiro.best": {
+    "_name": "Mashiro's Baumkuchen",
+    ".": [
+      {
+        "title": "Blog",
+        "docs": "https://docs.rsshub.app/routes/blog",
+        "source": [
+          "/",
+          "/:lang/"
+        ],
+        "target": "/mashiro/:lang"
+      }
+    ]
+  },
   "matters.town": {
     "_name": "Matters",
     ".": [
@@ -25554,6 +25568,19 @@
       }
     ]
   },
+  "okx.com": {
+    "_name": "欧易 OKX",
+    "www": [
+      {
+        "title": "公告",
+        "docs": "https://docs.rsshub.app/routes/finance",
+        "source": [
+          "/zh-hans/help/section/:section"
+        ],
+        "target": "/okx/:section"
+      }
+    ]
+  },
   "olevod.one": {
     "_name": "欧乐影院",
     "www": [
@@ -27534,16 +27561,24 @@
       }
     ]
   },
-  "piokok.com": {
+  "pixwox.com": {
     "_name": "Instagram",
     ".": [
       {
         "title": "User Profile - Picnob",
         "docs": "https://docs.rsshub.app/routes/social-media",
         "source": [
-          "/profile/:id/*"
+          "/profile/:id"
         ],
         "target": "/picnob/user/:id"
+      },
+      {
+        "title": "User Profile - Picnob",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/profile/:id/tagged"
+        ],
+        "target": "/picnob/user/:id/tagged"
       }
     ]
   },
