@@ -20231,7 +20231,7 @@
         "maintainers": [
           "hujingnb"
         ],
-        "url": "www.cnblogs.com/aggsite/headline",
+        "url": "www.cnblogs.com/pick",
         "description": "在博客园主页的分类出可查看所有类型。例如，go 的分类地址为: `https://www.cnblogs.com/cate/go/`, 则: [`/cnblogs/cate/go`](https://rsshub.app/cnblogs/cate/go)",
         "location": "common.ts"
       },
@@ -20267,7 +20267,7 @@
         "maintainers": [
           "hujingnb"
         ],
-        "url": "www.cnblogs.com/aggsite/headline",
+        "url": "www.cnblogs.com/pick",
         "description": "在博客园主页的分类出可查看所有类型。例如，go 的分类地址为: `https://www.cnblogs.com/cate/go/`, 则: [`/cnblogs/cate/go`](https://rsshub.app/cnblogs/cate/go)",
         "location": "common.ts"
       },
@@ -20303,7 +20303,7 @@
         "maintainers": [
           "hujingnb"
         ],
-        "url": "www.cnblogs.com/aggsite/headline",
+        "url": "www.cnblogs.com/pick",
         "description": "在博客园主页的分类出可查看所有类型。例如，go 的分类地址为: `https://www.cnblogs.com/cate/go/`, 则: [`/cnblogs/cate/go`](https://rsshub.app/cnblogs/cate/go)",
         "location": "common.ts"
       },
@@ -20339,7 +20339,7 @@
         "maintainers": [
           "hujingnb"
         ],
-        "url": "www.cnblogs.com/aggsite/headline",
+        "url": "www.cnblogs.com/pick",
         "description": "在博客园主页的分类出可查看所有类型。例如，go 的分类地址为: `https://www.cnblogs.com/cate/go/`, 则: [`/cnblogs/cate/go`](https://rsshub.app/cnblogs/cate/go)",
         "location": "common.ts"
       },
@@ -20375,7 +20375,7 @@
         "maintainers": [
           "hujingnb"
         ],
-        "url": "www.cnblogs.com/aggsite/headline",
+        "url": "www.cnblogs.com/pick",
         "description": "在博客园主页的分类出可查看所有类型。例如，go 的分类地址为: `https://www.cnblogs.com/cate/go/`, 则: [`/cnblogs/cate/go`](https://rsshub.app/cnblogs/cate/go)",
         "location": "common.ts"
       }
@@ -22617,7 +22617,8 @@
         "name": "分类",
         "url": "cuilingmag.com",
         "categories": [
-          "new-media"
+          "new-media",
+          "popular"
         ],
         "maintainers": [
           "nczitzk"
@@ -88365,6 +88366,37 @@
           }
         ],
         "location": "rule.ts"
+      },
+      "/disclosure/listed/notice": {
+        "path": "/disclosure/listed/notice",
+        "name": "上市公司公告",
+        "url": "www.szse.cn",
+        "maintainers": [
+          "nczitzk"
+        ],
+        "example": "/szse/disclosure/listed/notice",
+        "categories": [
+          "finance"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportRadar": true,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "www.szse.cn/disclosure/listed/notice/index.html"
+            ],
+            "target": "/disclosure/listed/notice"
+          }
+        ],
+        "view": 0,
+        "location": "disclosure/listed-notice.ts"
       }
     },
     "name": "深圳证券交易所",
@@ -99864,8 +99896,8 @@
               "description": ""
             }
           ],
-          "requirePuppeteer": false,
-          "antiCrawler": false,
+          "requirePuppeteer": true,
+          "antiCrawler": true,
           "supportBT": false,
           "supportPodcast": false,
           "supportScihub": false
@@ -101426,7 +101458,7 @@
         "categories": [
           "blog"
         ],
-        "example": "/youmemark/Cds2gZ2HIDdS41IfC6kzE1DL9Su1MqUp",
+        "example": "/youmemark/pseudoyu",
         "parameters": {
           "userid": "`userid` is the user id of youmemark"
         },
@@ -101446,7 +101478,8 @@
           {
             "source": [
               "youmemark.com/user/:userid"
-            ]
+            ],
+            "target": "/:userid"
           }
         ],
         "description": "Get user's public bookmarks from YouMeMark\n::: tip\n  Add `?limit=<number>` to the end of the route to limit the number of items. Default is 10.\n:::",
