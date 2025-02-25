@@ -1464,6 +1464,9 @@
   "/cmpxchg8b/articles": [
     "yuguorui"
   ],
+  "/cmu/andypavlo/blog": [
+    "mocusez"
+  ],
   "/cn-healthcare/index": [
     "qnloft"
   ],
@@ -2970,6 +2973,9 @@
     "Yoge-Code"
   ],
   "/gov/mmht/*": [],
+  "/gov/moa/gjs/:category{.+}?": [
+    "nczitzk"
+  ],
   "/gov/moa/suburl/:suburl{.+}": [
     "Origami404",
     "lyqluis"
