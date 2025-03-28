@@ -9131,6 +9131,27 @@
       }
     ]
   },
+  "chuapp.com": {
+    "_name": "触乐",
+    ".": [
+      {
+        "title": "分类",
+        "docs": "https://docs.rsshub.app/routes/game",
+        "source": [
+          "/category/:category"
+        ],
+        "target": "/chuapp/:category"
+      },
+      {
+        "title": "分类",
+        "docs": "https://docs.rsshub.app/routes/game",
+        "source": [
+          "/tag/index/id/20369.html"
+        ],
+        "target": "/chuapp/night"
+      }
+    ]
+  },
   "cib.com.cn": {
     "_name": "中国兴业银行",
     ".": [
@@ -11930,6 +11951,15 @@
           "/"
         ],
         "target": "/sciencedirect/call-for-paper/:subject"
+      },
+      {
+        "title": "Current Issue",
+        "docs": "https://docs.rsshub.app/routes/journal",
+        "source": [
+          "/journal/:id",
+          "/"
+        ],
+        "target": "/sciencedirect/journal/:id/current"
       },
       {
         "title": "Journal",
