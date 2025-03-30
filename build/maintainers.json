@@ -2638,6 +2638,9 @@
   "/gamegene/news": [
     "lone1y-51"
   ],
+  "/gamekee/news": [
+    "ueiu"
+  ],
   "/gamer/gnn/:category?": [
     "Arracc",
     "ladeng07",
@@ -6091,6 +6094,9 @@
   "/rarehistoricalphotos/": [
     "TonyRL"
   ],
+  "/raspberrypi/magazine": [
+    "nczitzk"
+  ],
   "/rattibha/user/:user": [
     "yshalsager"
   ],
@@ -7351,6 +7357,9 @@
   "/tradingview/pine/:version?": [],
   "/transcriptforest/:channel?": [
     "nczitzk"
+  ],
+  "/transformer-circuits/": [
+    "shinmohuang"
   ],
   "/trending/:keywords/:numberOfDays?": [
     "Jkker"
