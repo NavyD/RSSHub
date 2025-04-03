@@ -61324,6 +61324,41 @@
     "url": "meituan.com",
     "lang": "zh-CN"
   },
+  "melonbooks": {
+    "routes": {
+      "/search/:query?": {
+        "path": "/search/:query?",
+        "categories": [
+          "anime"
+        ],
+        "example": "/melonbooks/search/name=けいおん",
+        "parameters": {
+          "category": "链接参数，对应网址问号后的内容，不携带问号"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "name": "搜索结果",
+        "maintainers": [
+          "cokemine"
+        ],
+        "description": "::: tip\n如果你期望获取限制级内容，可以添加`&adult_view=1`参数\n:::",
+        "location": "search.ts"
+      }
+    },
+    "name": "メロンブックス",
+    "url": "www.melonbooks.co.jp",
+    "description": "サイン本の同人誌、同人ゲーム、同人音楽、同人グッズの通販は国内最大級、業界最速の萌えいっぱいの総合書店メロンブックスで。同人作品、同人委託の特典付商品も多数あり。直営店舗数も同人業界で最大級。",
+    "lang": "ja",
+    "categories": [
+      "anime"
+    ]
+  },
   "mercari": {
     "routes": {
       "/:sort/:order/:status/:keyword": {
@@ -75169,6 +75204,119 @@
     "name": "PlayStation Store",
     "url": "www.playstation.com",
     "lang": "en"
+  },
+  "psnine": {
+    "routes": {
+      "/game": {
+        "path": "/game",
+        "categories": [
+          "game"
+        ],
+        "example": "/psnine/game",
+        "name": "游戏",
+        "maintainers": [
+          "betta-cyber"
+        ],
+        "radar": [
+          {
+            "source": [
+              "psnine.com/psngame",
+              "psnine.com"
+            ]
+          }
+        ],
+        "location": "game.ts"
+      },
+      "/": {
+        "path": "/",
+        "categories": [
+          "game"
+        ],
+        "example": "/psnine",
+        "name": "首页",
+        "maintainers": [
+          "betta-cyber"
+        ],
+        "radar": [
+          {
+            "source": [
+              "psnine.com"
+            ]
+          }
+        ],
+        "location": "index.ts"
+      },
+      "/node/:id?/:order?": {
+        "path": "/node/:id?/:order?",
+        "parameters": {
+          "id": "节点 id，见下表，默认为 news",
+          "order": "排序，`date` 即最新，默认为 `obdate` 即综合排序"
+        },
+        "categories": [
+          "game"
+        ],
+        "example": "/psnine/node/news",
+        "name": "节点",
+        "maintainers": [
+          "betta-cyber",
+          "nczitzk"
+        ],
+        "radar": [
+          {
+            "source": [
+              "psnine.com/node/:id"
+            ]
+          }
+        ],
+        "location": "node.ts"
+      },
+      "/shuzhe": {
+        "path": "/shuzhe",
+        "categories": [
+          "game"
+        ],
+        "example": "/psnine/shuzhe",
+        "name": "数折",
+        "maintainers": [
+          "betta-cyber"
+        ],
+        "radar": [
+          {
+            "source": [
+              "psnine.com/dd",
+              "psnine.com"
+            ]
+          }
+        ],
+        "location": "shuzhe.ts"
+      },
+      "/trade": {
+        "path": "/trade",
+        "categories": [
+          "game"
+        ],
+        "example": "/psnine/trade",
+        "name": "闲游",
+        "maintainers": [
+          "betta-cyber"
+        ],
+        "radar": [
+          {
+            "source": [
+              "psnine.com/trade",
+              "psnine.com"
+            ]
+          }
+        ],
+        "location": "trade.ts"
+      }
+    },
+    "name": "PSN 中文站",
+    "url": "psnine.com",
+    "lang": "zh-CN",
+    "categories": [
+      "game"
+    ]
   },
   "psyche": {
     "routes": {
