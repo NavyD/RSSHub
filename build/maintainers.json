@@ -711,6 +711,15 @@
     "youyou-sudo",
     "honue"
   ],
+  "/baobua/category/:category": [
+    "AiraNadih"
+  ],
+  "/baobua/": [
+    "AiraNadih"
+  ],
+  "/baobua/search/:keyword": [
+    "AiraNadih"
+  ],
   "/baoyu/blog": [
     "liyaozhong"
   ],
@@ -1938,6 +1947,9 @@
   ],
   "/dianping/user/:id": [
     "pseudoyu"
+  ],
+  "/diariofruticola/filtro/:filter{.+}": [
+    "nczitzk"
   ],
   "/diershoubing/news": [
     "wushijishan"
@@ -5356,6 +5368,15 @@
   ],
   "/nwafu/:type?": [
     "karinido"
+  ],
+  "/nwnu/college/csse/:column": [
+    "PrinOrange"
+  ],
+  "/nwnu/department/academic-affairs/:column": [
+    "PrinOrange"
+  ],
+  "/nwnu/department/postgraduate/:column": [
+    "PrinOrange"
   ],
   "/nyaa/search/:query?": [
     "Lava-Swimmer",
