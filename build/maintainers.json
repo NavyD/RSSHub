@@ -4388,7 +4388,8 @@
   "/kunchengblog/essay": [
     "nczitzk"
   ],
-  "/kurogames/wutheringwaves/news": [
+  "/kurogames/wutheringwaves/news/:language?": [
+    "goestav",
     "enpitsulin"
   ],
   "/kuwaitlocal/:category?": [
@@ -8345,8 +8346,9 @@
   "/youmemark/:userid": [
     "pseudoyu"
   ],
-  "/youtube/channel/:id/:embed?": [
-    "DIYgod"
+  "/youtube/channel/:id/:routeParams?": [
+    "DIYgod",
+    "pseudoyu"
   ],
   "/youtube/charts/:category?/:country?/:embed?": [
     "TonyRL"
@@ -8366,8 +8368,9 @@
   "/youtube/subscriptions/:embed?": [
     "TonyRL"
   ],
-  "/youtube/user/:username/:embed?": [
-    "DIYgod"
+  "/youtube/user/:username/:routeParams?": [
+    "DIYgod",
+    "pseudoyu"
   ],
   "/youzhiyouxing/materials/:id?": [
     "broven",
