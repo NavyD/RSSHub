@@ -7273,6 +7273,16 @@
         ],
         "target": "/bupt/rczp"
       }
+    ],
+    "scss": [
+      {
+        "title": "网络空间安全学院 - 通知公告",
+        "docs": "https://docs.rsshub.app/routes/university",
+        "source": [
+          "/index/tzgg1.htm"
+        ],
+        "target": "/bupt/scss/tzgg"
+      }
     ]
   },
   "byau.edu.cn": {
@@ -14762,6 +14772,55 @@
       }
     ]
   },
+  "gmu.cn": {
+    "_name": "赣南医科大学",
+    ".": [
+      {
+        "title": "新闻中心",
+        "docs": "https://docs.rsshub.app/routes/university",
+        "source": [
+          "/xwzx/gyyw.htm",
+          "/"
+        ],
+        "target": "/gmu/news/gyyw"
+      },
+      {
+        "title": "新闻中心",
+        "docs": "https://docs.rsshub.app/routes/university",
+        "source": [
+          "/xwzx/ybdt.htm"
+        ],
+        "target": "/gmu/news/ybdt"
+      },
+      {
+        "title": "新闻中心",
+        "docs": "https://docs.rsshub.app/routes/university",
+        "source": [
+          "/xwzx/mtgy.htm"
+        ],
+        "target": "/gmu/news/mtgy"
+      },
+      {
+        "title": "新闻中心",
+        "docs": "https://docs.rsshub.app/routes/university",
+        "source": [
+          "/xwzx/xsjz.htm"
+        ],
+        "target": "/gmu/news/xsjz"
+      }
+    ],
+    "yjs": [
+      {
+        "title": "研究生院",
+        "docs": "https://docs.rsshub.app/routes/university",
+        "source": [
+          "/:type/:subtype.htm",
+          "/"
+        ],
+        "target": "/gmu/yjs/:type/:subtype"
+      }
+    ]
+  },
   "jihs.go.jp": {
     "_name": "JapanGov",
     "id-info": [
@@ -18563,6 +18622,19 @@
           "/"
         ],
         "target": "/huanqiu/news/:category?"
+      }
+    ]
+  },
+  "huawei.com": {
+    "_name": "华为开发者联盟",
+    "developer": [
+      {
+        "title": "HarmonyOS 示例代码",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/consumer/cn/samples"
+        ],
+        "target": "/huawei/huawei/developer/harmonyos/sample-code"
       }
     ]
   },
@@ -33124,6 +33196,19 @@
           "/zh/news.html"
         ],
         "target": "/slowmist/:type?"
+      }
+    ]
+  },
+  "smartlink.bio": {
+    "_name": "SmartLink",
+    ".": [
+      {
+        "title": "Posts",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/"
+        ],
+        "target": "/smartlink/:site"
       }
     ]
   },
