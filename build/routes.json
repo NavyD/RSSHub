@@ -13204,7 +13204,8 @@
           "channel": "channel, default to `top stories`"
         },
         "categories": [
-          "traditional-media"
+          "traditional-media",
+          "popular"
         ],
         "description": "Provides a better reading experience (full text articles) over the official ones.\n\n    Support major channels, refer to [BBC RSS feeds](https://www.bbc.co.uk/news/10628494). Eg, `business` for `https://feeds.bbci.co.uk/news/business/rss.xml`.\n\n    -   Channel contains sub-directories, such as `https://feeds.bbci.co.uk/news/world/asia/rss.xml`, replace `/` with `-`, `/bbc/world-asia`.",
         "location": "index.ts",
@@ -23591,7 +23592,8 @@
       "/depth/:category?": {
         "path": "/depth/:category?",
         "categories": [
-          "finance"
+          "finance",
+          "popular"
         ],
         "example": "/cls/depth/1000",
         "parameters": {
@@ -28021,6 +28023,173 @@
       "other"
     ],
     "lang": "en"
+  },
+  "daum": {
+    "name": "daum",
+    "routes": {
+      "/potplayer/:lang?": {
+        "path": "/potplayer/:lang?",
+        "name": "Potplayer Update History",
+        "url": "potplayer.daum.net",
+        "maintainers": [
+          "nczitzk"
+        ],
+        "example": "/daum/potplayer",
+        "parameters": {
+          "lang": {
+            "description": "Language, Korean by default",
+            "options": [
+              {
+                "label": "한국어",
+                "value": "Kor"
+              },
+              {
+                "label": "中文(简体)",
+                "value": "Chs"
+              },
+              {
+                "label": "中文(繁体)",
+                "value": "Cht"
+              },
+              {
+                "label": "English",
+                "value": "Eng"
+              },
+              {
+                "label": "Українська",
+                "value": "Eng"
+              },
+              {
+                "label": "Русский",
+                "value": "Rus"
+              },
+              {
+                "label": "Polski",
+                "value": "Pol"
+              }
+            ]
+          }
+        },
+        "description": ":::tip\nTo subscribe to [Potplayer Update History](https://t1.daumcdn.net/potplayer/PotPlayer/v4/Update2/UpdateEng.html), where the source URL is `https://t1.daumcdn.net/potplayer/PotPlayer/v4/Update2/UpdateEng.html`, extract the certain parts from this URL to be used as parameters, resulting in the route as [`/daum/potplayer/Eng`](https://rsshub.app/daum/potplayer/Eng).\n:::\n\n| Language                                                                           | Id                                           |\n| ---------------------------------------------------------------------------------- | -------------------------------------------- |\n| [한국어](https://t1.daumcdn.net/potplayer/PotPlayer/v4/Update2/Update.html)        |                                              |\n| [中文(简体)](https://t1.daumcdn.net/potplayer/PotPlayer/v4/Update2/UpdateChs.html) | [Chs](https://rsshub.app/daum/potplayer/Chs) |\n| [中文(繁体)](https://t1.daumcdn.net/potplayer/PotPlayer/v4/Update2/UpdateCht.html) | [Cht](https://rsshub.app/daum/potplayer/Cht) |\n| [ENGLISH](https://t1.daumcdn.net/potplayer/PotPlayer/v4/Update2/UpdateEng.html)    | [Eng](https://rsshub.app/daum/potplayer/Eng) |\n| [Українська](https://t1.daumcdn.net/potplayer/PotPlayer/v4/Update2/UpdateEng.html) | [Eng](https://rsshub.app/daum/potplayer/Eng) |\n| [РУССКИЙ](https://t1.daumcdn.net/potplayer/PotPlayer/v4/Update2/UpdateRus.html)    | [Eng](https://rsshub.app/daum/potplayer/Rus) |\n| [Polski](https://t1.daumcdn.net/potplayer/PotPlayer/v4/Update2/UpdatePol.html)     | [Eng](https://rsshub.app/daum/potplayer/Pol) |\n",
+        "categories": [
+          "program-update"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportRadar": true,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "potplayer.daum.net"
+            ]
+          },
+          {
+            "title": "한국어",
+            "source": [
+              "t1.daumcdn.net/potplayer/PotPlayer/v4/Update2/Update.html"
+            ],
+            "target": "/potplayer"
+          },
+          {
+            "title": "中文(简体)",
+            "source": [
+              "t1.daumcdn.net/potplayer/PotPlayer/v4/Update2/UpdateChs.html"
+            ],
+            "target": "/potplayer/Chs"
+          },
+          {
+            "title": "中文(繁体)",
+            "source": [
+              "t1.daumcdn.net/potplayer/PotPlayer/v4/Update2/UpdateCht.html"
+            ],
+            "target": "/potplayer/Cht"
+          },
+          {
+            "title": "English",
+            "source": [
+              "t1.daumcdn.net/potplayer/PotPlayer/v4/Update2/UpdateEng.html"
+            ],
+            "target": "/potplayer/Eng"
+          },
+          {
+            "title": "Українська",
+            "source": [
+              "t1.daumcdn.net/potplayer/PotPlayer/v4/Update2/UpdateEng.html"
+            ],
+            "target": "/potplayer/Eng"
+          },
+          {
+            "title": "Русский",
+            "source": [
+              "t1.daumcdn.net/potplayer/PotPlayer/v4/Update2/UpdateRus.html"
+            ],
+            "target": "/potplayer/Rus"
+          },
+          {
+            "title": "Polski",
+            "source": [
+              "t1.daumcdn.net/potplayer/PotPlayer/v4/Update2/UpdatePol.html"
+            ],
+            "target": "/potplayer/Pol"
+          }
+        ],
+        "view": 0,
+        "zh": {
+          "path": "/potplayer/:lang?",
+          "name": "PotPlayer 版本更新信息",
+          "url": "potplayer.daum.net",
+          "maintainers": [
+            "nczitzk"
+          ],
+          "example": "/daum/potplayer/zh_CN",
+          "parameters": {
+            "lang": {
+              "description": "语言，默认为韩语，可在对应页 URL 中找到",
+              "options": [
+                {
+                  "label": "한국어",
+                  "value": "Kor"
+                },
+                {
+                  "label": "中文(简体)",
+                  "value": "Chs"
+                },
+                {
+                  "label": "中文(繁体)",
+                  "value": "Cht"
+                },
+                {
+                  "label": "English",
+                  "value": "Eng"
+                },
+                {
+                  "label": "Українська",
+                  "value": "Eng"
+                },
+                {
+                  "label": "Русский",
+                  "value": "Rus"
+                },
+                {
+                  "label": "Polski",
+                  "value": "Pol"
+                }
+              ]
+            }
+          },
+          "description": ":::tip\n若订阅 [Potplayer Update History](https://t1.daumcdn.net/potplayer/PotPlayer/v4/Update2/UpdateChs.html)，网址为 `https://t1.daumcdn.net/potplayer/PotPlayer/v4/Update2/UpdateChs.html`，请截取 `https://t1.daumcdn.net/potplayer/PotPlayer/v4/Update2/Update` 到末尾的部分 `Chs` 作为 `lang` 参数填入，此时目标路由为 [`/daum/potplayer/Chs`](https://rsshub.app/daum/potplayer/Chs)。\n:::\n\n| Language                                                                           | Id                                           |\n| ---------------------------------------------------------------------------------- | -------------------------------------------- |\n| [한국어](https://t1.daumcdn.net/potplayer/PotPlayer/v4/Update2/Update.html)        |                                              |\n| [中文(简体)](https://t1.daumcdn.net/potplayer/PotPlayer/v4/Update2/UpdateChs.html) | [Chs](https://rsshub.app/daum/potplayer/Chs) |\n| [中文(繁体)](https://t1.daumcdn.net/potplayer/PotPlayer/v4/Update2/UpdateCht.html) | [Cht](https://rsshub.app/daum/potplayer/Cht) |\n| [ENGLISH](https://t1.daumcdn.net/potplayer/PotPlayer/v4/Update2/UpdateEng.html)    | [Eng](https://rsshub.app/daum/potplayer/Eng) |\n| [Українська](https://t1.daumcdn.net/potplayer/PotPlayer/v4/Update2/UpdateEng.html) | [Eng](https://rsshub.app/daum/potplayer/Eng) |\n| [РУССКИЙ](https://t1.daumcdn.net/potplayer/PotPlayer/v4/Update2/UpdateRus.html)    | [Eng](https://rsshub.app/daum/potplayer/Rus) |\n| [Polski](https://t1.daumcdn.net/potplayer/PotPlayer/v4/Update2/UpdatePol.html)     | [Eng](https://rsshub.app/daum/potplayer/Pol) |\n"
+        },
+        "location": "potplayer.ts",
+        "module": "() => import('@/routes/daum/potplayer.ts')"
+      }
+    },
+    "apiRoutes": {}
   },
   "dayanzai": {
     "routes": {
@@ -33063,8 +33232,7 @@
       "/:endpoint": {
         "path": "/:endpoint",
         "categories": [
-          "traditional-media",
-          "popular"
+          "traditional-media"
         ],
         "view": 0,
         "example": "/economist/latest",
@@ -41100,8 +41268,7 @@
       "/citations/:id": {
         "path": "/citations/:id",
         "categories": [
-          "journal",
-          "popular"
+          "journal"
         ],
         "example": "/google/citations/mlmE4JMAAAAJ",
         "parameters": {
@@ -71597,8 +71764,7 @@
       "/news/:lang?": {
         "path": "/news/:lang?",
         "categories": [
-          "traditional-media",
-          "popular"
+          "traditional-media"
         ],
         "view": 0,
         "example": "/nhk/news/en",
@@ -108369,7 +108535,8 @@
       "/search/hot/:fulltext?": {
         "path": "/search/hot/:fulltext?",
         "categories": [
-          "social-media"
+          "social-media",
+          "popular"
         ],
         "view": 1,
         "example": "/weibo/search/hot",
