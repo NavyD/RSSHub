@@ -19907,6 +19907,19 @@
       }
     ]
   },
+  "hyperdash.info": {
+    "_name": "HyperDash",
+    ".": [
+      {
+        "title": "Top Traders",
+        "docs": "https://docs.rsshub.app/routes/finance",
+        "source": [
+          "/"
+        ],
+        "target": "/hyperdash/top-traders"
+      }
+    ]
+  },
   "arktca.com": {
     "_name": "鹰角网络",
     "aneot": [
@@ -23108,6 +23121,19 @@
           "/:lang/"
         ],
         "target": "/mashiro/:lang"
+      }
+    ]
+  },
+  "mathpix.com": {
+    "_name": "Mathpix",
+    ".": [
+      {
+        "title": "Blog",
+        "docs": "https://docs.rsshub.app/routes/blog",
+        "source": [
+          "/blog"
+        ],
+        "target": "/mathpix/blog"
       }
     ]
   },
@@ -36960,6 +36986,19 @@
           "/"
         ],
         "target": "/tvb/news/:category?/:language?"
+      }
+    ]
+  },
+  "tver.jp": {
+    "_name": "TVer",
+    ".": [
+      {
+        "title": "Series",
+        "docs": "https://docs.rsshub.app/routes/traditional-media",
+        "source": [
+          "/series/:id"
+        ],
+        "target": "/tver/series/:id"
       }
     ]
   },

@@ -3886,6 +3886,9 @@
     "HenryQW",
     "nczitzk"
   ],
+  "/hyperdash/top-traders": [
+    "pseudoyu"
+  ],
   "/hypergryph/arknights/announce/:platform?/:group?": [
     "swwind"
   ],
@@ -4876,6 +4879,9 @@
   ],
   "/mastodon/remote/:site/:only_media?": [
     "hoilc"
+  ],
+  "/mathpix/blog": [
+    "nczitzk"
   ],
   "/matters/author/:uid": [
     "Cerebrater",
@@ -7691,6 +7697,9 @@
   ],
   "/tvb/news/:category?/:language?": [
     "nczitzk"
+  ],
+  "/tver/series/:id": [
+    "yuikisaito"
   ],
   "/tvtropes/featured/:category?": [
     "nczitzk"
