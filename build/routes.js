@@ -9354,6 +9354,29 @@ export default {
         "url": "www.anthropic.com/news",
         "location": "news.ts",
         "module": () => import('@/routes/anthropic/news.ts')
+      },
+      "/research": {
+        "path": "/research",
+        "categories": [
+          "programming"
+        ],
+        "example": "/anthropic/research",
+        "parameters": {},
+        "radar": [
+          {
+            "source": [
+              "www.anthropic.com/research",
+              "www.anthropic.com"
+            ]
+          }
+        ],
+        "name": "Research",
+        "maintainers": [
+          "ttttmr"
+        ],
+        "url": "www.anthropic.com/research",
+        "location": "research.ts",
+        "module": () => import('@/routes/anthropic/research.ts')
       }
     },
     "name": "Anthropic",
@@ -56069,8 +56092,7 @@ export default {
       "/ranking/:type": {
         "path": "/ranking/:type",
         "categories": [
-          "new-media",
-          "popular"
+          "new-media"
         ],
         "example": "/ithome/ranking/24h",
         "parameters": {
@@ -69152,7 +69174,8 @@ export default {
       "/:type?": {
         "path": "/:type?",
         "categories": [
-          "new-media"
+          "new-media",
+          "popular"
         ],
         "example": "/mittrchina/index",
         "parameters": {
@@ -86783,6 +86806,47 @@ export default {
     },
     "name": "深圳市医疗器械行业协会",
     "url": "www.samd.org.cn",
+    "lang": "zh-CN"
+  },
+  "samrdprc": {
+    "routes": {
+      "/news/:type1/:type2": {
+        "path": "/news/:type1/:type2",
+        "categories": [
+          "government"
+        ],
+        "example": "/samrdprc/news/xfpzh/xfpgnzh",
+        "parameters": {
+          "type1": "召回类型ID1，见下表",
+          "type2": "召回类型ID2，见下表"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "description": "\n| 类型中文 | 召回类型ID1 | 召回类型ID2 |\n| --- | --- | --- |\n| 消费品召回 | xfpzh | xfpgnzh |\n| 汽车召回 | qczh | gnzhqc |\n",
+        "name": "召回信息",
+        "maintainers": [
+          "a180285"
+        ],
+        "radar": [
+          {
+            "source": [
+              "www.samrdprc.org.cn/:type1/:type2"
+            ],
+            "target": "/news/:type1/:type2"
+          }
+        ],
+        "location": "news.ts",
+        "module": () => import('@/routes/samrdprc/news.ts')
+      }
+    },
+    "name": "国家市场监督管理总局",
+    "url": "www.samrdprc.org.cn",
     "lang": "zh-CN"
   },
   "samsung": {

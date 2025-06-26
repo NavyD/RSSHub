@@ -5014,6 +5014,15 @@
           "/"
         ],
         "target": "/anthropic/news"
+      },
+      {
+        "title": "Research",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/research",
+          "/"
+        ],
+        "target": "/anthropic/research"
       }
     ]
   },
@@ -31906,6 +31915,19 @@
           "/"
         ],
         "target": "/sakurazaka46/news"
+      }
+    ]
+  },
+  "samrdprc.org.cn": {
+    "_name": "国家市场监督管理总局",
+    "www": [
+      {
+        "title": "召回信息",
+        "docs": "https://docs.rsshub.app/routes/government",
+        "source": [
+          "/:type1/:type2"
+        ],
+        "target": "/samrdprc/news/:type1/:type2"
       }
     ]
   },
