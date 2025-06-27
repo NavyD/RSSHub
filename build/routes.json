@@ -87781,6 +87781,56 @@
     "url": "cs.scnu.edu.cn",
     "lang": "zh-CN"
   },
+  "scoop": {
+    "routes": {
+      "/apps/:query?": {
+        "path": "/apps/:query?",
+        "name": "Apps",
+        "url": "scoop.sh",
+        "maintainers": [
+          "nczitzk"
+        ],
+        "example": "/scoop/apps",
+        "parameters": {
+          "query": {
+            "description": "Query, `s=2&d=1&n=true&dm=true&o=true` by default"
+          }
+        },
+        "description": ":::tip\nTo subscribe to [Apps](https://scoop.sh/#/apps?s=2&d=1&n=true&dm=true&o=true), where the source URL is `https://scoop.sh/#/apps?s=2&d=1&n=true&dm=true&o=true`, extract the certain parts from this URL to be used as parameters, resulting in the route as [`/scoop/apps/s=2&d=1&n=true&dm=true&o=true`](https://rsshub.app/scoop/apps/s=2&d=1&n=true&dm=true&o=true).\n\n:::\n",
+        "categories": [
+          "program-update"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportRadar": true,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "scoop.sh/#/apps",
+              "scoop.sh"
+            ]
+          }
+        ],
+        "view": 5,
+        "location": "apps.ts",
+        "module": "() => import('@/routes/scoop/apps.ts')"
+      }
+    },
+    "name": "Scoop",
+    "apiRoutes": {},
+    "url": "scoop.sh",
+    "categories": [
+      "program-update"
+    ],
+    "description": "",
+    "lang": "en"
+  },
   "sctv": {
     "routes": {
       "/programme/:id?/:limit?/:isFull?": {
