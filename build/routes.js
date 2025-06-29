@@ -62700,7 +62700,8 @@ export default {
             "target": "/counterstrike/matches/:id"
           }
         ],
-        "name": "Unknown",
+        "example": "/liquipedia/counterstrike/matches/Team_Falcons",
+        "name": "Counter-Strike Team Match Results",
         "maintainers": [
           "CookiePieWw"
         ],
