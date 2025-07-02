@@ -89312,6 +89312,37 @@
         "location": "cse/index.ts",
         "module": "() => import('@/routes/seu/cse/index.ts')"
       },
+      "/cyber/tzgg": {
+        "path": "/cyber/tzgg",
+        "categories": [
+          "university"
+        ],
+        "example": "/seu/cyber/tzgg",
+        "parameters": {},
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "cyber.seu.edu.cn/tzgg/list.htm",
+              "cyber.seu.edu.cn/"
+            ]
+          }
+        ],
+        "name": "网络空间安全学院 - 通知公告",
+        "maintainers": [
+          "shrugginG"
+        ],
+        "description": "东南大学网络空间安全学院通知公告",
+        "location": "cyber/index.ts",
+        "module": "() => import('@/routes/seu/cyber/index.ts')"
+      },
       "/radio/academic": {
         "path": "/radio/academic",
         "categories": [
