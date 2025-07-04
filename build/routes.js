@@ -540,7 +540,8 @@ export default {
           "antiCrawler": false,
           "supportBT": true,
           "supportPodcast": false,
-          "supportScihub": false
+          "supportScihub": false,
+          "nsfw": true
         },
         "name": "论坛",
         "maintainers": [
@@ -11719,6 +11720,49 @@ export default {
     "url": "autocentre.ua",
     "description": "Автоцентр.ua: автоновини - Автомобільний сайт N1 в Україні",
     "lang": "ru"
+  },
+  "azul": {
+    "routes": {
+      "/downloads": {
+        "path": "/downloads",
+        "name": "Downloads",
+        "url": "www.azul.com",
+        "maintainers": [
+          "nczitzk"
+        ],
+        "example": "/azul/downloads",
+        "categories": [
+          "program-update"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportRadar": true,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "www.azul.com/downloads"
+            ],
+            "target": "/downloads"
+          }
+        ],
+        "view": 5,
+        "location": "packages.ts",
+        "module": () => import('@/routes/azul/packages.ts')
+      }
+    },
+    "name": "Azul",
+    "url": "azul.com",
+    "categories": [
+      "programming"
+    ],
+    "description": "",
+    "lang": "en"
   },
   "baai": {
     "routes": {
@@ -35322,6 +35366,45 @@ export default {
     },
     "name": "Fantia",
     "url": "fantia.jp",
+    "lang": "ja"
+  },
+  "fantube": {
+    "routes": {
+      "/r18/creator/:identifier": {
+        "path": "/r18/creator/:identifier",
+        "categories": [
+          "multimedia"
+        ],
+        "example": "/fantube/r18/creator/miyuu",
+        "parameters": {
+          "identifier": "User handle"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "www.fantube.tokyo/r18/creator/:identifier"
+            ]
+          }
+        ],
+        "name": "User Posts",
+        "maintainers": [
+          "TonyRL"
+        ],
+        "location": "creator.ts",
+        "module": () => import('@/routes/fantube/creator.ts')
+      }
+    },
+    "name": "FANTUBE",
+    "apiRoutes": {},
+    "url": "www.fantube.tokyo",
     "lang": "ja"
   },
   "fanxinzhui": {
@@ -94558,6 +94641,46 @@ export default {
     "url": "jwc.sspu.edu.cn",
     "lang": "zh-CN"
   },
+  "stanford": {
+    "routes": {
+      "/hazyresearch/blog": {
+        "path": [
+          "/hazyresearch/blog"
+        ],
+        "categories": [
+          "blog"
+        ],
+        "example": "/stanford/hazyresearch/blog",
+        "parameters": {},
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "hazyresearch.stanford.edu/blog"
+            ]
+          }
+        ],
+        "name": "Hazy Research Blog",
+        "maintainers": [
+          "dvorak0"
+        ],
+        "url": "hazyresearch.stanford.edu/blog",
+        "location": "blog.ts",
+        "module": () => import('@/routes/stanford/blog.ts')
+      }
+    },
+    "name": "Stanford",
+    "apiRoutes": {},
+    "url": "hazyresearch.stanford.edu/blog",
+    "lang": "en"
+  },
   "startuplatte": {
     "routes": {
       "/:category?": {
@@ -100107,7 +100230,8 @@ export default {
           "antiCrawler": true,
           "supportBT": false,
           "supportPodcast": false,
-          "supportScihub": false
+          "supportScihub": false,
+          "nsfw": true
         },
         "name": "分区帖子",
         "maintainers": [

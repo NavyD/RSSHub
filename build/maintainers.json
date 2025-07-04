@@ -673,6 +673,9 @@
   "/autocentre/": [
     "driversti"
   ],
+  "/azul/downloads": [
+    "nczitzk"
+  ],
   "/baai/hub/events": [
     "TonyRL"
   ],
@@ -2509,6 +2512,9 @@
   ],
   "/fantia/user/:id": [
     "nczitzk"
+  ],
+  "/fantube/r18/creator/:identifier": [
+    "TonyRL"
   ],
   "/fanxinzhui/": [
     "nczitzk"
@@ -7163,6 +7169,9 @@
   ],
   "/sspu/pe/:id?": [
     "nczitzk"
+  ],
+  "/stanford/hazyresearch/blog": [
+    "dvorak0"
   ],
   "/startuplatte/:category?": [
     "nczitzk"
