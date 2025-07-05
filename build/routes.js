@@ -1049,6 +1049,9 @@ export default {
           "keyword": "关键词，可查看下表的关键词说明"
         },
         "description": "**类型**\n\n| 最新 | 热门    | 随机   | 指定演员 | 指定标签 | 日期 |\n| ---- | ------- | ------ | -------- | -------- | ---- |\n| new  | popular | random | actress  | tag      | date |\n\n**关键词**\n\n| 空 | 日期范围    | 演员名       | 标签名         | 年月日     |\n| -- | ----------- | ------------ | -------------- | ---------- |\n|    | 7 / 30 / 60 | Yua%20Mikami | Adult%20Awards | 2020/07/30 |\n\n**示例说明**\n\n-  `/141jav/new`\n\n      仅当类型为 `new` `popular` 或 `random` 时关键词为 **空**\n\n-  `/141jav/popular/30`\n\n      `popular` `random` 类型的关键词可填写 `7` `30` 或 `60` 三个 **日期范围** 之一，分别对应 **7 天**、**30 天** 或 **60 天内**\n\n-  `/141jav/actress/Yua%20Mikami`\n\n      `actress` 类型的关键词必须填写 **演员名** ，可在 [此处](https://141jav.com/actress/) 演员单页链接中获取\n\n-  `/141jav/tag/Adult%20Awards`\n\n      `tag` 类型的关键词必须填写 **标签名** 且标签中的 `/` 必须替换为 `%2F` ，可在 [此处](https://141jav.com/tag/) 标签单页链接中获取\n\n-  `/141jav/date/2020/07/30`\n\n      `date` 类型的关键词必须填写 **日期(年/月/日)**",
+        "features": {
+          "nsfw": true
+        },
         "location": "index.ts",
         "module": () => import('@/routes/141jav/index.ts')
       }
@@ -1077,6 +1080,9 @@ export default {
           "keyword": "关键词，可查看下表的关键词说明"
         },
         "description": "**类型**\n\n| 最新 | 热门    | 随机   | 指定演员 | 指定标签 | 日期 |\n| ---- | ------- | ------ | -------- | -------- | ---- |\n| new  | popular | random | actress  | tag      | date |\n\n**关键词**\n\n| 空 | 日期范围    | 演员名       | 标签名         | 年月日     |\n| -- | ----------- | ------------ | -------------- | ---------- |\n|    | 7 / 30 / 60 | Yua%20Mikami | Adult%20Awards | 2020/07/30 |\n\n**示例说明**\n\n-  `/141ppv/new`\n\n      仅当类型为 `new` `popular` 或 `random` 时关键词为 **空**\n\n-  `/141ppv/popular/30`\n\n      `popular` `random` 类型的关键词可填写 `7` `30` 或 `60` 三个 **日期范围** 之一，分别对应 **7 天**、**30 天** 或 **60 天内**\n\n-  `/141ppv/actress/Yua%20Mikami`\n\n      `actress` 类型的关键词必须填写 **演员名** ，可在 [此处](https://141ppv.com/actress/) 演员单页链接中获取\n\n-  `/141ppv/tag/Adult%20Awards`\n\n      `tag` 类型的关键词必须填写 **标签名** 且标签中的 `/` 必须替换为 `%2F` ，可在 [此处](https://141ppv.com/tag/) 标签单页链接中获取\n\n-  `/141ppv/date/2020/07/30`\n\n      `date` 类型的关键词必须填写 **日期(年/月/日)**",
+        "features": {
+          "nsfw": true
+        },
         "location": "index.ts",
         "module": () => import('@/routes/141ppv/index.ts')
       }
@@ -1173,7 +1179,8 @@ export default {
           "antiCrawler": true,
           "supportBT": false,
           "supportPodcast": false,
-          "supportScihub": false
+          "supportScihub": false,
+          "nsfw": true
         },
         "radar": [
           {
@@ -4641,7 +4648,8 @@ export default {
           "antiCrawler": true,
           "supportBT": false,
           "supportPodcast": false,
-          "supportScihub": false
+          "supportScihub": false,
+          "nsfw": true
         },
         "name": "Category",
         "maintainers": [
@@ -4810,7 +4818,8 @@ export default {
           "antiCrawler": true,
           "supportBT": false,
           "supportPodcast": false,
-          "supportScihub": false
+          "supportScihub": false,
+          "nsfw": true
         },
         "radar": [
           {
@@ -4886,7 +4895,8 @@ export default {
           "antiCrawler": false,
           "supportBT": false,
           "supportPodcast": false,
-          "supportScihub": false
+          "supportScihub": false,
+          "nsfw": true
         },
         "radar": [
           {
@@ -21412,7 +21422,8 @@ export default {
           "antiCrawler": false,
           "supportBT": false,
           "supportPodcast": false,
-          "supportScihub": false
+          "supportScihub": false,
+          "nsfw": true
         },
         "name": "最新記事",
         "maintainers": [
@@ -21602,7 +21613,8 @@ export default {
           "antiCrawler": false,
           "supportBT": false,
           "supportPodcast": false,
-          "supportScihub": false
+          "supportScihub": false,
+          "nsfw": true
         },
         "name": "Tag",
         "maintainers": [
@@ -25538,6 +25550,9 @@ export default {
           "nczitzk",
           "Gabrlie"
         ],
+        "features": {
+          "nsfw": true
+        },
         "location": "index.ts",
         "module": () => import('@/routes/cool18/index.ts')
       }
@@ -25800,7 +25815,8 @@ export default {
           "antiCrawler": false,
           "supportBT": false,
           "supportPodcast": false,
-          "supportScihub": false
+          "supportScihub": false,
+          "nsfw": true
         },
         "radar": [
           {
@@ -33200,6 +33216,9 @@ export default {
         "path": "/:what?/:id?/:needTorrents?/:needImages?",
         "name": "Unknown",
         "maintainers": [],
+        "features": {
+          "nsfw": true
+        },
         "location": "index.ts",
         "module": () => import('@/routes/e-hentai/index.ts')
       }
@@ -34139,7 +34158,8 @@ export default {
           "antiCrawler": true,
           "supportBT": true,
           "supportPodcast": false,
-          "supportScihub": false
+          "supportScihub": false,
+          "nsfw": true
         },
         "name": "Tag",
         "maintainers": [
@@ -34926,7 +34946,8 @@ export default {
               "description": "Required for private posts. Can be found in browser DevTools -> Application -> Cookies -> https://www.fanbox.cc -> FANBOXSESSID",
               "optional": true
             }
-          ]
+          ],
+          "nsfw": true
         },
         "location": "index.ts",
         "module": () => import('@/routes/fanbox/index.ts')
@@ -35100,7 +35121,8 @@ export default {
           "antiCrawler": false,
           "supportBT": false,
           "supportPodcast": false,
-          "supportScihub": false
+          "supportScihub": false,
+          "nsfw": true
         },
         "radar": [
           {
@@ -37497,6 +37519,9 @@ export default {
           "junfengP"
         ],
         "url": "www.jjmhw.cc",
+        "features": {
+          "nsfw": true
+        },
         "location": "book.ts",
         "module": () => import('@/routes/freexcomic/book.ts')
       }
@@ -56629,6 +56654,9 @@ export default {
             "description": "Any path of list page on javbus"
           }
         },
+        "features": {
+          "nsfw": true
+        },
         "location": "index.ts",
         "module": () => import('@/routes/javbus/index.ts')
       }
@@ -56913,7 +56941,8 @@ export default {
           "antiCrawler": true,
           "supportBT": false,
           "supportPodcast": false,
-          "supportScihub": false
+          "supportScihub": false,
+          "nsfw": true
         },
         "radar": [
           {
@@ -57159,7 +57188,8 @@ export default {
           "antiCrawler": true,
           "supportBT": false,
           "supportPodcast": false,
-          "supportScihub": false
+          "supportScihub": false,
+          "nsfw": true
         },
         "name": "Videos by star",
         "maintainers": [
@@ -57242,6 +57272,9 @@ export default {
             "target": "/actress/:id"
           }
         ],
+        "features": {
+          "nsfw": true
+        },
         "location": "actress.ts",
         "module": () => import('@/routes/javtiful/actress.ts')
       },
@@ -57267,6 +57300,9 @@ export default {
             "target": "/channel/:id"
           }
         ],
+        "features": {
+          "nsfw": true
+        },
         "location": "channel.ts",
         "module": () => import('@/routes/javtiful/channel.ts')
       }
@@ -57299,6 +57335,9 @@ export default {
           "TonyRL"
         ],
         "url": "javtrailers.com/casts",
+        "features": {
+          "nsfw": true
+        },
         "location": "casts.ts",
         "module": () => import('@/routes/javtrailers/casts.ts')
       },
@@ -59124,6 +59163,9 @@ export default {
         "maintainers": [
           "Urabartin"
         ],
+        "features": {
+          "nsfw": true
+        },
         "location": "tab.ts",
         "module": () => import('@/routes/jpxgmn/tab.ts')
       },
@@ -60296,7 +60338,8 @@ export default {
           "antiCrawler": false,
           "supportBT": false,
           "supportPodcast": false,
-          "supportScihub": false
+          "supportScihub": false,
+          "nsfw": true
         },
         "radar": [
           {
@@ -60598,6 +60641,9 @@ export default {
           "sineeeee"
         ],
         "description": "| 最近 24 小时    | 最近一周     | 最近一月    | 最近一年     |\n| ------- | -------- | ------- | -------- |\n| 1d | 1w | 1m | 1y |",
+        "features": {
+          "nsfw": true
+        },
         "location": "post.ts",
         "module": () => import('@/routes/konachan/post.ts')
       },
@@ -60655,6 +60701,9 @@ export default {
           "sineeeee"
         ],
         "description": "| 最近 24 小时    | 最近一周     | 最近一月    | 最近一年     |\n| ------- | -------- | ------- | -------- |\n| 1d | 1w | 1m | 1y |",
+        "features": {
+          "nsfw": true
+        },
         "location": "post.ts",
         "module": () => import('@/routes/konachan/post.ts')
       }
@@ -62904,7 +62953,8 @@ export default {
           "antiCrawler": false,
           "supportBT": false,
           "supportPodcast": false,
-          "supportScihub": false
+          "supportScihub": false,
+          "nsfw": true
         },
         "radar": [
           {
@@ -68039,7 +68089,8 @@ export default {
           "antiCrawler": false,
           "supportBT": false,
           "supportPodcast": false,
-          "supportScihub": false
+          "supportScihub": false,
+          "nsfw": true
         },
         "name": "搜索结果",
         "maintainers": [
@@ -69040,7 +69091,8 @@ export default {
           "antiCrawler": false,
           "supportBT": false,
           "supportPodcast": false,
-          "supportScihub": false
+          "supportScihub": false,
+          "nsfw": true
         },
         "radar": [
           {
@@ -70560,7 +70612,8 @@ export default {
           "antiCrawler": false,
           "supportBT": false,
           "supportPodcast": false,
-          "supportScihub": false
+          "supportScihub": false,
+          "nsfw": true
         },
         "radar": [
           {
@@ -72801,7 +72854,8 @@ export default {
         },
         "features": {
           "antiCrawler": true,
-          "supportBT": true
+          "supportBT": true,
+          "nsfw": true
         },
         "radar": [
           {
@@ -81956,7 +82010,8 @@ export default {
           "antiCrawler": false,
           "supportBT": false,
           "supportPodcast": false,
-          "supportScihub": false
+          "supportScihub": false,
+          "nsfw": true
         },
         "name": "AV",
         "maintainers": [
@@ -82396,7 +82451,8 @@ export default {
           "antiCrawler": true,
           "supportBT": false,
           "supportPodcast": false,
-          "supportScihub": false
+          "supportScihub": false,
+          "nsfw": true
         },
         "radar": [
           {
@@ -84144,7 +84200,8 @@ export default {
           "antiCrawler": false,
           "supportBT": false,
           "supportPodcast": false,
-          "supportScihub": false
+          "supportScihub": false,
+          "nsfw": true
         },
         "radar": [
           {
@@ -89117,6 +89174,9 @@ export default {
           "junfengP",
           "nczitzk"
         ],
+        "features": {
+          "nsfw": true
+        },
         "description": "**原创 BT 电影**\n\n| 国产原创 | 亚洲无码原创 | 亚洲有码原创 | 高清中文字幕 | 三级写真 | VR 视频 | 素人有码 | 欧美无码 | 韩国主播 | 动漫原创 | 综合讨论 |\n| -------- | ------------ | ------------ | ------------ | -------- | ------- | -------- | -------- | -------- | -------- | -------- |\n| gcyc     | yzwmyc       | yzymyc       | gqzwzm       | sjxz     | vr      | srym     | omwm     | hgzb     | dmyc     | zhtl     |\n\n  **色花图片**\n\n| 原创自拍 | 转贴自拍 | 华人街拍 | 亚洲性爱 | 欧美性爱 | 卡通动漫 | 套图下载 |\n| -------- | -------- | -------- | -------- | -------- | -------- | -------- |\n| yczp     | ztzp     | hrjp     | yzxa     | omxa     | ktdm     | ttxz     |",
         "location": "index.ts",
         "module": () => import('@/routes/sehuatang/index.ts')
@@ -89135,6 +89195,9 @@ export default {
           "junfengP",
           "nczitzk"
         ],
+        "features": {
+          "nsfw": true
+        },
         "description": "**原创 BT 电影**\n\n| 国产原创 | 亚洲无码原创 | 亚洲有码原创 | 高清中文字幕 | 三级写真 | VR 视频 | 素人有码 | 欧美无码 | 韩国主播 | 动漫原创 | 综合讨论 |\n| -------- | ------------ | ------------ | ------------ | -------- | ------- | -------- | -------- | -------- | -------- | -------- |\n| gcyc     | yzwmyc       | yzymyc       | gqzwzm       | sjxz     | vr      | srym     | omwm     | hgzb     | dmyc     | zhtl     |\n\n  **色花图片**\n\n| 原创自拍 | 转贴自拍 | 华人街拍 | 亚洲性爱 | 欧美性爱 | 卡通动漫 | 套图下载 |\n| -------- | -------- | -------- | -------- | -------- | -------- | -------- |\n| yczp     | ztzp     | hrjp     | yzxa     | omxa     | ktdm     | ttxz     |",
         "location": "index.ts",
         "module": () => import('@/routes/sehuatang/index.ts')
@@ -89153,6 +89216,9 @@ export default {
           "junfengP",
           "nczitzk"
         ],
+        "features": {
+          "nsfw": true
+        },
         "description": "**原创 BT 电影**\n\n| 国产原创 | 亚洲无码原创 | 亚洲有码原创 | 高清中文字幕 | 三级写真 | VR 视频 | 素人有码 | 欧美无码 | 韩国主播 | 动漫原创 | 综合讨论 |\n| -------- | ------------ | ------------ | ------------ | -------- | ------- | -------- | -------- | -------- | -------- | -------- |\n| gcyc     | yzwmyc       | yzymyc       | gqzwzm       | sjxz     | vr      | srym     | omwm     | hgzb     | dmyc     | zhtl     |\n\n  **色花图片**\n\n| 原创自拍 | 转贴自拍 | 华人街拍 | 亚洲性爱 | 欧美性爱 | 卡通动漫 | 套图下载 |\n| -------- | -------- | -------- | -------- | -------- | -------- | -------- |\n| yczp     | ztzp     | hrjp     | yzxa     | omxa     | ktdm     | ttxz     |",
         "location": "index.ts",
         "module": () => import('@/routes/sehuatang/index.ts')
@@ -89171,6 +89237,9 @@ export default {
           "junfengP",
           "nczitzk"
         ],
+        "features": {
+          "nsfw": true
+        },
         "description": "**原创 BT 电影**\n\n| 国产原创 | 亚洲无码原创 | 亚洲有码原创 | 高清中文字幕 | 三级写真 | VR 视频 | 素人有码 | 欧美无码 | 韩国主播 | 动漫原创 | 综合讨论 |\n| -------- | ------------ | ------------ | ------------ | -------- | ------- | -------- | -------- | -------- | -------- | -------- |\n| gcyc     | yzwmyc       | yzymyc       | gqzwzm       | sjxz     | vr      | srym     | omwm     | hgzb     | dmyc     | zhtl     |\n\n  **色花图片**\n\n| 原创自拍 | 转贴自拍 | 华人街拍 | 亚洲性爱 | 欧美性爱 | 卡通动漫 | 套图下载 |\n| -------- | -------- | -------- | -------- | -------- | -------- | -------- |\n| yczp     | ztzp     | hrjp     | yzxa     | omxa     | ktdm     | ttxz     |",
         "location": "index.ts",
         "module": () => import('@/routes/sehuatang/index.ts')
@@ -89189,6 +89258,9 @@ export default {
           "junfengP",
           "nczitzk"
         ],
+        "features": {
+          "nsfw": true
+        },
         "description": "**原创 BT 电影**\n\n| 国产原创 | 亚洲无码原创 | 亚洲有码原创 | 高清中文字幕 | 三级写真 | VR 视频 | 素人有码 | 欧美无码 | 韩国主播 | 动漫原创 | 综合讨论 |\n| -------- | ------------ | ------------ | ------------ | -------- | ------- | -------- | -------- | -------- | -------- | -------- |\n| gcyc     | yzwmyc       | yzymyc       | gqzwzm       | sjxz     | vr      | srym     | omwm     | hgzb     | dmyc     | zhtl     |\n\n  **色花图片**\n\n| 原创自拍 | 转贴自拍 | 华人街拍 | 亚洲性爱 | 欧美性爱 | 卡通动漫 | 套图下载 |\n| -------- | -------- | -------- | -------- | -------- | -------- | -------- |\n| yczp     | ztzp     | hrjp     | yzxa     | omxa     | ktdm     | ttxz     |",
         "location": "index.ts",
         "module": () => import('@/routes/sehuatang/index.ts')
@@ -91301,7 +91373,8 @@ export default {
           "antiCrawler": false,
           "supportBT": false,
           "supportPodcast": false,
-          "supportScihub": false
+          "supportScihub": false,
+          "nsfw": true
         },
         "name": "子版块",
         "maintainers": [
@@ -93221,7 +93294,8 @@ export default {
         ],
         "features": {
           "antiCrawler": true,
-          "requirePuppeteer": true
+          "requirePuppeteer": true,
+          "nsfw": true
         },
         "radar": [
           {
@@ -111774,7 +111848,8 @@ export default {
           "antiCrawler": false,
           "supportBT": false,
           "supportPodcast": false,
-          "supportScihub": false
+          "supportScihub": false,
+          "nsfw": true
         },
         "name": "短篇",
         "maintainers": [
@@ -112903,7 +112978,8 @@ export default {
           "antiCrawler": false,
           "supportBT": false,
           "supportPodcast": false,
-          "supportScihub": false
+          "supportScihub": false,
+          "nsfw": true
         },
         "radar": [
           {
@@ -113891,6 +113967,9 @@ export default {
           "NekoAria"
         ],
         "description": "| 最近 24 小时    | 最近一周     | 最近一月    | 最近一年     |\n| ------- | -------- | ------- | -------- |\n| 1d | 1w | 1m | 1y |",
+        "features": {
+          "nsfw": true
+        },
         "location": "post.ts",
         "module": () => import('@/routes/yande/post.ts')
       }
@@ -114429,7 +114508,8 @@ export default {
           "antiCrawler": false,
           "supportBT": false,
           "supportPodcast": false,
-          "supportScihub": false
+          "supportScihub": false,
+          "nsfw": true
         },
         "radar": [
           {
