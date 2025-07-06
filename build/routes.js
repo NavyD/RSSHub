@@ -63156,7 +63156,12 @@ export default {
           "type": "ranking type, see below, new by default"
         },
         "features": {
-          "requireConfig": false,
+          "requireConfig": [
+            {
+              "name": "LOFTER_COOKIE",
+              "description": "LOFTER_COOKIE: 用于搜索标签相关内容，获取方式：\n    1.  登录 Lofter 并搜索任一标签，进入页面 https://www.lofter.com/tag/*\n    2.  打开控制台，切换到 Network 面板，刷新\n    3.  点击 TagBean.seach.dwr 请求，找到 Cookie\n    4.  获取最新标签内容只要求 `LOFTER_SESS` 开始的字段"
+            }
+          ],
           "requirePuppeteer": false,
           "antiCrawler": false,
           "supportBT": false,
@@ -63169,7 +63174,7 @@ export default {
           "nczitzk",
           "LucunJi"
         ],
-        "description": "| new  | date | week | month | total |\n| ---- | ---- | ---- | ----- | ----- |\n| 最新 | 日榜 | 周榜 | 月榜  | 总榜  |",
+        "description": "::: warning\n  搜索标签下的最新内容需要 Lofter 登录后的 Cookie 值，所以只能自建，详情见部署页面的配置模块。\n:::\n\n| new  | date | week | month | total |\n| ---- | ---- | ---- | ----- | ----- |\n| 最新 | 日榜 | 周榜 | 月榜  | 总榜  |",
         "location": "tag.ts",
         "module": () => import('@/routes/lofter/tag.ts')
       },
@@ -70285,6 +70290,80 @@ export default {
     "zh": {
       "name": "MSN"
     }
+  },
+  "musify": {
+    "routes": {
+      "/:language?": {
+        "path": "/:language?",
+        "name": "Latest",
+        "url": "musify.club",
+        "maintainers": [
+          "nczitzk"
+        ],
+        "example": "/musify/en",
+        "parameters": {
+          "category": {
+            "description": "Language, Russian by default",
+            "options": [
+              {
+                "label": "Russian",
+                "value": ""
+              },
+              {
+                "label": "English",
+                "value": "en"
+              }
+            ]
+          }
+        },
+        "description": ":::tip\nTo subscribe to [Latest](https://musify.club/en), where the source URL is `https://musify.club/en`, extract the certain parts from this URL to be used as parameters, resulting in the route as [`/musify/en`](https://rsshub.app/musify/en).\n:::\n",
+        "categories": [
+          "multimedia"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportRadar": true,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "musify.club/:language"
+            ],
+            "target": "/:language"
+          },
+          {
+            "title": "Latest",
+            "source": [
+              "musify.club/en"
+            ],
+            "target": "/en"
+          },
+          {
+            "title": "​​Последняя",
+            "source": [
+              "musify.club"
+            ],
+            "target": "/"
+          }
+        ],
+        "view": 0,
+        "location": "index.ts",
+        "module": () => import('@/routes/musify/index.ts')
+      }
+    },
+    "name": "musify",
+    "apiRoutes": {},
+    "url": "musify.club",
+    "categories": [
+      "multimedia"
+    ],
+    "description": "",
+    "lang": "ru"
   },
   "mwm": {
     "routes": {
