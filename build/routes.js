@@ -26839,6 +26839,126 @@ export default {
     "url": "blog.csdn.net",
     "lang": "zh-CN"
   },
+  "css-tricks": {
+    "routes": {
+      "/articles": {
+        "path": "/articles",
+        "view": 0,
+        "categories": [
+          "programming"
+        ],
+        "example": "/css-tricks/articles",
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "css-tricks.com/category/articles/"
+            ],
+            "target": "/articles"
+          }
+        ],
+        "name": "Articles",
+        "maintainers": [
+          "Rjnishant530"
+        ],
+        "location": "articles.ts",
+        "module": () => import('@/routes/css-tricks/articles.ts')
+      },
+      "/collections/:type": {
+        "path": "/collections/:type",
+        "view": 0,
+        "categories": [
+          "programming"
+        ],
+        "example": "/css-tricks/collections/2",
+        "parameters": {
+          "category": {
+            "description": "Collection Type",
+            "options": [
+              {
+                "value": "3",
+                "label": "Latest CSS Guides"
+              },
+              {
+                "value": "2",
+                "label": "Fresh From the Almanac"
+              },
+              {
+                "value": "4",
+                "label": "Classic Tricks"
+              }
+            ]
+          }
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "css-tricks.com"
+            ],
+            "target": "/collections/:type"
+          }
+        ],
+        "name": "CSS Guides",
+        "maintainers": [
+          "Rjnishant530"
+        ],
+        "location": "collections.ts",
+        "module": () => import('@/routes/css-tricks/collections.ts')
+      },
+      "/popular": {
+        "path": "/popular",
+        "view": 0,
+        "categories": [
+          "programming"
+        ],
+        "example": "/css-tricks/popular",
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "css-tricks.com"
+            ],
+            "target": "/popular"
+          }
+        ],
+        "name": "Popular this month",
+        "maintainers": [
+          "Rjnishant530"
+        ],
+        "location": "popular.ts",
+        "module": () => import('@/routes/css-tricks/popular.ts')
+      }
+    },
+    "name": "CSS-Tricks",
+    "apiRoutes": {},
+    "url": "css-tricks.com",
+    "categories": [
+      "programming"
+    ],
+    "lang": "en"
+  },
   "cssn": {
     "routes": {
       "/iolaw/:section?": {
@@ -29694,8 +29814,7 @@ export default {
       "/blog": {
         "path": "/blog",
         "categories": [
-          "new-media",
-          "popular"
+          "new-media"
         ],
         "example": "/deepmind/blog",
         "parameters": {},
@@ -44251,7 +44370,8 @@ export default {
       "/miit/wjgs": {
         "path": "/miit/wjgs",
         "categories": [
-          "government"
+          "government",
+          "popular"
         ],
         "example": "/gov/miit/wjgs",
         "parameters": {},
@@ -107948,6 +108068,58 @@ export default {
   },
   "visionias": {
     "routes": {
+      "/dailySummary": {
+        "path": "/dailySummary",
+        "example": "/visionias/dailySummary",
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "visionias.in/current-affairs/upsc-daily-news-summary"
+            ],
+            "target": "/dailySummary"
+          }
+        ],
+        "name": "Daily News Summary",
+        "maintainers": [
+          "Rjnishant530"
+        ],
+        "location": "daily-news-summary.ts",
+        "module": () => import('@/routes/visionias/daily-news-summary.ts')
+      },
+      "/monthlyMagazine": {
+        "path": "/monthlyMagazine",
+        "example": "/visionias/monthlyMagazine",
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "visionias.in/current-affairs/monthly-magazine"
+            ],
+            "target": "/monthlyMagazine"
+          }
+        ],
+        "name": "Monthly Magazine",
+        "maintainers": [
+          "Rjnishant530"
+        ],
+        "location": "monthly-magazine.ts",
+        "module": () => import('@/routes/visionias/monthly-magazine.ts')
+      },
       "/newsToday/:filter?": {
         "path": "/newsToday/:filter?",
         "example": "/visionias/newsToday",
@@ -108018,6 +108190,7 @@ export default {
       }
     },
     "name": "VisionIAS",
+    "apiRoutes": {},
     "url": "visionias.in",
     "lang": "en",
     "categories": [
