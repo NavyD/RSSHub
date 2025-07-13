@@ -2976,6 +2976,9 @@
   "/github/notifications": [
     "zhzy0077"
   ],
+  "/github/feed/:user/:types?": [
+    "RtYkk"
+  ],
   "/github/pull/:user/:repo/:state?/:labels?": [
     "hashman",
     "TonyRL"
@@ -5207,6 +5210,9 @@
   ],
   "/mysql/release/:version?": [
     "nczitzk"
+  ],
+  "/nankai/yzb/:type?": [
+    "sddzhyc"
   ],
   "/nasa/apod-cn": [
     "nczitzk",

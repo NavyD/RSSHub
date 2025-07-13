@@ -14992,6 +14992,14 @@
         "target": "/github/notifications"
       },
       {
+        "title": "User's Feed",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/:user"
+        ],
+        "target": "/github/feed/:user"
+      },
+      {
         "title": "Repo Pull Requests",
         "docs": "https://docs.rsshub.app/routes/programming",
         "source": [
@@ -26722,6 +26730,20 @@
           "/:username"
         ],
         "target": "/mymusicsheet/user/sheets/:username"
+      }
+    ]
+  },
+  "nankai.edu.cn": {
+    "_name": "南开大学",
+    "yzb": [
+      {
+        "title": "研究生招生网",
+        "docs": "https://docs.rsshub.app/routes/university",
+        "source": [
+          "/",
+          "/:type/list.htm"
+        ],
+        "target": "/nankai/yzb/:type?"
       }
     ]
   },

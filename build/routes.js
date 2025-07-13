@@ -9345,7 +9345,8 @@ export default {
       "/news": {
         "path": "/news",
         "categories": [
-          "programming"
+          "programming",
+          "popular"
         ],
         "example": "/anthropic/news",
         "parameters": {},
@@ -32334,8 +32335,7 @@ export default {
       "/people/:userid/status/:routeParams?": {
         "path": "/people/:userid/status/:routeParams?",
         "categories": [
-          "social-media",
-          "popular"
+          "social-media"
         ],
         "view": 1,
         "example": "/douban/people/75118396/status",
@@ -41096,6 +41096,98 @@ export default {
         "location": "notifications.ts",
         "module": () => import('@/routes/github/notifications.ts')
       },
+      "/feed/:user/:types?": {
+        "path": "/feed/:user/:types?",
+        "categories": [
+          "programming"
+        ],
+        "example": "/github/feed/yihong0618/star,release,pr",
+        "parameters": {
+          "user": "GitHub username",
+          "types": {
+            "description": "Event types to include, comma separated",
+            "default": "all",
+            "options": [
+              {
+                "label": "All events",
+                "value": "all"
+              },
+              {
+                "label": "Create events",
+                "value": "create"
+              },
+              {
+                "label": "Delete events",
+                "value": "delete"
+              },
+              {
+                "label": "Fork events",
+                "value": "fork"
+              },
+              {
+                "label": "Issue comment events",
+                "value": "issuecomm"
+              },
+              {
+                "label": "Member events",
+                "value": "member"
+              },
+              {
+                "label": "Pull request events",
+                "value": "pr"
+              },
+              {
+                "label": "Pull request review comment events",
+                "value": "prcomm"
+              },
+              {
+                "label": "Public events",
+                "value": "public"
+              },
+              {
+                "label": "Push events",
+                "value": "push"
+              },
+              {
+                "label": "Release events",
+                "value": "release"
+              },
+              {
+                "label": "Watch events (stars)",
+                "value": "star"
+              }
+            ]
+          }
+        },
+        "features": {
+          "requireConfig": [
+            {
+              "name": "GITHUB_ACCESS_TOKEN",
+              "optional": true,
+              "description": "GitHub access token to access private events"
+            }
+          ],
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "github.com/:user"
+            ],
+            "target": "/feed/:user"
+          }
+        ],
+        "name": "User's Feed",
+        "maintainers": [
+          "RtYkk"
+        ],
+        "location": "private-feed.ts",
+        "module": () => import('@/routes/github/private-feed.ts')
+      },
       "/pull/:user/:repo/:state?/:labels?": {
         "path": "/pull/:user/:repo/:state?/:labels?",
         "categories": [
@@ -41433,7 +41525,7 @@ export default {
     "name": "GitHub",
     "apiRoutes": {},
     "url": "github.com",
-    "description": "::: tip\nGitHub provides some official RSS feeds:\n\n-   Repo releases: `https://github.com/:owner/:repo/releases.atom`\n-   Repo commits: `https://github.com/:owner/:repo/commits.atom`\n-   User activities: `https://github.com/:user.atom`\n-   Private feed: `https://github.com/:user.private.atom?token=:secret` (You can find **Subscribe to your news feed** in [dashboard](https://github.com) page after login)\n-   Wiki history: `https://github.com/:owner/:repo/wiki.atom`\n:::",
+    "description": "::: tip\nGitHub provides some official RSS feeds:\n\n-   Repo releases: `https://github.com/:owner/:repo/releases.atom`\n-   Repo commits: `https://github.com/:owner/:repo/commits.atom`\n-   User activities: `https://github.com/:user.atom`\n-   Private feed: `https://github.com/:user.private.atom?token=:secret` (Note: You can ONLY obtain this url via an [API](https://docs.github.com/en/rest/activity/feeds?apiVersion=2022-11-28) call with a [Personal Access Token](https://github.com/settings/tokens/new) with **ENOUGH** scopes now.)\n-   Wiki history: `https://github.com/:owner/:repo/wiki.atom`\n:::",
     "lang": "en"
   },
   "gitpod": {
@@ -71076,6 +71168,48 @@ export default {
     "name": "MySQL",
     "url": "dev.mysql.com",
     "lang": "en"
+  },
+  "nankai": {
+    "routes": {
+      "/yzb/:type?": {
+        "path": "/yzb/:type?",
+        "categories": [
+          "university"
+        ],
+        "example": "/nankai/yzb/5509",
+        "parameters": {
+          "type": "栏目名（若为空则默认为“硕士招生”）"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "yzb.nankai.edu.cn",
+              "yzb.nankai.edu.cn/:type/list.htm"
+            ],
+            "target": "/yzb/:type?"
+          }
+        ],
+        "name": "研究生招生网",
+        "maintainers": [
+          "sddzhyc"
+        ],
+        "description": "| 硕士招生 | 博士招生 | 港澳台研究生最新信息 |\n| -------- | -------- | -------- |\n| 5509     | 2552    | 2562   |",
+        "url": "yzb.nankai.edu.cn",
+        "location": "yzb.ts",
+        "module": () => import('@/routes/nankai/yzb.ts')
+      }
+    },
+    "name": "南开大学",
+    "url": "yzb.nankai.edu.cn",
+    "lang": "zh-CN"
   },
   "nasa": {
     "routes": {
