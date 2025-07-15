@@ -34002,8 +34002,7 @@
       "/:endpoint": {
         "path": "/:endpoint",
         "categories": [
-          "traditional-media",
-          "popular"
+          "traditional-media"
         ],
         "view": 0,
         "example": "/economist/latest",
@@ -65680,82 +65679,78 @@
         "example": "/mckinsey/cn",
         "parameters": {
           "category": {
-            "description": "分类",
+            "description": "分类，留空为 `最新洞见`",
             "options": [
               {
-                "value": "2",
+                "value": "autos",
                 "label": "汽车"
               },
               {
-                "value": "3",
+                "value": "banking-insurance",
                 "label": "金融服务"
               },
               {
-                "value": "4",
+                "value": "consumers",
                 "label": "消费者"
               },
               {
-                "value": "5",
-                "label": "医药"
+                "value": "healthcare-pharmaceuticals",
+                "label": "医药与医疗"
               },
               {
-                "value": "7",
+                "value": "business-technology",
                 "label": "数字化"
               },
               {
-                "value": "8",
+                "value": "manufacturing",
                 "label": "制造业"
               },
               {
-                "value": "9",
-                "label": "私募"
-              },
-              {
-                "value": "10",
+                "value": "technology-media-and-telecom",
                 "label": "技术，媒体与通信"
               },
               {
-                "value": "12",
+                "value": "urbanization-sustainability",
                 "label": "城市化与可持续发展"
               },
               {
-                "value": "13",
+                "value": "innovation",
                 "label": "创新"
               },
               {
-                "value": "16",
+                "value": "talent-leadership",
                 "label": "人才与领导力"
               },
               {
-                "value": "18",
+                "value": "macroeconomy",
                 "label": "宏观经济"
               },
               {
-                "value": "19",
+                "value": "mckinsey-global-institute",
                 "label": "麦肯锡全球研究院"
               },
               {
-                "value": "25",
+                "value": "insights",
                 "label": "洞见"
               },
               {
-                "value": "37",
-                "label": "麦肯锡季刊"
-              },
-              {
-                "value": "41",
+                "value": "capital-projects-infrastructure",
                 "label": "资本项目和基础设施"
               },
               {
-                "value": "42",
+                "value": "交通运输与物流",
                 "label": "旅游、运输和物流"
               },
               {
-                "value": "45",
+                "value": "全球基础材料",
                 "label": "全球基础材料"
+              },
+              {
+                "value": "出海与国际化、转型",
+                "label": "出海与国际化、转型"
               }
             ],
-            "default": "25"
+            "default": "最新洞见"
           }
         },
         "features": {
@@ -65770,7 +65765,7 @@
         "maintainers": [
           "laampui"
         ],
-        "description": "| 分类 | 分类名             |\n| ---- | ------------------ |\n| 25   | 全部洞见           |\n| 2    | 汽车               |\n| 3    | 金融服务           |\n| 4    | 消费者             |\n| 5    | 医药               |\n| 7    | 数字化             |\n| 8    | 制造业             |\n| 9    | 私募               |\n| 10   | 技术，媒体与通信   |\n| 12   | 城市化与可持续发展 |\n| 13   | 创新               |\n| 16   | 人才与领导力       |\n| 18   | 宏观经济           |\n| 19   | 麦肯锡全球研究院   |\n| 37   | 麦肯锡季刊         |\n| 41   | 资本项目和基础设施 |\n| 42   | 旅游、运输和物流   |\n| 45   | 全球基础材料       |",
+        "description": "| 分类                            | 分类名             |\n| ------------------------------- | ------------------ |\n|                                 | 全部洞见           |\n| autos                           | 汽车               |\n| banking-insurance               | 金融服务           |\n| consumers                       | 消费者             |\n| healthcare-pharmaceuticals      | 医药与医疗         |\n| business-technology             | 数字化             |\n| manufacturing                   | 制造业             |\n| technology-media-and-telecom    | 技术，媒体与通信   |\n| urbanization-sustainability     | 城市化与可持续发展 |\n| innovation                      | 创新               |\n| talent-leadership               | 人才与领导力       |\n| macroeconomy                    | 宏观经济           |\n| mckinsey-global-institute       | 麦肯锡全球研究院   |\n| capital-projects-infrastructure | 资本项目和基础设施 |\n| 交通运输与物流                  | 旅游、运输和物流   |\n| 出海与国际化、转型              | 出海与国际化、转型 |\n| 全球基础材料                    | 全球基础材料       |",
         "location": "cn/index.ts",
         "module": "() => import('@/routes/mckinsey/cn/index.ts')"
       }
@@ -72922,6 +72917,243 @@
     "description": "新芽是专注于互联网创业的媒体平台，提供创业资讯、投融资信息、创业活动、创业服务等。",
     "lang": "zh-CN"
   },
+  "newslaundry": {
+    "routes": {
+      "/explainer": {
+        "path": "/explainer",
+        "view": 0,
+        "categories": [
+          "new-media"
+        ],
+        "example": "/newslaundry/explainer",
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "newslaundry.com/explainer"
+            ],
+            "target": "/explainer"
+          }
+        ],
+        "name": "Explainer",
+        "maintainers": [
+          "Rjnishant530"
+        ],
+        "location": "explainer.ts",
+        "module": "() => import('@/routes/newslaundry/explainer.ts')"
+      },
+      "/nl-cheatsheet": {
+        "path": "/nl-cheatsheet",
+        "view": 0,
+        "categories": [
+          "new-media"
+        ],
+        "example": "/newslaundry/nl-cheatsheet",
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "newslaundry.com/collection/nl-cheatsheet"
+            ],
+            "target": "/nl-cheatsheet"
+          }
+        ],
+        "name": "Explains",
+        "maintainers": [
+          "Rjnishant530"
+        ],
+        "location": "nl-cheatsheet.ts",
+        "module": "() => import('@/routes/newslaundry/nl-cheatsheet.ts')"
+      },
+      "/nl-collaborations": {
+        "path": "/nl-collaborations",
+        "view": 0,
+        "categories": [
+          "new-media"
+        ],
+        "example": "/newslaundry/nl-collaborations",
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "newslaundry.com/nl-collaborations"
+            ],
+            "target": "/nl-collaborations"
+          }
+        ],
+        "name": "NL Collaboration",
+        "maintainers": [
+          "Rjnishant530"
+        ],
+        "location": "nl-collaborations.ts",
+        "module": "() => import('@/routes/newslaundry/nl-collaborations.ts')"
+      },
+      "/podcast/:category?": {
+        "path": "/podcast/:category?",
+        "view": 0,
+        "categories": [
+          "new-media"
+        ],
+        "example": "/newslaundry/podcast",
+        "parameters": {
+          "category": "Podcast category, see below for details"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": true,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "newslaundry.com/podcast"
+            ],
+            "target": "/podcast"
+          },
+          {
+            "source": [
+              "newslaundry.com/collection/nl-hafta-podcast"
+            ],
+            "target": "/podcast/nl-hafta"
+          },
+          {
+            "source": [
+              "newslaundry.com/podcast/whats-your-ism"
+            ],
+            "target": "/podcast/whats-your-ism"
+          }
+        ],
+        "name": "Podcast",
+        "description": "| Category | URL |\n| -------- | --- |\n| All Podcasts | [/podcast](https://rsshub.app/newslaundry/podcast) |\n| NL Hafta | [/podcast/nl-hafta](https://rsshub.app/newslaundry/podcast/nl-hafta) |\n| What's Your Ism? | [/podcast/whats-your-ism](https://rsshub.app/newslaundry/podcast/whats-your-ism) |",
+        "maintainers": [
+          "Rjnishant530"
+        ],
+        "location": "podcast.ts",
+        "module": "() => import('@/routes/newslaundry/podcast.ts')"
+      },
+      "/reports": {
+        "path": "/reports",
+        "view": 0,
+        "categories": [
+          "new-media"
+        ],
+        "example": "/newslaundry/reports",
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "newslaundry.com/reports"
+            ],
+            "target": "/reports"
+          }
+        ],
+        "name": "Reports",
+        "maintainers": [
+          "Rjnishant530"
+        ],
+        "location": "reports.ts",
+        "module": "() => import('@/routes/newslaundry/reports.ts')"
+      },
+      "/shot": {
+        "path": "/shot",
+        "view": 0,
+        "categories": [
+          "new-media"
+        ],
+        "example": "/newslaundry/shot",
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "newslaundry.com/shot"
+            ],
+            "target": "/shot"
+          }
+        ],
+        "name": "Shot",
+        "maintainers": [
+          "Rjnishant530"
+        ],
+        "location": "shot.ts",
+        "module": "() => import('@/routes/newslaundry/shot.ts')"
+      },
+      "/subscriber-only": {
+        "path": "/subscriber-only",
+        "view": 0,
+        "categories": [
+          "new-media"
+        ],
+        "example": "/newslaundry/subscriber-only",
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "newslaundry.com/subscriber-only"
+            ],
+            "target": "/subscriber-only"
+          }
+        ],
+        "name": "Subscriber Only",
+        "maintainers": [
+          "Rjnishant530"
+        ],
+        "location": "subscriber-only.ts",
+        "module": "() => import('@/routes/newslaundry/subscriber-only.ts')"
+      }
+    },
+    "name": "Newslaundry",
+    "apiRoutes": {},
+    "url": "newslaundry.com",
+    "categories": [
+      "new-media"
+    ],
+    "lang": "en"
+  },
   "newsmarket": {
     "routes": {
       "/:category?": {
@@ -76895,7 +77127,8 @@
           "DIYgod"
         ],
         "categories": [
-          "program-update"
+          "program-update",
+          "popular"
         ],
         "example": "/obsidian/plugins",
         "location": "plugins.ts",
@@ -100890,6 +101123,38 @@
   },
   "taobao": {
     "routes": {
+      "/mysql/monthly": {
+        "path": "/mysql/monthly",
+        "name": "数据库内核月报",
+        "url": "mysql.taobao.org",
+        "maintainers": [
+          "nczitzk"
+        ],
+        "example": "/taobao/mysql/monthly",
+        "categories": [
+          "programming"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportRadar": true,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "mysql.taobao.org/monthly/"
+            ],
+            "target": "/mysql/monthly"
+          }
+        ],
+        "view": 0,
+        "location": "mysql.ts",
+        "module": "() => import('@/routes/taobao/mysql.ts')"
+      },
       "/zhongchou/:type?": {
         "path": "/zhongchou/:type?",
         "categories": [
@@ -100917,8 +101182,9 @@
         "module": "() => import('@/routes/taobao/zhongchou.ts')"
       }
     },
-    "name": "淘宝众筹",
-    "url": "izhongchou.taobao.com",
+    "name": "淘宝网",
+    "apiRoutes": {},
+    "url": "taobao.com",
     "lang": "zh-CN"
   },
   "taoguba": {
