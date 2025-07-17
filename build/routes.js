@@ -56672,6 +56672,137 @@ export default {
     "url": "www.j-test.com",
     "lang": "ja"
   },
+  "jamesclear": {
+    "routes": {
+      "/book-summaries": {
+        "path": "/book-summaries",
+        "view": 0,
+        "categories": [
+          "blog"
+        ],
+        "example": "/jamesclear/book-summaries",
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "jamesclear.com/book-summaries"
+            ],
+            "target": "/book-summaries"
+          }
+        ],
+        "name": "Book Summaries",
+        "maintainers": [
+          "Rjnishant530"
+        ],
+        "location": "book-summaries.ts",
+        "module": () => import('@/routes/jamesclear/book-summaries.ts')
+      },
+      "/great-speeches": {
+        "path": "/great-speeches",
+        "view": 0,
+        "categories": [
+          "blog"
+        ],
+        "example": "/jamesclear/great-speeches",
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "jamesclear.com/great-speeches"
+            ],
+            "target": "/great-speeches"
+          }
+        ],
+        "name": "Great Speeches",
+        "maintainers": [
+          "Rjnishant530"
+        ],
+        "location": "great-speeches.ts",
+        "module": () => import('@/routes/jamesclear/great-speeches.ts')
+      },
+      "/quotes": {
+        "path": "/quotes",
+        "view": 0,
+        "categories": [
+          "blog"
+        ],
+        "example": "/jamesclear/quotes",
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "jamesclear.com/quotes"
+            ],
+            "target": "/quotes"
+          }
+        ],
+        "name": "Quotes",
+        "maintainers": [
+          "Rjnishant530"
+        ],
+        "location": "quotes.ts",
+        "module": () => import('@/routes/jamesclear/quotes.ts')
+      },
+      "/3-2-1": {
+        "path": "/3-2-1",
+        "view": 0,
+        "categories": [
+          "blog"
+        ],
+        "example": "/jamesclear/3-2-1",
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "jamesclear.com/3-2-1"
+            ],
+            "target": "/3-2-1"
+          }
+        ],
+        "name": "3-2-1 Newsletter",
+        "maintainers": [
+          "Rjnishant530"
+        ],
+        "location": "three-two-one.ts",
+        "module": () => import('@/routes/jamesclear/three-two-one.ts')
+      }
+    },
+    "name": "James Clear",
+    "apiRoutes": {},
+    "url": "jamesclear.com",
+    "categories": [
+      "blog"
+    ],
+    "lang": "en"
+  },
   "jandan": {
     "routes": {
       "/": {
