@@ -60847,6 +60847,51 @@ export default {
     "url": "kimlaw.or.kr",
     "lang": "ko"
   },
+  "kiro": {
+    "routes": {
+      "/blog": {
+        "path": "/blog",
+        "name": "Blog",
+        "url": "kiro.dev",
+        "maintainers": [
+          "nczitzk"
+        ],
+        "example": "/kiro/blog",
+        "categories": [
+          "programming"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportRadar": true,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "kiro.dev",
+              "kiro.dev/blog/"
+            ],
+            "target": "/blog"
+          }
+        ],
+        "view": 0,
+        "location": "blog.ts",
+        "module": () => import('@/routes/kiro/blog.ts')
+      }
+    },
+    "name": "Kiro",
+    "apiRoutes": {},
+    "url": "kiro.dev",
+    "categories": [
+      "programming"
+    ],
+    "description": "The AI IDE for prototype to production",
+    "lang": "en"
+  },
   "kisskiss": {
     "routes": {
       "/blog/:category?": {
@@ -71297,6 +71342,103 @@ export default {
   },
   "nankai": {
     "routes": {
+      "/cc/:type?": {
+        "path": "/cc/:type?",
+        "categories": [
+          "university"
+        ],
+        "example": "/nankai/cc/13291",
+        "parameters": {
+          "type": "栏目编号（若为空则默认为\"最新动态\"）"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "cc.nankai.edu.cn",
+              "cc.nankai.edu.cn/:type/list.htm"
+            ],
+            "target": "/cc/:type?"
+          }
+        ],
+        "name": "计算机学院",
+        "maintainers": [
+          "vicguo0724"
+        ],
+        "description": "| 最新动态 | 学院公告 | 学生工作通知 | 科研信息 | 本科生教学 | 党团园地 | 研究生招生 | 研究生教学 | 境外交流 |\n| -------- | -------- | ---------- | -------- | ---------- | -------- | ---------- | ---------- | -------- |\n| 13291    | 13292    | 13293      | 13294    | 13295      | 13296    | 13297      | 13298      | 13299    |",
+        "url": "cc.nankai.edu.cn",
+        "location": "cc-notice.ts",
+        "module": () => import('@/routes/nankai/cc-notice.ts')
+      },
+      "/jwc": {
+        "path": "/jwc",
+        "categories": [
+          "university"
+        ],
+        "example": "/nankai/jwc",
+        "parameters": {},
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "jwc.nankai.edu.cn/tzgg/list.htm"
+            ],
+            "target": "/jwc"
+          }
+        ],
+        "name": "教务处通知公告",
+        "maintainers": [
+          "vicguo0724"
+        ],
+        "description": "南开大学教务处通知公告",
+        "url": "jwc.nankai.edu.cn",
+        "location": "jwc.ts",
+        "module": () => import('@/routes/nankai/jwc.ts')
+      },
+      "/notice": {
+        "path": "/notice",
+        "categories": [
+          "university"
+        ],
+        "example": "/nankai/notice",
+        "parameters": {},
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": true,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "www.nankai.edu.cn",
+              "www.nankai.edu.cn/157/list.htm"
+            ]
+          }
+        ],
+        "name": "通知公告",
+        "maintainers": [
+          "vicguo0724"
+        ],
+        "location": "notice.ts",
+        "module": () => import('@/routes/nankai/notice.ts')
+      },
       "/yzb/:type?": {
         "path": "/yzb/:type?",
         "categories": [
@@ -71334,6 +71476,7 @@ export default {
       }
     },
     "name": "南开大学",
+    "apiRoutes": {},
     "url": "yzb.nankai.edu.cn",
     "lang": "zh-CN"
   },
