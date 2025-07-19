@@ -61179,6 +61179,44 @@
     "apiRoutes": {},
     "url": "koreaherald.com"
   },
+  "kovidgoyal": {
+    "routes": {
+      "/kitty/changelog": {
+        "path": "/kitty/changelog",
+        "categories": [
+          "program-update"
+        ],
+        "example": "/kovidgoyal/kitty/changelog",
+        "parameters": {},
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "sw.kovidgoyal.net/kitty/changelog/"
+            ],
+            "target": "/kitty/changelog"
+          }
+        ],
+        "name": "Changelog",
+        "maintainers": [
+          "xbot"
+        ],
+        "url": "sw.kovidgoyal.net/kitty/changelog/",
+        "location": "kitty/changelog.ts",
+        "module": "() => import('@/routes/kovidgoyal/kitty/changelog.ts')"
+      }
+    },
+    "name": "Kovid's software projects",
+    "url": "sw.kovidgoyal.net",
+    "lang": "en"
+  },
   "kpmg": {
     "routes": {
       "/insights/:lang?": {
