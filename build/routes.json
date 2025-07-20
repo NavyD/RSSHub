@@ -10142,6 +10142,20 @@
         "location": "apps.ts",
         "module": "() => import('@/routes/apple/apps.ts')"
       },
+      "/design": {
+        "categories": [
+          "design"
+        ],
+        "example": "/apple/design",
+        "maintainers": [
+          "jean-jacket"
+        ],
+        "name": "Design updates",
+        "path": "/design",
+        "url": "developer.apple.com/design/whats-new/",
+        "location": "design.ts",
+        "module": "() => import('@/routes/apple/design.ts')"
+      },
       "/exchange_repair/:country?": {
         "path": "/exchange_repair/:country?",
         "categories": [
@@ -10264,7 +10278,7 @@
     },
     "name": "Apple",
     "apiRoutes": {},
-    "url": "apps.apple.com",
+    "url": "apple.com",
     "lang": "en"
   },
   "appleinsider": {
@@ -82100,7 +82114,8 @@
         "radar": [
           {
             "source": [
-              "www.pixiv.net/users/:id/bookmarks/artworks"
+              "www.pixiv.net/users/:id/bookmarks/artworks",
+              "www.pixiv.net/en/users/:id/bookmarks/artworks"
             ]
           }
         ],
@@ -82229,7 +82244,9 @@
             "title": "User Novels (簡介 Basic info)",
             "source": [
               "www.pixiv.net/users/:id/novels",
-              "www.pixiv.net/users/:id"
+              "www.pixiv.net/users/:id",
+              "www.pixiv.net/en/users/:id/novels",
+              "www.pixiv.net/en/users/:id"
             ],
             "target": "/user/novels/:id"
           },
@@ -82237,7 +82254,9 @@
             "title": "User Novels (全文 Full text)",
             "source": [
               "www.pixiv.net/users/:id/novels",
-              "www.pixiv.net/users/:id"
+              "www.pixiv.net/users/:id",
+              "www.pixiv.net/en/users/:id/novels",
+              "www.pixiv.net/en/users/:id"
             ],
             "target": "/user/novels/:id/true"
           }
@@ -82433,7 +82452,8 @@
         "radar": [
           {
             "source": [
-              "www.pixiv.net/users/:id"
+              "www.pixiv.net/users/:id",
+              "www.pixiv.net/en/users/:id"
             ]
           }
         ],
@@ -91851,12 +91871,15 @@
         "location": "dky.ts",
         "module": "() => import('@/routes/sicau/dky.ts')"
       },
-      "/jiaowu/jxtz": {
-        "path": "/jiaowu/jxtz",
+      "/jiaowu/jxtz/:detail?": {
+        "path": "/jiaowu/jxtz/:detail?",
         "categories": [
           "university"
         ],
-        "example": "/sicau/jiaowu/jxtz",
+        "example": "/sicau/jiaowu/jxtz/detail",
+        "parameters": {
+          "detail": "是否抓取全文，该值只要不为空就抓取全文返回，否则只返回标题"
+        },
         "features": {
           "requireConfig": false,
           "requirePuppeteer": false,
@@ -91877,6 +91900,7 @@
         "maintainers": [
           "hualiong"
         ],
+        "description": "\n::: tip\n抓取全文返回会导致更长的响应时间，可以尝试使用 `/sicau/jiaowu/jxtz` 路径，这将只返回标题，然后再在应用内抓取全文内容。\n:::\n",
         "url": "jiaowu.sicau.edu.cn/",
         "location": "jiaowu.ts",
         "module": "() => import('@/routes/sicau/jiaowu.ts')"
