@@ -49530,17 +49530,63 @@ export default {
   },
   "hit": {
     "routes": {
-      "/hitgs": {
-        "path": "/hitgs",
+      "/hitgs/:id?": {
+        "path": "/hitgs/:id?",
+        "name": "研究生院",
+        "url": "hitgs.hit.edu.cn",
+        "maintainers": [
+          "hlmu",
+          "nczitzk"
+        ],
+        "example": "/hit/hitgs/tzgg",
+        "parameters": {
+          "category": {
+            "description": "分类，默认为 `tzgg`，即通知公告，可在对应分类页 URL 中找到",
+            "options": [
+              {
+                "label": "通知公告",
+                "value": "tzgg"
+              },
+              {
+                "label": "综合新闻",
+                "value": "zhxw"
+              },
+              {
+                "label": "高水平课程与学术交流",
+                "value": "gspkcyxsjl"
+              },
+              {
+                "label": "国家政策",
+                "value": "gjzc"
+              },
+              {
+                "label": "规章制度",
+                "value": "17546"
+              },
+              {
+                "label": "办事流程",
+                "value": "17547"
+              },
+              {
+                "label": "常见问题",
+                "value": "17548"
+              },
+              {
+                "label": "常见下载",
+                "value": "17549"
+              }
+            ]
+          }
+        },
+        "description": ":::tip\n订阅 [通知公告](https://hitgs.hit.edu.cn/tzgg/list.htm)，其源网址为 `https://hitgs.hit.edu.cn/tzgg/list.htm`，请参考该 URL 指定部分构成参数，此时路由为 [`/hit/hitgs/tzgg`](https://rsshub.app/hit/hitgs/tzgg)。\n:::\n\n<details>\n  <summary>更多栏目</summary>\n\n| 栏目 | ID |\n| - | - |\n| [通知公告](https://hitgs.hit.edu.cn/tzgg/list.htm) | [tzgg](https://rsshub.app/hit/hitgs/tzgg) |\n| [综合新闻](https://hitgs.hit.edu.cn/zhxw/list.htm) | [zhxw](https://rsshub.app/hit/hitgs/zhxw) |\n| [高水平课程与学术交流](https://hitgs.hit.edu.cn/gspkcyxsjl/list.htm) | [gspkcyxsjl](https://rsshub.app/hit/hitgs/gspkcyxsjl) |\n| [国家政策](https://hitgs.hit.edu.cn/gjzc/list.htm) | [gjzc](https://rsshub.app/hit/hitgs/gjzc) |\n| [规章制度](https://hitgs.hit.edu.cn/17546/list.htm) | [17546](https://rsshub.app/hit/hitgs/17546) |\n| [办事流程](https://hitgs.hit.edu.cn/17547/list.htm) | [17547](https://rsshub.app/hit/hitgs/17547) |\n| [常见问题](https://hitgs.hit.edu.cn/17548/list.htm) | [17548](https://rsshub.app/hit/hitgs/17548) |\n| [常见下载](https://hitgs.hit.edu.cn/17549/list.htm) | [17549](https://rsshub.app/hit/hitgs/17549) |\n\n</details>\n",
         "categories": [
           "university"
         ],
-        "example": "/hit/hitgs",
-        "parameters": {},
         "features": {
           "requireConfig": false,
           "requirePuppeteer": false,
           "antiCrawler": false,
+          "supportRadar": true,
           "supportBT": false,
           "supportPodcast": false,
           "supportScihub": false
@@ -49548,15 +49594,68 @@ export default {
         "radar": [
           {
             "source": [
-              "hitgs.hit.edu.cn/*"
+              "hitgs.hit.edu.cn",
+              "hitgs.hit.edu.cn/:id/list.htm"
             ]
+          },
+          {
+            "title": "通知公告",
+            "source": [
+              "hitgs.hit.edu.cn/tzgg/list.htm"
+            ],
+            "target": "/hitgs/tzgg"
+          },
+          {
+            "title": "综合新闻",
+            "source": [
+              "hitgs.hit.edu.cn/zhxw/list.htm"
+            ],
+            "target": "/hitgs/zhxw"
+          },
+          {
+            "title": "高水平课程与学术交流",
+            "source": [
+              "hitgs.hit.edu.cn/gspkcyxsjl/list.htm"
+            ],
+            "target": "/hitgs/gspkcyxsjl"
+          },
+          {
+            "title": "国家政策",
+            "source": [
+              "hitgs.hit.edu.cn/gjzc/list.htm"
+            ],
+            "target": "/hitgs/gjzc"
+          },
+          {
+            "title": "规章制度",
+            "source": [
+              "hitgs.hit.edu.cn/17546/list.htm"
+            ],
+            "target": "/hitgs/17546"
+          },
+          {
+            "title": "办事流程",
+            "source": [
+              "hitgs.hit.edu.cn/17547/list.htm"
+            ],
+            "target": "/hitgs/17547"
+          },
+          {
+            "title": "常见问题",
+            "source": [
+              "hitgs.hit.edu.cn/17548/list.htm"
+            ],
+            "target": "/hitgs/17548"
+          },
+          {
+            "title": "常见下载",
+            "source": [
+              "hitgs.hit.edu.cn/17549/list.htm"
+            ],
+            "target": "/hitgs/17549"
           }
         ],
-        "name": "研究生院通知公告",
-        "maintainers": [
-          "hlmu"
-        ],
-        "url": "hitgs.hit.edu.cn/*",
+        "view": 0,
         "location": "hitgs.ts",
         "module": () => import('@/routes/hit/hitgs.ts')
       },
@@ -59838,8 +59937,7 @@ export default {
       "/category/:category": {
         "path": "/category/:category",
         "categories": [
-          "programming",
-          "popular"
+          "programming"
         ],
         "example": "/juejin/category/frontend",
         "parameters": {
@@ -71905,7 +72003,8 @@ export default {
       "/research/:journal?": {
         "path": "/research/:journal?",
         "categories": [
-          "journal"
+          "journal",
+          "popular"
         ],
         "example": "/nature/research/ng",
         "parameters": {
