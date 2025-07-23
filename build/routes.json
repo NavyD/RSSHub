@@ -30001,6 +30001,78 @@
     "url": "delta.io",
     "lang": "en"
   },
+  "dev.to": {
+    "routes": {
+      "/guides": {
+        "path": "/guides",
+        "categories": [
+          "programming"
+        ],
+        "example": "/dev.to/guides",
+        "parameters": {},
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "dev.to/"
+            ]
+          }
+        ],
+        "name": "Trending Guides",
+        "maintainers": [
+          "Rjnishant530"
+        ],
+        "url": "dev.to",
+        "location": "guides.ts",
+        "module": "() => import('@/routes/dev.to/guides.ts')"
+      },
+      "/top/:period": {
+        "path": "/top/:period",
+        "categories": [
+          "programming"
+        ],
+        "example": "/dev.to/top/week",
+        "parameters": {
+          "period": "Period (week, month, year, infinity)"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "dev.to/top/:period"
+            ]
+          }
+        ],
+        "name": "Top Posts",
+        "maintainers": [
+          "dwemerx",
+          "Rjnishant530"
+        ],
+        "url": "dev.to/top",
+        "location": "top.ts",
+        "module": "() => import('@/routes/dev.to/top.ts')"
+      }
+    },
+    "name": "DEV Community",
+    "apiRoutes": {},
+    "url": "dev.to",
+    "description": "A constructive and inclusive social network for software developers.",
+    "lang": "en"
+  },
   "devolverdigital": {
     "routes": {
       "/blog": {
@@ -39150,6 +39222,50 @@
     "apiRoutes": {},
     "url": "news.gamme.com.tw",
     "lang": "zh-TW"
+  },
+  "gaoyu": {
+    "routes": {
+      "/blog": {
+        "path": "/blog",
+        "name": "Blog",
+        "url": "www.gaoyu.me",
+        "maintainers": [
+          "nczitzk"
+        ],
+        "example": "/gaoyu/blog",
+        "categories": [
+          "blog"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportRadar": true,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "www.gaoyu.me/blog"
+            ],
+            "target": "/blog"
+          }
+        ],
+        "view": 0,
+        "location": "blog.ts",
+        "module": "() => import('@/routes/gaoyu/blog.ts')"
+      }
+    },
+    "name": "Yu Gao",
+    "apiRoutes": {},
+    "url": "gaoyu.me",
+    "categories": [
+      "blog"
+    ],
+    "description": "",
+    "lang": "zh-CN"
   },
   "gcores": {
     "routes": {
@@ -101987,6 +102103,23 @@
   },
   "techcrunch": {
     "routes": {
+      "/category/:categoryId": {
+        "path": "/category/:categoryId",
+        "categories": [
+          "new-media"
+        ],
+        "example": "/techcrunch/category/577047203",
+        "parameters": {
+          "categoryId": "分类id"
+        },
+        "name": "Category",
+        "maintainers": [
+          "MilliumOrion"
+        ],
+        "description": "Use the category ID to retrieve a list of articles, category ID.  \nFrom the page source of `https://techcrunch.com/category/***`, locate the `{category_id}`  \nExample:  \n`html` -> `head` -> `<link rel=\"alternate\" title=\"JSON\" type=\"application/json\" href=\"https://techcrunch.com/wp-json/wp/v2/categories/{category_id}\">`",
+        "location": "category.ts",
+        "module": "() => import('@/routes/techcrunch/category.ts')"
+      },
       "/news": {
         "path": "/news",
         "categories": [
@@ -102019,6 +102152,7 @@
       }
     },
     "name": "TechCrunch",
+    "apiRoutes": {},
     "url": "techcrunch.com",
     "lang": "en"
   },
@@ -107696,7 +107830,7 @@
             "target": "/jwc/:type?"
           }
         ],
-        "name": "教务处通知公告",
+        "name": "教务处",
         "maintainers": [
           "sddzhyc"
         ],

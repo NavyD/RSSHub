@@ -2039,6 +2039,13 @@
   "/deltaio/blog": [
     "RengarLee"
   ],
+  "/dev.to/guides": [
+    "Rjnishant530"
+  ],
+  "/dev.to/top/:period": [
+    "dwemerx",
+    "Rjnishant530"
+  ],
   "/devolverdigital/blog": [
     "XXY233"
   ],
@@ -2840,6 +2847,9 @@
   ],
   "/gamme/:domain/:category?": [],
   "/gamme/:domain/tag/:tag": [],
+  "/gaoyu/blog": [
+    "nczitzk"
+  ],
   "/gcores/articles": [
     "nczitzk"
   ],
@@ -7500,6 +7510,9 @@
   ],
   "/tass/:category?": [
     "TonyRL"
+  ],
+  "/techcrunch/category/:categoryId": [
+    "MilliumOrion"
   ],
   "/techcrunch/news": [
     "EthanWng97"
