@@ -29828,7 +29828,8 @@ export default {
       "/blog": {
         "path": "/blog",
         "categories": [
-          "new-media"
+          "new-media",
+          "popular"
         ],
         "example": "/deepmind/blog",
         "parameters": {},
@@ -60086,8 +60087,7 @@ export default {
       "/category/:category": {
         "path": "/category/:category",
         "categories": [
-          "programming",
-          "popular"
+          "programming"
         ],
         "example": "/juejin/category/frontend",
         "parameters": {
@@ -65755,6 +65755,47 @@ export default {
     "apiRoutes": {},
     "url": "www.manhuagui.com",
     "lang": "zh-CN"
+  },
+  "manus": {
+    "routes": {
+      "/blog": {
+        "path": "/blog",
+        "categories": [
+          "programming"
+        ],
+        "example": "/manus/blog",
+        "url": "manus.im",
+        "parameters": {},
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "www.manus.im"
+            ],
+            "target": "/blog"
+          }
+        ],
+        "name": "Blog",
+        "maintainers": [
+          "cscnk52"
+        ],
+        "description": "Manus Blog",
+        "view": 5,
+        "location": "blog.ts",
+        "module": () => import('@/routes/manus/blog.ts')
+      }
+    },
+    "name": "Manus",
+    "apiRoutes": {},
+    "url": "manus.im",
+    "lang": "en"
   },
   "manyvids": {
     "routes": {
@@ -73769,6 +73810,43 @@ export default {
     "apiRoutes": {},
     "url": "newsmarket.com.tw",
     "lang": "zh-TW"
+  },
+  "newswav": {
+    "routes": {
+      "/": {
+        "path": "/",
+        "categories": [
+          "new-media"
+        ],
+        "example": "/newswav",
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "newswav.com/latest",
+              "newswav.com"
+            ]
+          }
+        ],
+        "name": "Latest",
+        "maintainers": [
+          "TonyRL"
+        ],
+        "location": "latest.ts",
+        "module": () => import('@/routes/newswav/latest.ts')
+      }
+    },
+    "name": "Newswav",
+    "apiRoutes": {},
+    "url": "newswav.com",
+    "lang": "en"
   },
   "newyorker": {
     "routes": {
