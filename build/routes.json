@@ -8355,7 +8355,8 @@
       "/information/:type?": {
         "path": "/information/:type?",
         "categories": [
-          "new-media"
+          "new-media",
+          "popular"
         ],
         "example": "/aliresearch/information",
         "parameters": {
@@ -18769,6 +18770,69 @@
     "apiRoutes": {},
     "url": "cankaoxiaoxi.com",
     "lang": "zh-CN"
+  },
+  "capitalmind": {
+    "routes": {
+      "/insights": {
+        "path": "/insights",
+        "example": "/capitalmind/insights",
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "capitalmind.in/insights"
+            ],
+            "target": "/insights"
+          }
+        ],
+        "name": "Insights",
+        "maintainers": [
+          "Rjnishant530"
+        ],
+        "location": "insights.ts",
+        "module": "() => import('@/routes/capitalmind/insights.ts')"
+      },
+      "/podcasts": {
+        "path": "/podcasts",
+        "example": "/capitalmind/podcasts",
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": true,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "capitalmind.in/podcasts"
+            ],
+            "target": "/podcasts"
+          }
+        ],
+        "name": "Podcasts",
+        "maintainers": [
+          "Rjnishant530"
+        ],
+        "location": "podcasts.ts",
+        "module": "() => import('@/routes/capitalmind/podcasts.ts')"
+      }
+    },
+    "name": "Capitalmind",
+    "apiRoutes": {},
+    "url": "capitalmind.in",
+    "lang": "en",
+    "categories": [
+      "finance"
+    ]
   },
   "cara": {
     "routes": {
@@ -29828,8 +29892,7 @@
       "/blog": {
         "path": "/blog",
         "categories": [
-          "new-media",
-          "popular"
+          "new-media"
         ],
         "example": "/deepmind/blog",
         "parameters": {},
