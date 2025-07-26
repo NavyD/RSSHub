@@ -86900,6 +86900,29 @@ export default {
     "url": "ici.radio-canada.ca",
     "lang": "en"
   },
+  "railway": {
+    "routes": {
+      "/blog": {
+        "path": "/blog",
+        "categories": [
+          "blog"
+        ],
+        "example": "/railway/blog",
+        "url": "blog.railway.com",
+        "name": "Blog",
+        "maintainers": [
+          "jihuayu"
+        ],
+        "location": "index.ts",
+        "module": () => import('@/routes/railway/index.ts')
+      }
+    },
+    "name": "Railway",
+    "apiRoutes": {},
+    "url": "railway.com",
+    "description": "",
+    "lang": "en"
+  },
   "rarehistoricalphotos": {
     "routes": {
       "/": {
@@ -87608,6 +87631,50 @@ export default {
     "apiRoutes": {},
     "url": "right.com.cn",
     "lang": "zh-CN"
+  },
+  "rockthejvm": {
+    "routes": {
+      "/articles": {
+        "path": "/articles",
+        "name": "Article",
+        "url": "rockthejvm.com",
+        "maintainers": [
+          "nczitzk"
+        ],
+        "example": "/rockthejvm/articles",
+        "categories": [
+          "programming"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportRadar": true,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "rockthejvm.com/articles"
+            ],
+            "target": "/articles"
+          }
+        ],
+        "view": 0,
+        "location": "articles.ts",
+        "module": () => import('@/routes/rockthejvm/articles.ts')
+      }
+    },
+    "name": "Rock the JVM",
+    "apiRoutes": {},
+    "url": "rockthejvm.com",
+    "categories": [
+      "programming"
+    ],
+    "description": "",
+    "lang": "en"
   },
   "rodong": {
     "routes": {
