@@ -27520,7 +27520,7 @@ export default {
       "/changelog": {
         "path": "/changelog",
         "name": "Changelog",
-        "url": "www.cursor.com",
+        "url": "cursor.com",
         "maintainers": [
           "p3psi-boo",
           "nczitzk"
@@ -27541,7 +27541,7 @@ export default {
         "radar": [
           {
             "source": [
-              "www.cursor.com/changelog"
+              "cursor.com/changelog"
             ],
             "target": "/changelog"
           }
@@ -27553,7 +27553,7 @@ export default {
     },
     "name": "Cursor",
     "apiRoutes": {},
-    "url": "www.cursor.com",
+    "url": "cursor.com",
     "description": "",
     "lang": "en"
   },

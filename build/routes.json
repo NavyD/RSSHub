@@ -27520,7 +27520,7 @@
       "/changelog": {
         "path": "/changelog",
         "name": "Changelog",
-        "url": "www.cursor.com",
+        "url": "cursor.com",
         "maintainers": [
           "p3psi-boo",
           "nczitzk"
@@ -27541,7 +27541,7 @@
         "radar": [
           {
             "source": [
-              "www.cursor.com/changelog"
+              "cursor.com/changelog"
             ],
             "target": "/changelog"
           }
@@ -27553,7 +27553,7 @@
     },
     "name": "Cursor",
     "apiRoutes": {},
-    "url": "www.cursor.com",
+    "url": "cursor.com",
     "description": "",
     "lang": "en"
   },
