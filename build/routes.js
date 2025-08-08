@@ -46862,6 +46862,38 @@ export default {
         "location": "shenzhen/hrss/szksy/index.ts",
         "module": () => import('@/routes/gov/shenzhen/hrss/szksy/index.ts')
       },
+      "/shenzhen/szlh/zwfw/zffw/:caty": {
+        "path": "/shenzhen/szlh/zwfw/zffw/:caty",
+        "categories": [
+          "government"
+        ],
+        "example": "/gov/shenzhen/szlh/zwfw/zffw/tzgg",
+        "parameters": {
+          "caty": "信息类别"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "szlh.gov.cn/zwfw/zffw/:caty"
+            ]
+          }
+        ],
+        "name": "深圳市罗湖区人民政府",
+        "maintainers": [
+          "lonn"
+        ],
+        "description": "| 通知公告 |\n| :------: |\n|   tzgg   |",
+        "location": "shenzhen/szlh/index.ts",
+        "module": () => import('@/routes/gov/shenzhen/szlh/index.ts')
+      },
       "/shenzhen/xxgk/zfxxgj/:caty": {
         "path": "/shenzhen/xxgk/zfxxgj/:caty",
         "categories": [
@@ -47543,9 +47575,9 @@ export default {
         "module": () => import('@/routes/gov/zj/search.ts')
       }
     },
-    "name": "上海市人民政府",
+    "name": "深圳市罗湖区人民政府",
     "apiRoutes": {},
-    "url": "sh.gov.cn",
+    "url": "www.szlh.gov.cn",
     "categories": [
       "government",
       "popular"
@@ -58798,7 +58830,7 @@ export default {
         "name": "Books",
         "description": "\n| language | Description |\n| ---   | ---   |\n| tw | 臺灣正體 |\n| en | English |\n| jp | 日本語 |\n    ",
         "maintainers": [
-          "FYLSen"
+          "Cedaric"
         ],
         "location": "books.ts",
         "module": () => import('@/routes/jimmyspa/books.ts')
@@ -58839,7 +58871,7 @@ export default {
         "name": "News",
         "description": "\n| language | Description |\n| ---   | ---   |\n| tw | 臺灣正體 |\n| en | English |\n| jp | 日本語 |\n    ",
         "maintainers": [
-          "FYLSen"
+          "Cedaric"
         ],
         "location": "news.ts",
         "module": () => import('@/routes/jimmyspa/news.ts')
@@ -71188,7 +71220,7 @@ export default {
         "name": "industry",
         "description": "\n| ID | Description |\n| ---   | ---   |\n| 0 | 企业 |\n| 1 | 金融机构 |\n| 2 | 主权 |\n| 3 | 地方政府及城投公司 |\n| 4 | 宏观经济 |\n| 5 | 结构融资 |\n| 6 | 基础设施项目融资 |\n| 7 | ESG |\n| 8 | 其他 |\n    ",
         "maintainers": [
-          "FYLSen"
+          "Cedaric"
         ],
         "location": "report.ts",
         "module": () => import('@/routes/moodysmismicrosite/report.ts')
@@ -95150,7 +95182,7 @@ export default {
         "name": "Ratings",
         "description": "\n| language | Description |\n| ---   | ---   |\n| zh | 中文 |\n| en | English |\n| es | Español |\n| pt | Português |\n| jp | 日本語 |\n| ru | Русский |\n| ar | العربية |\n    ",
         "maintainers": [
-          "FYLSen"
+          "Cedaric"
         ],
         "location": "ratings.ts",
         "module": () => import('@/routes/spglobal/ratings.ts')
@@ -104354,6 +104386,160 @@ export default {
     "apiRoutes": {},
     "url": "theverge.com",
     "lang": "en"
+  },
+  "thewirehindi": {
+    "routes": {
+      "/category/:category": {
+        "path": "/category/:category",
+        "categories": [
+          "new-media"
+        ],
+        "example": "/thewirehindi/category/bharat",
+        "parameters": {
+          "category": {
+            "description": "Category name",
+            "options": [
+              {
+                "value": "interview",
+                "label": "इंटरव्यू"
+              },
+              {
+                "value": "audio",
+                "label": "ऑडियो"
+              },
+              {
+                "value": "kala-sahitya",
+                "label": "कला-साहित्य"
+              },
+              {
+                "value": "campus",
+                "label": "कैंपस"
+              },
+              {
+                "value": "covid-19",
+                "label": "कोविड-19"
+              },
+              {
+                "value": "jan-ki-baat",
+                "label": "जन की बात"
+              },
+              {
+                "value": "duniya",
+                "label": "दुनिया"
+              },
+              {
+                "value": "north-east",
+                "label": "नॉर्थ ईस्ट"
+              },
+              {
+                "value": "prasangik",
+                "label": "प्रासंगिक"
+              },
+              {
+                "value": "bharat",
+                "label": "भारत"
+              },
+              {
+                "value": "media",
+                "label": "मीडिया"
+              },
+              {
+                "value": "media-bol",
+                "label": "मीडिया बोल"
+              },
+              {
+                "value": "rajneeti",
+                "label": "राजनीति"
+              },
+              {
+                "value": "vichar",
+                "label": "विचार"
+              },
+              {
+                "value": "vigyan",
+                "label": "विज्ञान"
+              },
+              {
+                "value": "vishesh",
+                "label": "विशेष"
+              },
+              {
+                "value": "video",
+                "label": "वीडियो"
+              },
+              {
+                "value": "samaj",
+                "label": "समाज"
+              },
+              {
+                "value": "ham-bhi-bharat",
+                "label": "हम भी भारत"
+              },
+              {
+                "value": "hamare-bare-mein",
+                "label": "हमारे बारे में"
+              }
+            ]
+          }
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "thewirehindi.com/category/*"
+            ]
+          }
+        ],
+        "name": "Category",
+        "maintainers": [
+          "Rjnishant530"
+        ],
+        "url": "thewirehindi.com/",
+        "location": "category.ts",
+        "module": () => import('@/routes/thewirehindi/category.ts')
+      },
+      "/": {
+        "path": "/",
+        "categories": [
+          "new-media"
+        ],
+        "example": "/thewirehindi",
+        "parameters": {},
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "thewirehindi.com/"
+            ]
+          }
+        ],
+        "name": "Latest News",
+        "maintainers": [
+          "Rjnishant530"
+        ],
+        "url": "thewirehindi.com/",
+        "location": "index.ts",
+        "module": () => import('@/routes/thewirehindi/index.ts')
+      }
+    },
+    "name": "The Wire Hindi",
+    "apiRoutes": {},
+    "url": "thewirehindi.com",
+    "lang": "hi"
   },
   "thoughtco": {
     "routes": {
@@ -119544,6 +119730,34 @@ export default {
     "name": "知园",
     "apiRoutes": {},
     "url": "zhiy.cc",
+    "lang": "zh-CN"
+  },
+  "zhizhuan100": {
+    "routes": {
+      "/analytic": {
+        "path": "/analytic",
+        "categories": [
+          "finance"
+        ],
+        "view": 0,
+        "example": "/zhizhuan100/analytic",
+        "radar": [
+          {
+            "source": [
+              "www.zhizhuan100.com.cn/analysis"
+            ]
+          }
+        ],
+        "name": "analytic",
+        "maintainers": [
+          "Cedaric"
+        ],
+        "location": "report.ts",
+        "module": () => import('@/routes/zhizhuan100/report.ts')
+      }
+    },
+    "name": "智篆商业",
+    "url": "www.zhizhuan100.com.cn",
     "lang": "zh-CN"
   },
   "zhonglun": {

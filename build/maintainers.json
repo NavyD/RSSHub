@@ -3370,6 +3370,9 @@
   "/gov/shenzhen/hrss/szksy/:caty/:page?": [
     "zlasd"
   ],
+  "/gov/shenzhen/szlh/zwfw/zffw/:caty": [
+    "lonn"
+  ],
   "/gov/shenzhen/xxgk/zfxxgj/:caty": [
     "laoxua"
   ],
@@ -4373,10 +4376,10 @@
     "prnake"
   ],
   "/jimmyspa/books/:language": [
-    "FYLSen"
+    "Cedaric"
   ],
   "/jimmyspa/news/:language": [
-    "FYLSen"
+    "Cedaric"
   ],
   "/jin10/category/:id": [
     "laampui"
@@ -5203,7 +5206,7 @@
     "nczitzk"
   ],
   "/moodysmismicrosite/report/:industry?": [
-    "FYLSen"
+    "Cedaric"
   ],
   "/mox/:category?": [
     "nczitzk"
@@ -7193,7 +7196,7 @@
     "TonyRL"
   ],
   "/spglobal/ratings/:language?": [
-    "FYLSen"
+    "Cedaric"
   ],
   "/spotify/artist/:id": [
     "outloudvi"
@@ -7712,6 +7715,12 @@
   "/theverge/:hub?": [
     "HenryQW",
     "vbali"
+  ],
+  "/thewirehindi/category/:category": [
+    "Rjnishant530"
+  ],
+  "/thewirehindi/": [
+    "Rjnishant530"
   ],
   "/thoughtco/:category?": [
     "nczitzk"
@@ -9009,6 +9018,9 @@
   ],
   "/zhiy/posts/:author": [
     "TonyRL"
+  ],
+  "/zhizhuan100/analytic": [
+    "Cedaric"
   ],
   "/zhonglun/research/article/:language{[a-zA-Z0-9-]+}?": [
     "nczitzk"
