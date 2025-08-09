@@ -25942,9 +25942,15 @@
         "radar": [
           {
             "source": [
-              "coomer.st/:source/user/:id",
               "coomer.st/"
-            ]
+            ],
+            "target": ""
+          },
+          {
+            "source": [
+              "coomer.st/:source/user/:id"
+            ],
+            "target": "/:source/:id"
           }
         ],
         "name": "Posts",
@@ -61351,25 +61357,25 @@
             "source": [
               "kemono.cr/"
             ],
-            "target": "/kemono"
+            "target": ""
           },
           {
             "source": [
               "kemono.cr/:source/user/:id"
             ],
-            "target": "/kemono/:source/:id"
+            "target": "/:source/:id"
           },
           {
             "source": [
               "kemono.cr/:source/user/:id/announcements"
             ],
-            "target": "/kemono/:source/:id/announcements"
+            "target": "/:source/:id/announcements"
           },
           {
             "source": [
               "kemono.cr/:source/user/:id/fancards"
             ],
-            "target": "/kemono/:source/:id/fancards"
+            "target": "/:source/:id/fancards"
           }
         ],
         "name": "Posts",
@@ -69417,6 +69423,36 @@
     "apiRoutes": {},
     "url": "metacritic.com",
     "lang": "en"
+  },
+  "meteoblue": {
+    "routes": {
+      "/weathernews": {
+        "path": "/weathernews",
+        "name": "Weather News",
+        "maintainers": [
+          "tssujt"
+        ],
+        "example": "/meteoblue/weathernews",
+        "categories": [
+          "blog"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "description": "Weather news and articles from meteoblue",
+        "location": "weathernews.ts",
+        "module": "() => import('@/routes/meteoblue/weathernews.ts')"
+      }
+    },
+    "name": "meteoblue",
+    "url": "meteoblue.com",
+    "lang": "en",
+    "description": "Weather forecasts, climate data, and meteorological news from meteoblue"
   },
   "meteor": {
     "routes": {
@@ -104694,6 +104730,135 @@
     "name": "thzt",
     "apiRoutes": {},
     "url": "thzt.github.io",
+    "description": "",
+    "lang": "zh-CN"
+  },
+  "tidb": {
+    "routes": {
+      "/blog/c/:category?": {
+        "path": "/blog/c/:category?",
+        "name": "专栏分类",
+        "url": "tidb.net",
+        "maintainers": [
+          "nczitzk"
+        ],
+        "example": "/tidb/blog/c/latest",
+        "parameters": {
+          "category": {
+            "description": "分类，默认为 `latest`，即全部文章，可在对应分类页 URL 中找到",
+            "options": [
+              {
+                "label": "全部文章",
+                "value": "latest"
+              },
+              {
+                "label": "管理与运维",
+                "value": "management-and-operation"
+              },
+              {
+                "label": "实践案例",
+                "value": "practical-case"
+              },
+              {
+                "label": "架构选型",
+                "value": "architecture-selection"
+              },
+              {
+                "label": "原理解读",
+                "value": "principle-interpretation"
+              },
+              {
+                "label": "应用开发",
+                "value": "application-development"
+              },
+              {
+                "label": "社区动态",
+                "value": "community-feeds"
+              }
+            ]
+          }
+        },
+        "description": ":::tip\n订阅 [管理与运维](https://tidb.net/blog/c/management-and-operation)，其源网址为 `https://tidb.net/blog/c/management-and-operation`，请参考该 URL 指定部分构成参数，此时路由为 [`/tidb/blog/c/management-and-operation`](https://rsshub.app/tidb/blog/c/management-and-operation)。\n:::\n\n| 分类                                                           | ID                                                                                  |\n| -------------------------------------------------------------- | ----------------------------------------------------------------------------------- |\n| [全部文章](https://tidb.net/blog)                              | [latest](https://rsshub.app/tidb/blog)                                              |\n| [管理与运维](https://tidb.net/blog/c/management-and-operation) | [management-and-operation](https://rsshub.app/tidb/blog/c/management-and-operation) |\n| [实践案例](https://tidb.net/blog/c/practical-case)             | [practical-case](https://rsshub.app/tidb/blog/c/practical-case)                     |\n| [架构选型](https://tidb.net/blog/c/architecture-selection)     | [architecture-selection](https://rsshub.app/tidb/blog/c/architecture-selection)     |\n| [原理解读](https://tidb.net/blog/c/principle-interpretation)   | [principle-interpretation](https://rsshub.app/tidb/blog/c/principle-interpretation) |\n| [应用开发](https://tidb.net/blog/c/application-development)    | [application-development](https://rsshub.app/tidb/blog/c/application-development)   |\n| [社区动态](https://tidb.net/blog/c/community-feeds)            | [community-feeds](https://rsshub.app/tidb/blog/c/community-feeds)                   |\n\n",
+        "categories": [
+          "programming"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportRadar": true,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "tidb.net/blog",
+              "tidb.net/blog/c/:category"
+            ]
+          },
+          {
+            "title": "全部文章",
+            "source": [
+              "tidb.net/blog"
+            ],
+            "target": "/blog/c/latest"
+          },
+          {
+            "title": "管理与运维",
+            "source": [
+              "tidb.net/blog/c/management-and-operation"
+            ],
+            "target": "/blog/c/management-and-operation"
+          },
+          {
+            "title": "实践案例",
+            "source": [
+              "tidb.net/blog/c/practical-case"
+            ],
+            "target": "/blog/c/practical-case"
+          },
+          {
+            "title": "架构选型",
+            "source": [
+              "tidb.net/blog/c/architecture-selection"
+            ],
+            "target": "/blog/c/architecture-selection"
+          },
+          {
+            "title": "原理解读",
+            "source": [
+              "tidb.net/blog/c/principle-interpretation"
+            ],
+            "target": "/blog/c/principle-interpretation"
+          },
+          {
+            "title": "应用开发",
+            "source": [
+              "tidb.net/blog/c/application-development"
+            ],
+            "target": "/blog/c/application-development"
+          },
+          {
+            "title": "社区动态",
+            "source": [
+              "tidb.net/blog/c/community-feeds"
+            ],
+            "target": "/blog/c/community-feeds"
+          }
+        ],
+        "view": 0,
+        "location": "blog.ts",
+        "module": "() => import('@/routes/tidb/blog.ts')"
+      }
+    },
+    "name": "TiDB 社区",
+    "apiRoutes": {},
+    "url": "tidb.net",
+    "categories": [
+      "programming"
+    ],
     "description": "",
     "lang": "zh-CN"
   },
