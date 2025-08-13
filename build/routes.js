@@ -30944,6 +30944,49 @@ export default {
     "url": "dgjyw.com",
     "lang": "zh-CN"
   },
+  "dgut": {
+    "routes": {
+      "/jwb/:type?": {
+        "path": "/jwb/:type?",
+        "categories": [
+          "university"
+        ],
+        "example": "/dgut/jwb/jwtz",
+        "parameters": {
+          "type": "哪种通知，默认为教务通知"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "maintainers": [
+          "1200522928"
+        ],
+        "radar": [
+          {
+            "source": [
+              "jwb.dgut.edu.cn/tzgg/"
+            ],
+            "target": ""
+          }
+        ],
+        "name": "教务部通知公告",
+        "description": "| 教学动态 | 教务通知 | 教研通知 | 实践通知 | 产业学院 |  通识教育  |\"杨振宁\"班|招生信息 |采购公告 |\n| ------- | -------  | ---------| --------| --------| ----------|---------|------- |--------|\n| jxdt    | jwtz     | jytz     |   sjtz  |   cyxy  |   tsjy    | yznb    |  zsxx  | cggg   |",
+        "location": "jwb.ts",
+        "module": () => import('@/routes/dgut/jwb.ts')
+      }
+    },
+    "name": "东莞理工学院",
+    "apiRoutes": {},
+    "url": "www.dgut.edu.cn",
+    "zh": {
+      "name": "东莞理工学院"
+    }
+  },
   "dhu": {
     "routes": {
       "/jiaowu/news/:type?": {
@@ -35420,6 +35463,43 @@ export default {
     "url": "ca.china-embassy.org",
     "description": "支持国家列表\n\n加拿大 `CA`\n\n-   大使馆: `/embassy/ca`\n\n-   领事馆城市列表:\n\n| 城市     | 路由                   |\n| -------- | ---------------------- |\n| 蒙特利尔 | `/embassy/ca/montreal` |\n\n* * *\n\n德国 `DE`\n\n-   大使馆: `/embassy/de`\n\n-   领事馆城市列表:\n\n| 城市   | 路由                 |\n| ------ | -------------------- |\n| 慕尼黑 | `/embassy/de/munich` |\n\n* * *\n\n法国 `FR`\n\n-   大使馆: `/embassy/fr`\n\n-   领事馆城市列表:\n\n| 城市       | 路由                     |\n| ---------- | ------------------------ |\n| 马赛       | `/embassy/fr/marseille`  |\n| 斯特拉斯堡 | `/embassy/fr/strasbourg` |\n| 里昂       | `/embassy/fr/lyon`       |\n\n* * *\n\n日本 `JP`\n\n-   大使馆: `/embassy/jp`\n\n-   领事馆城市列表:\n\n| 城市   | 路由                   |\n| ------ | ---------------------- |\n| 长崎   | `/embassy/jp/nagasaki` |\n| 大阪   | `/embassy/jp/osaka`    |\n| 福冈   | `/embassy/jp/fukuoka`  |\n| 名古屋 | `/embassy/jp/nagoya`   |\n| 札幌   | `/embassy/jp/sapporo`  |\n| 新潟   | `/embassy/jp/niigata`  |\n\n* * *\n\n韩国 `KR`\n\n-   大使馆: `/embassy/kr`\n\n-   领事馆城市列表:\n\n| 城市 | 路由                  |\n| ---- | --------------------- |\n| 釜山 | `/embassy/kr/busan`   |\n| 济州 | `/embassy/kr/jeju`    |\n| 光州 | `/embassy/kr/gwangju` |\n\n* * *\n\n马来西亚 `MY`\n\n-   大使馆: `/embassy/my`\n\n* * *\n\n新加坡 `SG`\n\n-   大使馆: `/embassy/sg`\n\n* * *\n\n美国 `US`\n\n-   大使馆: `/embassy/us`\n\n-   领事馆城市列表:\n\n| 城市   | 路由                       |\n| ------ | -------------------------- |\n| 纽约   | `/embassy/us/newyork`      |\n| 芝加哥 | `/embassy/us/chicago`      |\n| 旧金山 | `/embassy/us/sanfrancisco` |\n\n* * *\n\n英国 `UK`\n\n-   大使馆: `/embassy/uk`\n\n-   领事馆城市列表:\n\n| 城市       | 路由                     |\n| ---------- | ------------------------ |\n| 爱丁堡     | `/embassy/uk/edinburgh`  |\n| 贝尔法斯特 | `/embassy/uk/belfast`    |\n| 曼彻斯特   | `/embassy/uk/manchester` |",
     "lang": "zh-CN"
+  },
+  "englishhome": {
+    "routes": {
+      "/": {
+        "path": "/",
+        "categories": [
+          "blog"
+        ],
+        "example": "/englishhome",
+        "parameters": {},
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "englishhome.org/"
+            ]
+          }
+        ],
+        "name": "首頁",
+        "maintainers": [
+          "johan456789"
+        ],
+        "description": "英語之家 - The Home of English 首頁",
+        "location": "index.ts",
+        "module": () => import('@/routes/englishhome/index.ts')
+      }
+    },
+    "name": "英語之家",
+    "apiRoutes": {},
+    "url": "englishhome.org"
   },
   "enterprisecraftsmanship": {
     "routes": {
@@ -50331,7 +50411,8 @@ export default {
       "/home/:sort?/:id?": {
         "path": "/home/:sort?/:id?",
         "categories": [
-          "programming"
+          "programming",
+          "popular"
         ],
         "example": "/hellogithub/home",
         "parameters": {
@@ -76063,6 +76144,40 @@ export default {
     "url": "nintendo.com",
     "lang": "en"
   },
+  "nio": {
+    "routes": {
+      "/nioradio/:albumid": {
+        "path": "/nioradio/:albumid",
+        "categories": [
+          "multimedia"
+        ],
+        "description": "\n:::tip\n**如何获取电台 ID？**\n打开蔚来 APP 后，点击“此地”→“NIO Radio”，找到自己想要转换为播客的专辑，分享后在生成的链接中找到`container_id=`后方的数字即可。\n常见电台 ID：\n| 电台名称          | 电台 ID |\n| :------------ | :---- |\n| 资讯充电站（早间版）    | 5     |\n| 资讯充电站（晚间版）    | 23    |\n| E 次元财经报       | 148   |\n| 塞萌不塞车         | 661   |\n| 乐行记           | 11    |\n| Weekend Dance | 547   |\n:::",
+        "example": "/nio/nioradio/5",
+        "parameters": {
+          "albumid": "电台专辑 ID"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": true,
+          "supportScihub": false
+        },
+        "name": "NIO Radio",
+        "maintainers": [
+          "marcosteam"
+        ],
+        "location": "nioradio.ts",
+        "module": () => import('@/routes/nio/nioradio.ts')
+      }
+    },
+    "name": "NIO",
+    "url": "nio.com",
+    "zh": {
+      "name": "蔚来"
+    }
+  },
   "nippon": {
     "routes": {
       "/:category?": {
@@ -90646,6 +90761,52 @@ export default {
     ],
     "description": "",
     "lang": "en"
+  },
+  "scpta": {
+    "routes": {
+      "/news/:category": {
+        "path": "/news/:category",
+        "categories": [
+          "government"
+        ],
+        "example": "/scpta/news/33",
+        "parameters": {
+          "category": {
+            "description": "分类ID，默认为`33`(工作动态)",
+            "default": "33"
+          }
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "www.scpta.com.cn/front/News/List"
+            ],
+            "target": "/news"
+          }
+        ],
+        "name": "通知公告",
+        "maintainers": [
+          "Yeye-0426"
+        ],
+        "description": "| 分类                 | category_id |\n|----------------------|-------------|\n| 工作动态             | 33          |\n| 公务员考试           | 56          |\n| 专业技术人员资格考试 | 57          |\n| 事业单位考试         | 67          |\n| 其它                 | 72          |",
+        "location": "news.ts",
+        "module": () => import('@/routes/scpta/news.ts')
+      }
+    },
+    "name": "四川省人力资源和社会保障厅人事考试专栏",
+    "url": "www.scpta.com.cn",
+    "categories": [
+      "government"
+    ],
+    "lang": "zh-CN"
   },
   "sctv": {
     "routes": {
