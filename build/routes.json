@@ -5456,8 +5456,7 @@
       "/article/:categoryId/:sortType?/:timeRange?": {
         "path": "/article/:categoryId/:sortType?/:timeRange?",
         "categories": [
-          "anime",
-          "popular"
+          "anime"
         ],
         "view": 0,
         "example": "/acfun/article/110",
@@ -85096,9 +85095,87 @@
         "radar": [
           {
             "source": [
-              "pornhub.com/model/:username/*"
+              "www.pornhub.com/model/:username",
+              "www.pornhub.com/model/:username/*"
             ],
             "target": "/model/:username"
+          },
+          {
+            "source": [
+              "de.pornhub.com/model/:username",
+              "de.pornhub.com/model/:username/*"
+            ],
+            "target": "/model/:username/de"
+          },
+          {
+            "source": [
+              "fr.pornhub.com/model/:username",
+              "fr.pornhub.com/model/:username/*"
+            ],
+            "target": "/model/:username/fr"
+          },
+          {
+            "source": [
+              "es.pornhub.com/model/:username",
+              "es.pornhub.com/model/:username/*"
+            ],
+            "target": "/model/:username/es"
+          },
+          {
+            "source": [
+              "it.pornhub.com/model/:username",
+              "it.pornhub.com/model/:username/*"
+            ],
+            "target": "/model/:username/it"
+          },
+          {
+            "source": [
+              "pt.pornhub.com/model/:username",
+              "pt.pornhub.com/model/:username/*"
+            ],
+            "target": "/model/:username/pt"
+          },
+          {
+            "source": [
+              "pl.pornhub.com/model/:username",
+              "pl.pornhub.com/model/:username/*"
+            ],
+            "target": "/model/:username/pl"
+          },
+          {
+            "source": [
+              "rt.pornhub.com/model/:username",
+              "rt.pornhub.com/model/:username/*"
+            ],
+            "target": "/model/:username/rt"
+          },
+          {
+            "source": [
+              "jp.pornhub.com/model/:username",
+              "jp.pornhub.com/model/:username/*"
+            ],
+            "target": "/model/:username/jp"
+          },
+          {
+            "source": [
+              "nl.pornhub.com/model/:username",
+              "nl.pornhub.com/model/:username/*"
+            ],
+            "target": "/model/:username/nl"
+          },
+          {
+            "source": [
+              "cz.pornhub.com/model/:username",
+              "cz.pornhub.com/model/:username/*"
+            ],
+            "target": "/model/:username/cz"
+          },
+          {
+            "source": [
+              "cn.pornhub.com/model/:username",
+              "cn.pornhub.com/model/:username/*"
+            ],
+            "target": "/model/:username/cn"
           }
         ],
         "name": "Model",
@@ -85208,9 +85285,87 @@
         "radar": [
           {
             "source": [
-              "pornhub.com/pornstar/:username/*"
+              "www.pornhub.com/pornstar/:username",
+              "www.pornhub.com/pornstar/:username/*"
             ],
             "target": "/pornstar/:username"
+          },
+          {
+            "source": [
+              "de.pornhub.com/pornstar/:username",
+              "de.pornhub.com/pornstar/:username/*"
+            ],
+            "target": "/pornstar/:username/de"
+          },
+          {
+            "source": [
+              "fr.pornhub.com/pornstar/:username",
+              "fr.pornhub.com/pornstar/:username/*"
+            ],
+            "target": "/pornstar/:username/fr"
+          },
+          {
+            "source": [
+              "es.pornhub.com/pornstar/:username",
+              "es.pornhub.com/pornstar/:username/*"
+            ],
+            "target": "/pornstar/:username/es"
+          },
+          {
+            "source": [
+              "it.pornhub.com/pornstar/:username",
+              "it.pornhub.com/pornstar/:username/*"
+            ],
+            "target": "/pornstar/:username/it"
+          },
+          {
+            "source": [
+              "pt.pornhub.com/pornstar/:username",
+              "pt.pornhub.com/pornstar/:username/*"
+            ],
+            "target": "/pornstar/:username/pt"
+          },
+          {
+            "source": [
+              "pl.pornhub.com/pornstar/:username",
+              "pl.pornhub.com/pornstar/:username/*"
+            ],
+            "target": "/pornstar/:username/pl"
+          },
+          {
+            "source": [
+              "rt.pornhub.com/pornstar/:username",
+              "rt.pornhub.com/pornstar/:username/*"
+            ],
+            "target": "/pornstar/:username/rt"
+          },
+          {
+            "source": [
+              "jp.pornhub.com/pornstar/:username",
+              "jp.pornhub.com/pornstar/:username/*"
+            ],
+            "target": "/pornstar/:username/jp"
+          },
+          {
+            "source": [
+              "nl.pornhub.com/pornstar/:username",
+              "nl.pornhub.com/pornstar/:username/*"
+            ],
+            "target": "/pornstar/:username/nl"
+          },
+          {
+            "source": [
+              "cz.pornhub.com/pornstar/:username",
+              "cz.pornhub.com/pornstar/:username/*"
+            ],
+            "target": "/pornstar/:username/cz"
+          },
+          {
+            "source": [
+              "cn.pornhub.com/pornstar/:username",
+              "cn.pornhub.com/pornstar/:username/*"
+            ],
+            "target": "/pornstar/:username/cn"
           }
         ],
         "name": "Pornstar",
@@ -85268,9 +85423,87 @@
         "radar": [
           {
             "source": [
-              "pornhub.com/users/:username/*"
+              "www.pornhub.com/users/:username",
+              "www.pornhub.com/users/:username/*"
             ],
             "target": "/users/:username"
+          },
+          {
+            "source": [
+              "de.pornhub.com/users/:username",
+              "de.pornhub.com/users/:username/*"
+            ],
+            "target": "/users/:username/de"
+          },
+          {
+            "source": [
+              "fr.pornhub.com/users/:username",
+              "fr.pornhub.com/users/:username/*"
+            ],
+            "target": "/users/:username/fr"
+          },
+          {
+            "source": [
+              "es.pornhub.com/users/:username",
+              "es.pornhub.com/users/:username/*"
+            ],
+            "target": "/users/:username/es"
+          },
+          {
+            "source": [
+              "it.pornhub.com/users/:username",
+              "it.pornhub.com/users/:username/*"
+            ],
+            "target": "/users/:username/it"
+          },
+          {
+            "source": [
+              "pt.pornhub.com/users/:username",
+              "pt.pornhub.com/users/:username/*"
+            ],
+            "target": "/users/:username/pt"
+          },
+          {
+            "source": [
+              "pl.pornhub.com/users/:username",
+              "pl.pornhub.com/users/:username/*"
+            ],
+            "target": "/users/:username/pl"
+          },
+          {
+            "source": [
+              "rt.pornhub.com/users/:username",
+              "rt.pornhub.com/users/:username/*"
+            ],
+            "target": "/users/:username/rt"
+          },
+          {
+            "source": [
+              "jp.pornhub.com/users/:username",
+              "jp.pornhub.com/users/:username/*"
+            ],
+            "target": "/users/:username/jp"
+          },
+          {
+            "source": [
+              "nl.pornhub.com/users/:username",
+              "nl.pornhub.com/users/:username/*"
+            ],
+            "target": "/users/:username/nl"
+          },
+          {
+            "source": [
+              "cz.pornhub.com/users/:username",
+              "cz.pornhub.com/users/:username/*"
+            ],
+            "target": "/users/:username/cz"
+          },
+          {
+            "source": [
+              "cn.pornhub.com/users/:username",
+              "cn.pornhub.com/users/:username/*"
+            ],
+            "target": "/users/:username/cn"
           }
         ],
         "name": "Users",
