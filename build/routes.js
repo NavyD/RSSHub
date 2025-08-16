@@ -26208,6 +26208,45 @@ export default {
     "url": "comicskingdom.com",
     "lang": "en"
   },
+  "commonhealth": {
+    "routes": {
+      "/": {
+        "path": "/",
+        "name": "最新內容",
+        "url": "commonhealth.com.tw",
+        "maintainers": [
+          "johan456789"
+        ],
+        "example": "/commonhealth",
+        "categories": [
+          "traditional-media"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportRadar": true,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "www.commonhealth.com.tw/"
+            ],
+            "target": "/"
+          }
+        ],
+        "location": "index.ts",
+        "module": () => import('@/routes/commonhealth/index.ts')
+      }
+    },
+    "name": "康健",
+    "apiRoutes": {},
+    "url": "commonhealth.com.tw",
+    "lang": "zh-TW"
+  },
   "consumer": {
     "routes": {
       "/:category?/:language?/:keyword?": {
@@ -70634,6 +70673,41 @@ export default {
         "description": "#### 新闻 {#mi-ha-you-yuan-shen-xin-wen}\n\n| 最新   | 新闻 | 公告   | 活动     |\n| ------ | ---- | ------ | -------- |\n| latest | news | notice | activity |",
         "location": "ys/news.ts",
         "module": () => import('@/routes/mihoyo/ys/news.ts')
+      },
+      "/zzz/:location?/:category?": {
+        "path": "/zzz/:location?/:category?",
+        "categories": [
+          "game"
+        ],
+        "example": "/mihoyo/zzz",
+        "parameters": {
+          "location": "区域，可选 `zh-cn`（国服，简中）或 `zh-tw`（国际服，繁中）",
+          "category": "分类，见下表，默认为最新"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "zzz.mihoyo.com/news"
+            ],
+            "target": "/zzz"
+          }
+        ],
+        "name": "绝区零",
+        "maintainers": [
+          "Yeye-0426"
+        ],
+        "url": "zzz.mihoyo.com/news",
+        "description": "#### 新闻 {#mi-ha-you-jue-qu-ling-xin-wen}\n\n| 最新     | 新闻 | 公告   | 活动     |\n| -------- | ---- | ------ | -------- |\n| news-all | news | notice | activity |",
+        "location": "zzz/news.ts",
+        "module": () => import('@/routes/mihoyo/zzz/news.ts')
       }
     },
     "name": "米哈游",
