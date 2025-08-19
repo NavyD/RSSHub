@@ -17736,6 +17736,55 @@ export default {
     "url": "bookfere.com",
     "lang": "zh-CN"
   },
+  "bookwalker": {
+    "routes": {
+      "/search/:filter?": {
+        "path": "/search/:filter?",
+        "name": "搜尋",
+        "url": "www.bookwalker.com.tw",
+        "maintainers": [
+          "nczitzk"
+        ],
+        "example": "/bookwalker/search/order=sell_desc&s=34",
+        "parameters": {
+          "filter": {
+            "description": "过滤器，默认为 `order=sell_desc`，即依發售日新至舊排序"
+          }
+        },
+        "description": ":::tip\n订阅 [依發售日新至舊排序的文學小說](https://www.bookwalker.com.tw/search?order=sell_desc&s=34)，其源网址为 `https://www.bookwalker.com.tw/search?order=sell_desc&s=34`，请参考该 URL 指定部分构成参数，此时路由为 [`/bookwalker/search/order=sell_desc&s=34`](https://rsshub.app/bookwalker/search/order=sell_desc&s=34)。\n:::\n",
+        "categories": [
+          "shopping"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportRadar": true,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "www.bookwalker.com.tw/search"
+            ],
+            "target": "/bookwalker/search"
+          }
+        ],
+        "view": 0,
+        "location": "search.ts",
+        "module": () => import('@/routes/bookwalker/search.ts')
+      }
+    },
+    "name": "BOOKWALKER電子書",
+    "url": "bookwalker.com.tw",
+    "categories": [
+      "shopping"
+    ],
+    "description": "",
+    "lang": "zh-TW"
+  },
   "booru": {
     "routes": {
       "/mmda/tags/:tags?": {
