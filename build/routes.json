@@ -5500,6 +5500,114 @@
     "description": "",
     "lang": "zh-CN"
   },
+  "aa1": {
+    "routes": {
+      "/60s/:category?": {
+        "path": "/60s/:category?",
+        "name": "每日新闻",
+        "url": "60s.aa1.cn",
+        "maintainers": [
+          "nczitzk"
+        ],
+        "example": "/aa1/60s/news",
+        "parameters": {
+          "category": {
+            "description": "分类，默认为全部，可在对应分类页 URL 中找到",
+            "options": [
+              {
+                "label": "全部",
+                "value": ""
+              },
+              {
+                "label": "新闻词文章数据",
+                "value": "freenewsdata"
+              },
+              {
+                "label": "最新",
+                "value": "new"
+              },
+              {
+                "label": "本平台同款自动发文章插件",
+                "value": "1"
+              },
+              {
+                "label": "每天60秒读懂世界",
+                "value": "news"
+              }
+            ]
+          }
+        },
+        "description": ":::tip\n订阅 [每天60秒读懂世界](https://60s.aa1.cn/category/news)，其源网址为 `https://60s.aa1.cn/category/news`，请参考该 URL 指定部分构成参数，此时路由为 [`/aa1/60s/news`](https://rsshub.app/aa1/60s/news) 或 [`/aa1/60s/每天60秒读懂世界`](https://rsshub.app/aa1/60s/每天60秒读懂世界)。\n:::\n\n| 分类                                                       | ID                                                      |\n| ---------------------------------------------------------- | ------------------------------------------------------- |\n| [全部](https://60s.aa1.cn)                                 | [<空>](https://rsshub.app/aa1/60s)                      |\n| [新闻词文章数据](https://60s.aa1.cn/category/freenewsdata) | [freenewsdata](https://rsshub.app/aa1/60s/freenewsdata) |\n| [最新](https://60s.aa1.cn/category/new)                    | [new](https://rsshub.app/aa1/60s/new)                   |\n| [本平台同款自动发文章插件](https://60s.aa1.cn/category/1)  | [1](https://rsshub.app/aa1/60s/1)                       |\n| [每天 60 秒读懂世界](https://60s.aa1.cn/category/news)     | [news](https://rsshub.app/aa1/60s/news)                 |\n",
+        "categories": [
+          "new-media"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportRadar": true,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "60s.aa1.cn",
+              "60s.aa1.cn/category/:category"
+            ],
+            "target": "/60s/:category"
+          },
+          {
+            "title": "全部",
+            "source": [
+              "60s.aa1.cn"
+            ],
+            "target": "/60s"
+          },
+          {
+            "title": "新闻词文章数据",
+            "source": [
+              "60s.aa1.cn/category/freenewsdata"
+            ],
+            "target": "/60s/freenewsdata"
+          },
+          {
+            "title": "最新",
+            "source": [
+              "60s.aa1.cn/category/new"
+            ],
+            "target": "/60s/new"
+          },
+          {
+            "title": "本平台同款自动发文章插件",
+            "source": [
+              "60s.aa1.cn/category/1"
+            ],
+            "target": "/60s/1"
+          },
+          {
+            "title": "每天60秒读懂世界",
+            "source": [
+              "60s.aa1.cn/category/news"
+            ],
+            "target": "/60s/news"
+          }
+        ],
+        "view": 0,
+        "location": "60s.ts",
+        "module": "() => import('@/routes/aa1/60s.ts')"
+      }
+    },
+    "name": "夏柔",
+    "apiRoutes": {},
+    "url": "aa1.cn",
+    "categories": [
+      "new-media"
+    ],
+    "description": "",
+    "lang": "zh-CN"
+  },
   "aamacau": {
     "routes": {
       "/:category?/:id?": {
