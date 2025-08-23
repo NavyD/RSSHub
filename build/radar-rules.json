@@ -13985,6 +13985,27 @@
       }
     ]
   },
+  "elecfans.com": {
+    "_name": "电子发烧友",
+    "www": [
+      {
+        "title": "文章",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/"
+        ],
+        "target": "/elecfans/article/:atype"
+      },
+      {
+        "title": "资料",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/"
+        ],
+        "target": "/elecfans/soft/:atype"
+      }
+    ]
+  },
   "eleduck.com": {
     "_name": "电鸭社区",
     ".": [
@@ -20315,6 +20336,19 @@
       }
     ]
   },
+  "hudsonrivertrading.com": {
+    "_name": "Hudson River Trading",
+    "www": [
+      {
+        "title": "Tech Blog",
+        "docs": "https://docs.rsshub.app/routes/blog",
+        "source": [
+          "/hrtbeat/"
+        ],
+        "target": "/hudsonrivertrading/blog/:section?"
+      }
+    ]
+  },
   "huggingface.co": {
     "_name": "Huggingface",
     ".": [
@@ -20349,10 +20383,9 @@
         "title": "Daily Papers",
         "docs": "https://docs.rsshub.app/routes/programming",
         "source": [
-          "/papers",
-          "/"
+          "/papers/:cycle"
         ],
-        "target": "/huggingface/daily-papers"
+        "target": "/huggingface/daily-papers/:cycle"
       }
     ]
   },

@@ -35881,6 +35881,76 @@ export default {
     "url": "elasticsearch.cn",
     "lang": "zh-CN"
   },
+  "elecfans": {
+    "routes": {
+      "/article/:atype": {
+        "path": "/article/:atype",
+        "categories": [
+          "programming"
+        ],
+        "example": "/elecfans/article/special",
+        "parameters": {
+          "atype": "需获取文章的类别"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "name": "文章",
+        "radar": [
+          {
+            "source": [
+              "www.elecfans.com"
+            ]
+          }
+        ],
+        "maintainers": [
+          "tian051011"
+        ],
+        "location": "article.ts",
+        "module": () => import('@/routes/elecfans/article.ts')
+      },
+      "/soft/:atype": {
+        "path": "/soft/:atype",
+        "categories": [
+          "programming"
+        ],
+        "example": "/elecfans/soft/special",
+        "parameters": {
+          "atype": "需获取资料的类别"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "name": "资料",
+        "radar": [
+          {
+            "source": [
+              "www.elecfans.com"
+            ]
+          }
+        ],
+        "maintainers": [
+          "tian051011"
+        ],
+        "location": "soft.ts",
+        "module": () => import('@/routes/elecfans/soft.ts')
+      }
+    },
+    "name": "电子发烧友",
+    "apiRoutes": {},
+    "url": "www.elecfans.com",
+    "lang": "zh-CN"
+  },
   "eleduck": {
     "routes": {
       "/jobs": {
@@ -53865,6 +53935,66 @@ export default {
     "description": "",
     "lang": "zh-CN"
   },
+  "hudsonrivertrading": {
+    "routes": {
+      "/blog/:section?": {
+        "path": "/blog/:section?",
+        "categories": [
+          "blog"
+        ],
+        "example": "/hudsonrivertrading/blog",
+        "parameters": {
+          "section": {
+            "description": "Optional section filter",
+            "options": [
+              {
+                "label": "Algorithm",
+                "value": "algo"
+              },
+              {
+                "label": "Engineering",
+                "value": "engineers"
+              },
+              {
+                "label": "Intern Spotlight",
+                "value": "interns"
+              },
+              {
+                "label": "Hardware, Systems & More",
+                "value": "more"
+              }
+            ]
+          }
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "www.hudsonrivertrading.com/hrtbeat/"
+            ]
+          }
+        ],
+        "name": "Tech Blog",
+        "maintainers": [
+          "johan456789"
+        ],
+        "description": "HRT (Hudson River Trading) Tech Blog\n\n| Route | Section |\n| ----- | ------- |\n| /hudsonrivertrading/blog | All Posts |\n| /hudsonrivertrading/blog/algo | Algorithm |\n| /hudsonrivertrading/blog/engineers | Engineering |\n| /hudsonrivertrading/blog/interns | Intern Spotlight |\n| /hudsonrivertrading/blog/more | Hardware, Systems & More |",
+        "location": "index.ts",
+        "module": () => import('@/routes/hudsonrivertrading/index.ts')
+      }
+    },
+    "name": "Hudson River Trading",
+    "apiRoutes": {},
+    "url": "hudsonrivertrading.com",
+    "description": "HRT (Hudson River Trading) is a quantitative trading firm that uses advanced algorithms and technology to trade across global financial markets."
+  },
   "huggingface": {
     "routes": {
       "/blog-community/:sort?": {
@@ -53976,13 +54106,16 @@ export default {
         "location": "blog.ts",
         "module": () => import('@/routes/huggingface/blog.ts')
       },
-      "/daily-papers": {
-        "path": "/daily-papers",
+      "/daily-papers/:cycle?/:voteFliter?": {
+        "path": "/daily-papers/:cycle?/:voteFliter?",
         "categories": [
           "programming"
         ],
-        "example": "/huggingface/daily-papers",
-        "parameters": {},
+        "example": "/huggingface/daily-papers/week/50",
+        "parameters": {
+          "cycle": "The publication cycle you want to follow. Choose from: date, week, month. Default: date",
+          "voteFliter": "Filter papers by vote count."
+        },
         "features": {
           "requireConfig": false,
           "requirePuppeteer": false,
@@ -53994,14 +54127,15 @@ export default {
         "radar": [
           {
             "source": [
-              "huggingface.co/papers",
-              "huggingface.co/"
-            ]
+              "huggingface.co/papers/:cycle"
+            ],
+            "target": "/daily-papers/:cycle"
           }
         ],
         "name": "Daily Papers",
         "maintainers": [
-          "zeyugao"
+          "zeyugao",
+          "ovo-tim"
         ],
         "url": "huggingface.co/papers",
         "location": "daily-papers.ts",
