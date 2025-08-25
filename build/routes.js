@@ -20657,6 +20657,112 @@ export default {
     "url": "cbirc.gov.cn",
     "lang": "zh-CN"
   },
+  "cbndata": {
+    "routes": {
+      "/information/:id?": {
+        "path": "/information/:id?",
+        "name": "看点",
+        "url": "www.cbndata.com",
+        "maintainers": [
+          "nczitzk"
+        ],
+        "example": "/cbndata/information/all",
+        "parameters": {
+          "id": {
+            "description": "分类，默认为 `all`，即全部，可在对应分类页 URL 中找到",
+            "options": [
+              {
+                "label": "全部",
+                "value": "all"
+              },
+              {
+                "label": "美妆个护",
+                "value": "1"
+              },
+              {
+                "label": "服饰鞋包",
+                "value": "2559"
+              },
+              {
+                "label": "宠物",
+                "value": "2419"
+              },
+              {
+                "label": "营销",
+                "value": "2484"
+              }
+            ]
+          }
+        },
+        "description": ":::tip\n订阅 [美妆个护](https://www.cbndata.com/information?tag_id=1)，其源网址为 `https://www.cbndata.com/information?tag_id=1`，请参考该 URL 指定部分构成参数，此时路由为 [`/cbndata/information/1`](https://rsshub.app/cbndata/information/1)。\n:::\n\n| 分类                                                        | ID                                                  |\n| ----------------------------------------------------------- | --------------------------------------------------- |\n| [全部](https://www.cbndata.com/information?tag_id=all)      | [all](https://rsshub.app/cbndata/information/all)   |\n| [美妆个护](https://www.cbndata.com/information?tag_id=1)    | [1](https://rsshub.app/cbndata/information/1)       |\n| [服饰鞋包](https://www.cbndata.com/information?tag_id=2559) | [2559](https://rsshub.app/cbndata/information/2559) |\n| [宠物](https://www.cbndata.com/information?tag_id=2419)     | [2419](https://rsshub.app/cbndata/information/2419) |\n| [营销](https://www.cbndata.com/information?tag_id=2484)     | [2484](https://rsshub.app/cbndata/information/2484) |\n",
+        "categories": [
+          "new-media"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportRadar": true,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "www.cbndata.com/information"
+            ]
+          },
+          {
+            "title": "全部",
+            "source": [
+              "www.cbndata.com/information"
+            ],
+            "target": "/information/all"
+          },
+          {
+            "title": "美妆个护",
+            "source": [
+              "www.cbndata.com/information"
+            ],
+            "target": "/information/1"
+          },
+          {
+            "title": "服饰鞋包",
+            "source": [
+              "www.cbndata.com/information"
+            ],
+            "target": "/information/2559"
+          },
+          {
+            "title": "宠物",
+            "source": [
+              "www.cbndata.com/information"
+            ],
+            "target": "/information/2419"
+          },
+          {
+            "title": "营销",
+            "source": [
+              "www.cbndata.com/information"
+            ],
+            "target": "/information/2484"
+          }
+        ],
+        "view": 0,
+        "location": "information.ts",
+        "module": () => import('@/routes/cbndata/information.ts')
+      }
+    },
+    "name": "CBNData",
+    "apiRoutes": {},
+    "url": "cbndata.com",
+    "categories": [
+      "new-media"
+    ],
+    "description": "第一财经商业数据中心（CBNData）",
+    "lang": "zh-CN"
+  },
   "cbnweek": {
     "routes": {
       "/": {
@@ -31154,8 +31260,7 @@ export default {
       "/blog": {
         "path": "/blog",
         "categories": [
-          "new-media",
-          "popular"
+          "new-media"
         ],
         "example": "/deepmind/blog",
         "parameters": {},
@@ -92750,6 +92855,45 @@ export default {
     "url": "www.sec-wiki.com",
     "lang": "zh-CN"
   },
+  "secretsanfrancisco": {
+    "routes": {
+      "/:category?": {
+        "path": "/:category?",
+        "categories": [
+          "new-media"
+        ],
+        "example": "/secretsanfrancisco/top-news",
+        "parameters": {
+          "category": "category name, can be found in url"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "secretsanfrancisco.com/:category"
+            ],
+            "target": "/:category"
+          }
+        ],
+        "name": "Category",
+        "maintainers": [
+          "EthanWng97"
+        ],
+        "location": "rss.ts",
+        "module": () => import('@/routes/secretsanfrancisco/rss.ts')
+      }
+    },
+    "name": "Secret San francisco",
+    "url": "secretsanfrancisco.com",
+    "lang": "en"
+  },
   "secrss": {
     "routes": {
       "/author/:author": {
@@ -118100,7 +118244,8 @@ export default {
       "/hots": {
         "path": "/hots",
         "categories": [
-          "finance"
+          "finance",
+          "popular"
         ],
         "example": "/xueqiu/hots",
         "parameters": {},
