@@ -21589,6 +21589,80 @@ export default {
     "description": "",
     "lang": "zh-CN"
   },
+  "ccg": {
+    "routes": {
+      "/:category?": {
+        "path": "/:category?",
+        "name": "动态",
+        "url": "www.ccg.org.cn",
+        "maintainers": [
+          "nczitzk"
+        ],
+        "example": "/ccg/news",
+        "parameters": {
+          "category": {
+            "description": "分类，默认为 `news`，即新闻动态，可在对应分类页 URL 中找到",
+            "options": [
+              {
+                "label": "新闻动态",
+                "value": "news"
+              },
+              {
+                "label": "媒体报道",
+                "value": "mtbd"
+              }
+            ]
+          }
+        },
+        "description": ":::tip\n订阅 [新闻动态](http://www.ccg.org.cn/news)，其源网址为 `http://www.ccg.org.cn/news`，请参考该 URL 指定部分构成参数，此时路由为 [`/ccg/news`](https://rsshub.app/ccg/news)。\n:::\n\n| 分类                                   | ID                                  |\n| -------------------------------------- | ----------------------------------- |\n| [新闻动态](http://www.ccg.org.cn/news) | [news](https://rsshub.app/ccg/news) |\n| [媒体报道](http://www.ccg.org.cn/mtbd) | [mtbd](https://rsshub.app/ccg/mtbd) |\n",
+        "categories": [
+          "new-media"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportRadar": true,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "www.ccg.org.cn/category"
+            ],
+            "target": "/:category"
+          },
+          {
+            "title": "新闻动态",
+            "source": [
+              "www.ccg.org.cn/news"
+            ],
+            "target": "/news"
+          },
+          {
+            "title": "媒体报道",
+            "source": [
+              "www.ccg.org.cn/mtbd"
+            ],
+            "target": "/mtbd"
+          }
+        ],
+        "view": 0,
+        "location": "index.ts",
+        "module": () => import('@/routes/ccg/index.ts')
+      }
+    },
+    "name": "全球化智库",
+    "apiRoutes": {},
+    "url": "ccg.org.cn",
+    "categories": [
+      "new-media"
+    ],
+    "description": "",
+    "lang": "zh-CN"
+  },
   "ccnu": {
     "routes": {
       "/career": {
@@ -36218,6 +36292,46 @@ export default {
     "description": "支持国家列表\n\n加拿大 `CA`\n\n-   大使馆: `/embassy/ca`\n\n-   领事馆城市列表:\n\n| 城市     | 路由                   |\n| -------- | ---------------------- |\n| 蒙特利尔 | `/embassy/ca/montreal` |\n\n* * *\n\n德国 `DE`\n\n-   大使馆: `/embassy/de`\n\n-   领事馆城市列表:\n\n| 城市   | 路由                 |\n| ------ | -------------------- |\n| 慕尼黑 | `/embassy/de/munich` |\n\n* * *\n\n法国 `FR`\n\n-   大使馆: `/embassy/fr`\n\n-   领事馆城市列表:\n\n| 城市       | 路由                     |\n| ---------- | ------------------------ |\n| 马赛       | `/embassy/fr/marseille`  |\n| 斯特拉斯堡 | `/embassy/fr/strasbourg` |\n| 里昂       | `/embassy/fr/lyon`       |\n\n* * *\n\n日本 `JP`\n\n-   大使馆: `/embassy/jp`\n\n-   领事馆城市列表:\n\n| 城市   | 路由                   |\n| ------ | ---------------------- |\n| 长崎   | `/embassy/jp/nagasaki` |\n| 大阪   | `/embassy/jp/osaka`    |\n| 福冈   | `/embassy/jp/fukuoka`  |\n| 名古屋 | `/embassy/jp/nagoya`   |\n| 札幌   | `/embassy/jp/sapporo`  |\n| 新潟   | `/embassy/jp/niigata`  |\n\n* * *\n\n韩国 `KR`\n\n-   大使馆: `/embassy/kr`\n\n-   领事馆城市列表:\n\n| 城市 | 路由                  |\n| ---- | --------------------- |\n| 釜山 | `/embassy/kr/busan`   |\n| 济州 | `/embassy/kr/jeju`    |\n| 光州 | `/embassy/kr/gwangju` |\n\n* * *\n\n马来西亚 `MY`\n\n-   大使馆: `/embassy/my`\n\n* * *\n\n新加坡 `SG`\n\n-   大使馆: `/embassy/sg`\n\n* * *\n\n美国 `US`\n\n-   大使馆: `/embassy/us`\n\n-   领事馆城市列表:\n\n| 城市   | 路由                       |\n| ------ | -------------------------- |\n| 纽约   | `/embassy/us/newyork`      |\n| 芝加哥 | `/embassy/us/chicago`      |\n| 旧金山 | `/embassy/us/sanfrancisco` |\n\n* * *\n\n英国 `UK`\n\n-   大使馆: `/embassy/uk`\n\n-   领事馆城市列表:\n\n| 城市       | 路由                     |\n| ---------- | ------------------------ |\n| 爱丁堡     | `/embassy/uk/edinburgh`  |\n| 贝尔法斯特 | `/embassy/uk/belfast`    |\n| 曼彻斯特   | `/embassy/uk/manchester` |",
     "lang": "zh-CN"
   },
+  "engineering": {
+    "routes": {
+      "/tag/:tag": {
+        "path": "/tag/:tag",
+        "categories": [
+          "programming"
+        ],
+        "example": "/engineering/tag/javascript",
+        "parameters": {
+          "tag": "Browse programming languages, frameworks, and technologies"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "engineering.fyi/tag/:tag"
+            ]
+          }
+        ],
+        "name": "Tag",
+        "maintainers": [
+          "suhang-only"
+        ],
+        "description": "| JSON    | Javascript     | Java | Apache | AWS | SQL | React | Golang    |\n| ---- | ---------- | ---- | ------ | --- | --- | ----- | ------ |\n| json | javascript | java | apache | aws | sql | react | golang |",
+        "location": "tag.ts",
+        "module": () => import('@/routes/engineering/tag.ts')
+      }
+    },
+    "name": "Engineering.fyi",
+    "url": "engineering.fyi",
+    "description": "Programming Tutorials and Engineering Articles",
+    "lang": "en"
+  },
   "englishhome": {
     "routes": {
       "/": {
@@ -36542,6 +36656,7 @@ export default {
         "radar": [
           {
             "source": [
+              "www.eventernote.com/actors/:name/:id",
               "www.eventernote.com/actors/:name/:id/events"
             ]
           }
@@ -105946,6 +106061,45 @@ export default {
     "apiRoutes": {},
     "url": "thecover.cn",
     "lang": "zh-CN"
+  },
+  "thegadgetflow": {
+    "routes": {
+      "/:category?": {
+        "path": "/:category?",
+        "categories": [
+          "shopping"
+        ],
+        "example": "/thegadgetflow/cool-gadgets-gifts",
+        "parameters": {
+          "category": "category name, can be found in url"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "thegadgetflow.com/categories/:category"
+            ],
+            "target": "/:category"
+          }
+        ],
+        "name": "Category",
+        "maintainers": [
+          "EthanWng97"
+        ],
+        "location": "rss.ts",
+        "module": () => import('@/routes/thegadgetflow/rss.ts')
+      }
+    },
+    "name": "Gadget Flow",
+    "url": "thegadgetflow.com",
+    "lang": "en"
   },
   "thegradient": {
     "routes": {
