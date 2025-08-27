@@ -14972,6 +14972,46 @@ export default {
     "url": "www.bestblogs.dev",
     "lang": "zh-CN"
   },
+  "bestofjs": {
+    "routes": {
+      "/rankings/monthly": {
+        "path": "/rankings/monthly",
+        "categories": [
+          "programming"
+        ],
+        "example": "/bestofjs/rankings/monthly",
+        "view": 5,
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "bestofjs.org/rankings/monthly/:year/:month"
+            ],
+            "target": "/rankings/monthly"
+          }
+        ],
+        "name": "Monthly Rankings",
+        "maintainers": [
+          "ztkuaikuai"
+        ],
+        "url": "bestofjs.org/rankings/monthly",
+        "location": "monthly.ts",
+        "module": () => import('@/routes/bestofjs/monthly.ts')
+      }
+    },
+    "name": "Best of JS",
+    "apiRoutes": {},
+    "url": "bestofjs.org",
+    "description": "\n:::tip\nBest of JS Monthly Rankings\n:::",
+    "lang": "en"
+  },
   "bfl": {
     "routes": {
       "/announcements": {
