@@ -62602,8 +62602,74 @@ export default {
         ],
         "example": "/juejin/trending/ios/monthly",
         "parameters": {
-          "category": "分类名",
-          "type": "类型"
+          "category": {
+            "description": "分类名",
+            "options": [
+              {
+                "value": "android",
+                "label": "Android"
+              },
+              {
+                "value": "frontend",
+                "label": "前端"
+              },
+              {
+                "value": "ios",
+                "label": "iOS"
+              },
+              {
+                "value": "backend",
+                "label": "后端"
+              },
+              {
+                "value": "design",
+                "label": "设计"
+              },
+              {
+                "value": "product",
+                "label": "产品"
+              },
+              {
+                "value": "freebie",
+                "label": "工具资源"
+              },
+              {
+                "value": "article",
+                "label": "阅读"
+              },
+              {
+                "value": "ai",
+                "label": "人工智能"
+              },
+              {
+                "value": "devops",
+                "label": "运维"
+              },
+              {
+                "value": "all",
+                "label": "全部"
+              }
+            ],
+            "default": "all"
+          },
+          "type": {
+            "description": "类型",
+            "options": [
+              {
+                "value": "weekly",
+                "label": "本周最热"
+              },
+              {
+                "value": "monthly",
+                "label": "本月最热"
+              },
+              {
+                "value": "historical",
+                "label": "历史最热"
+              }
+            ],
+            "default": "weekly"
+          }
         },
         "features": {
           "requireConfig": false,
@@ -62617,7 +62683,6 @@ export default {
         "maintainers": [
           "moaix"
         ],
-        "description": "| category | 标签     |\n| -------- | -------- |\n| android  | Android  |\n| frontend | 前端     |\n| ios      | iOS      |\n| backend  | 后端     |\n| design   | 设计     |\n| product  | 产品     |\n| freebie  | 工具资源 |\n| article  | 阅读     |\n| ai       | 人工智能 |\n| devops   | 运维     |\n| all      | 全部     |\n\n| type       | 类型     |\n| ---------- | -------- |\n| weekly     | 本周最热 |\n| monthly    | 本月最热 |\n| historical | 历史最热 |",
         "location": "trending.ts",
         "module": () => import('@/routes/juejin/trending.ts')
       }
@@ -105209,15 +105274,15 @@ export default {
           {
             "source": [
               "techpowerup.com/"
-            ],
-            "target": ""
+            ]
           }
         ],
-        "name": "Unknown",
+        "name": "Latest Content",
         "maintainers": [
           "TonyRL"
         ],
-        "url": "techpowerup.com/",
+        "example": "/techpowerup",
+        "url": "www.techpowerup.com/",
         "location": "index.ts",
         "module": () => import('@/routes/techpowerup/index.ts')
       },
@@ -105226,7 +105291,7 @@ export default {
         "categories": [
           "new-media"
         ],
-        "example": "/techpowerup/review/4090",
+        "example": "/techpowerup/review/amd",
         "parameters": {
           "keyword": "Search Keyword"
         },
@@ -105241,7 +105306,8 @@ export default {
         "radar": [
           {
             "source": [
-              "techpowerup.com/"
+              "techpowerup.com/review/search",
+              "techpowerup.com/review"
             ],
             "target": ""
           }
@@ -105250,14 +105316,14 @@ export default {
         "maintainers": [
           "TonyRL"
         ],
-        "url": "techpowerup.com/",
+        "url": "www.techpowerup.com/review/",
         "location": "review.ts",
         "module": () => import('@/routes/techpowerup/review.ts')
       }
     },
     "name": "TechPowerUp",
     "apiRoutes": {},
-    "url": "techpowerup.com",
+    "url": "www.techpowerup.com",
     "lang": "en"
   },
   "techsir": {
