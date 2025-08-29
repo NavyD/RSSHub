@@ -17906,6 +17906,45 @@
     "url": "bmkg.go.id",
     "lang": "en"
   },
+  "bnext": {
+    "routes": {
+      "/": {
+        "path": "/",
+        "categories": [
+          "traditional-media"
+        ],
+        "example": "/bnext",
+        "parameters": {},
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "www.bnext.com.tw"
+            ],
+            "target": "/bnext"
+          }
+        ],
+        "name": "最新文章",
+        "maintainers": [
+          "johan456789"
+        ],
+        "url": "www.bnext.com.tw",
+        "location": "index.ts",
+        "module": "() => import('@/routes/bnext/index.ts')"
+      }
+    },
+    "name": "數位時代 BusinessNext",
+    "apiRoutes": {},
+    "url": "bnext.com.tw",
+    "lang": "zh-TW"
+  },
   "bnu": {
     "routes": {
       "/bs/:category?": {
@@ -63295,6 +63334,12 @@
               "kemono.cr/:source/user/:id/fancards"
             ],
             "target": "/:source/:id/fancards"
+          },
+          {
+            "source": [
+              "kemono.cr/discord/server/:id"
+            ],
+            "target": "/discord/:id"
           }
         ],
         "name": "Posts",
