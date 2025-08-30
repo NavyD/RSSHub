@@ -25349,6 +25349,15 @@ export default {
           "supportPodcast": false,
           "supportScihub": false
         },
+        "radar": [
+          {
+            "source": [
+              "cline.bot/blog/archive",
+              "cline.bot/blog"
+            ],
+            "target": "/blog"
+          }
+        ],
         "name": "Blog",
         "maintainers": [
           "yeshan333"
@@ -109059,6 +109068,49 @@ export default {
     "name": "Transformer Circuits",
     "apiRoutes": {},
     "url": "transformer-circuits.pub",
+    "lang": "en"
+  },
+  "trendforce": {
+    "routes": {
+      "/news": {
+        "path": "/news",
+        "name": "News",
+        "url": "www.trendforce.com",
+        "maintainers": [
+          "nczitzk"
+        ],
+        "example": "/trendforce/news",
+        "categories": [
+          "new-media"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportRadar": true,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "www.trendforce.com/news/"
+            ],
+            "target": "/news"
+          }
+        ],
+        "view": 0,
+        "location": "new.ts",
+        "module": () => import('@/routes/trendforce/new.ts')
+      }
+    },
+    "name": "TrendForce",
+    "url": "trendforce.com",
+    "categories": [
+      "new-media"
+    ],
+    "description": "",
     "lang": "en"
   },
   "trendingpapers": {
