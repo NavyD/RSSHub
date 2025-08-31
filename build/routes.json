@@ -31422,7 +31422,8 @@
       "/blog": {
         "path": "/blog",
         "categories": [
-          "new-media"
+          "new-media",
+          "popular"
         ],
         "example": "/deepmind/blog",
         "parameters": {},
@@ -34739,8 +34740,7 @@
       "/:type?/:category?": {
         "path": "/:type?/:category?",
         "categories": [
-          "new-media",
-          "popular"
+          "new-media"
         ],
         "example": "/dx2025",
         "parameters": {
@@ -36719,6 +36719,53 @@
     "apiRoutes": {},
     "url": "europechinese.blogspot.com",
     "lang": "zh-TW"
+  },
+  "eventbrite": {
+    "routes": {
+      "/:region/:eventType?/:includePromoted?": {
+        "path": "/:region/:eventType?/:includePromoted?",
+        "categories": [
+          "other"
+        ],
+        "example": "/eventbrite/canada--toronto/all-events",
+        "parameters": {
+          "eventType": "category of events for filtering",
+          "region": "Region or scope of events"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "eventbrite.com/d/:region/:eventType"
+            ],
+            "target": "/:region/:eventType"
+          },
+          {
+            "source": [
+              "eventbrite.ca/d/:region/:eventType"
+            ],
+            "target": "/:region/:eventType"
+          }
+        ],
+        "name": "Events",
+        "maintainers": [
+          "elibroftw"
+        ],
+        "location": "events.ts",
+        "module": "() => import('@/routes/eventbrite/events.ts')"
+      }
+    },
+    "name": "Eventbrite",
+    "apiRoutes": {},
+    "url": "eventbrite.com",
+    "lang": "en"
   },
   "eventernote": {
     "routes": {
@@ -46623,6 +46670,37 @@
         "description": "| 挂牌督办 | 调查报告   |\n| -------- | ---------- |\n| sggpdbqk | tbzdsgdcbg |",
         "location": "mem/sgcc.ts",
         "module": "() => import('@/routes/gov/mem/sgcc.ts')"
+      },
+      "/mem/gk/zfxxgkpt/fdzdgknr": {
+        "path": "/mem/gk/zfxxgkpt/fdzdgknr",
+        "categories": [
+          "government"
+        ],
+        "example": "/gov/mem/gk/zfxxgkpt/fdzdgknr",
+        "parameters": {},
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "www.mem.gov.cn/gk/zfxxgkpt/fdzdgknr"
+            ],
+            "target": "/mem/gk/zfxxgkpt/fdzdgknr"
+          }
+        ],
+        "name": "法定主动公开内容",
+        "maintainers": [
+          "skeaven"
+        ],
+        "description": "应急管理部法定主动公开内容,包含通知、公告、督办、政策解读等，可供应急相关工作人员及时获取政策信息",
+        "location": "mem/zfxxgkpt.ts",
+        "module": "() => import('@/routes/gov/mem/zfxxgkpt.ts')"
       },
       "/fmprc/:category?": {
         "path": [
@@ -120325,7 +120403,7 @@
         "parameters": {
           "handle": "YouTube handles or channel id"
         },
-        "name": "Community",
+        "name": "Community Posts",
         "maintainers": [
           "TonyRL"
         ],
