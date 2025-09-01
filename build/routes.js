@@ -10747,6 +10747,7 @@ export default {
         "radar": [
           {
             "source": [
+              "podcasts.apple.com/:region/podcast/:showName/:id",
               "podcasts.apple.com/:region/podcast/:id"
             ]
           }
@@ -77080,6 +77081,27 @@ export default {
   },
   "nicovideo": {
     "routes": {
+      "/mylist/:id": {
+        "name": "Mylist",
+        "path": "/mylist/:id",
+        "parameters": {
+          "id": "Mylist ID"
+        },
+        "example": "/nicovideo/mylist/2973737",
+        "maintainers": [
+          "esperecyan"
+        ],
+        "radar": [
+          {
+            "source": [
+              "www.nicovideo.jp/user/:user/mylist/:id"
+            ],
+            "target": "/mylist/:id"
+          }
+        ],
+        "location": "mylist.ts",
+        "module": () => import('@/routes/nicovideo/mylist.ts')
+      },
       "/user/:id/video/:embed?": {
         "name": "User Videos",
         "path": "/user/:id/video/:embed?",
@@ -77105,6 +77127,7 @@ export default {
       }
     },
     "name": "Niconico",
+    "apiRoutes": {},
     "url": "www.nicovideo.jp",
     "categories": [
       "multimedia"
