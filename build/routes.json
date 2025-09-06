@@ -27363,6 +27363,50 @@
     "description": "\n::: tip\n即日起，多数路由图片防盗链。\n需要将 `ALLOW_USER_HOTLINK_TEMPLATE` 环境变量设置为 `true` ，然后配置`image_hotlink_template` 。\n详见 [#16715](https://github.com/DIYgod/RSSHub/issues/16715)\n:::",
     "lang": "zh-CN"
   },
+  "coolbuy": {
+    "routes": {
+      "/": {
+        "path": "/",
+        "name": "产品",
+        "url": "coolbuy.com",
+        "maintainers": [
+          "nczitzk"
+        ],
+        "example": "/coolbuy",
+        "categories": [
+          "shopping"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportRadar": true,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "coolbuy.com"
+            ],
+            "target": "/"
+          }
+        ],
+        "view": 0,
+        "location": "index.ts",
+        "module": "() => import('@/routes/coolbuy/index.ts')"
+      }
+    },
+    "name": "玩物志",
+    "apiRoutes": {},
+    "url": "coolbuy.com",
+    "categories": [
+      "shopping"
+    ],
+    "description": "",
+    "lang": "zh-CN"
+  },
   "coolpc": {
     "routes": {
       "/news": {
