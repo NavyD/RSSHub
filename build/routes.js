@@ -27407,6 +27407,60 @@ export default {
     "description": "",
     "lang": "zh-CN"
   },
+  "coolidge": {
+    "routes": {
+      "/film-guide": {
+        "path": "/film-guide",
+        "name": "Film Guide",
+        "url": "coolidge.org/film-guide",
+        "maintainers": [
+          "johan456789"
+        ],
+        "example": "/coolidge/film-guide",
+        "categories": [
+          "blog"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportRadar": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "location": "film-guide.ts",
+        "module": () => import('@/routes/coolidge/film-guide.ts')
+      },
+      "/news": {
+        "path": "/news",
+        "name": "News",
+        "url": "coolidge.org/about-us/news-media",
+        "maintainers": [
+          "johan456789"
+        ],
+        "example": "/coolidge/news",
+        "categories": [
+          "blog"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportRadar": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "location": "news.ts",
+        "module": () => import('@/routes/coolidge/news.ts')
+      }
+    },
+    "name": "Coolidge Corner Theatre",
+    "apiRoutes": {},
+    "url": "coolidge.org",
+    "lang": "en"
+  },
   "coolpc": {
     "routes": {
       "/news": {
