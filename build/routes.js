@@ -8890,8 +8890,7 @@ export default {
       "/information/:type?": {
         "path": "/information/:type?",
         "categories": [
-          "new-media",
-          "popular"
+          "new-media"
         ],
         "example": "/aliresearch/information",
         "parameters": {
@@ -48219,7 +48218,8 @@ export default {
       "/npc/:caty": {
         "path": "/npc/:caty",
         "categories": [
-          "government"
+          "government",
+          "popular"
         ],
         "example": "/gov/npc/c183",
         "parameters": {
@@ -62986,6 +62986,152 @@ export default {
   },
   "juejin": {
     "routes": {
+      "/aicoding/:tag?/:sort?": {
+        "path": "/aicoding/:tag?/:sort?",
+        "categories": [
+          "programming"
+        ],
+        "example": "/juejin/aicoding",
+        "parameters": {
+          "tag": {
+            "description": "标签，留空为全部",
+            "options": [
+              {
+                "value": "AI编程",
+                "label": "AI编程"
+              },
+              {
+                "value": "Claude",
+                "label": "Claude"
+              },
+              {
+                "value": "Trae",
+                "label": "Trae"
+              },
+              {
+                "value": "MCP",
+                "label": "MCP"
+              },
+              {
+                "value": "Cursor",
+                "label": "Cursor"
+              },
+              {
+                "value": "Cline",
+                "label": "Cline"
+              },
+              {
+                "value": "Github Copilot",
+                "label": "Github Copilot"
+              },
+              {
+                "value": "bolt",
+                "label": "bolt"
+              },
+              {
+                "value": "V0",
+                "label": "V0"
+              },
+              {
+                "value": "replit",
+                "label": "replit"
+              },
+              {
+                "value": "Warp",
+                "label": "Warp"
+              },
+              {
+                "value": "Visual Studio IntelliCode",
+                "label": "Visual Studio IntelliCode"
+              },
+              {
+                "value": "WindSurf",
+                "label": "WindSurf"
+              },
+              {
+                "value": "豆包MarsCode",
+                "label": "豆包MarsCode"
+              },
+              {
+                "value": "通义灵码",
+                "label": "通义灵码"
+              },
+              {
+                "value": "Devin",
+                "label": "Devin"
+              },
+              {
+                "value": "文心快码",
+                "label": "文心快码"
+              },
+              {
+                "value": "imgcook",
+                "label": "imgcook"
+              },
+              {
+                "value": "CodeWhisperer",
+                "label": "CodeWhisperer"
+              },
+              {
+                "value": "Lovable",
+                "label": "Lovable"
+              },
+              {
+                "value": "FittenCode",
+                "label": "FittenCode"
+              },
+              {
+                "value": "Solo",
+                "label": "Solo"
+              },
+              {
+                "value": "CodeFuse",
+                "label": "CodeFuse"
+              },
+              {
+                "value": "Tabnine",
+                "label": "Tabnine"
+              }
+            ]
+          },
+          "sort": {
+            "description": "排序方式，默认为最新发布",
+            "default": "hot",
+            "options": [
+              {
+                "value": "hot",
+                "label": "热门"
+              },
+              {
+                "value": "latest",
+                "label": "最新"
+              }
+            ]
+          }
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "juejin.cn/books"
+            ]
+          }
+        ],
+        "name": "AI 编程",
+        "maintainers": [
+          "TonyRL"
+        ],
+        "url": "aicoding.juejin.cn",
+        "location": "aicoding.ts",
+        "module": () => import('@/routes/juejin/aicoding.ts')
+      },
       "/books": {
         "path": "/books",
         "categories": [
@@ -90318,7 +90464,11 @@ export default {
           "requireConfig": [
             {
               "name": "HEFENG_KEY",
-              "description": ""
+              "description": "QWeather API KEY"
+            },
+            {
+              "name": "HEFENG_API_HOST",
+              "description": "This is required after 2026/01/01: https://blog.qweather.com/announce/public-api-domain-change-to-api-host/"
             }
           ],
           "requirePuppeteer": false,
@@ -90350,6 +90500,10 @@ export default {
             {
               "name": "HEFENG_KEY",
               "description": "访问 `https://www.qweather.com/` 注册开发 API Key。"
+            },
+            {
+              "name": "HEFENG_API_HOST",
+              "description": "This is required after 2026/01/01: https://blog.qweather.com/announce/public-api-domain-change-to-api-host/"
             }
           ],
           "requirePuppeteer": false,
@@ -111811,15 +111965,12 @@ export default {
   },
   "uber": {
     "routes": {
-      "/blog/:maxPage?": {
-        "path": "/blog/:maxPage?",
+      "/blog/:compat?": {
+        "path": "/blog/:compat?",
         "categories": [
           "blog"
         ],
         "example": "/uber/blog",
-        "parameters": {
-          "maxPage": "max number of pages to retrieve, default to 1 page at most"
-        },
         "features": {
           "requireConfig": false,
           "requirePuppeteer": false,
@@ -111831,8 +111982,7 @@ export default {
         "radar": [
           {
             "source": [
-              "www.uber.com/:language/blog/engineering",
-              "www.uber.com/:language/blog"
+              "www.uber.com/:language/blog/engineering"
             ],
             "target": "/blog"
           }
@@ -111841,7 +111991,11 @@ export default {
         "maintainers": [
           "hulb"
         ],
-        "url": "www.uber.com/blog/pittsburgh/engineering",
+        "url": "www.uber.com/en-HK/blog/engineering",
+        "description": "The English blog on any of Uber's regional sites (e.g., www.uber.com/en-JP/blog) is the same engineering blog provided by this route, so language selection is not supported. This route is not for the public news blog on specific regional sites (e.g., www.uber.com/ja-JP/blog).",
+        "zh": {
+          "description": "uber的任何区域站点的英文blog（例如www.uber.com/en-JP/blog）都是相同的内容，正是本路由提供的engineering blog，因此本路由不提供语言选择；本路由不是uber在特定区域站点的公开新闻blog（例如www.uber.com/ja-JP/blog)"
+        },
         "location": "blog.ts",
         "module": () => import('@/routes/uber/blog.ts')
       }
@@ -119189,50 +119343,6 @@ export default {
     "name": "喜马拉雅",
     "apiRoutes": {},
     "url": "ximalaya.com",
-    "lang": "zh-CN"
-  },
-  "xinhuanet": {
-    "routes": {
-      "/app": {
-        "path": "/app",
-        "name": "客户端",
-        "url": "app.xinhuanet.com",
-        "maintainers": [
-          "nczitzk"
-        ],
-        "example": "/xinhuanet/app",
-        "description": "",
-        "categories": [
-          "traditional-media"
-        ],
-        "features": {
-          "requireConfig": false,
-          "requirePuppeteer": false,
-          "antiCrawler": false,
-          "supportRadar": true,
-          "supportBT": false,
-          "supportPodcast": false,
-          "supportScihub": false
-        },
-        "radar": [
-          {
-            "source": [
-              "app.xinhuanet.com"
-            ],
-            "target": "/app"
-          }
-        ],
-        "location": "app.ts",
-        "module": () => import('@/routes/xinhuanet/app.ts')
-      }
-    },
-    "name": "新华网",
-    "apiRoutes": {},
-    "url": "xinhuanet.com",
-    "categories": [
-      "traditional-media"
-    ],
-    "description": "",
     "lang": "zh-CN"
   },
   "xinpianchang": {
